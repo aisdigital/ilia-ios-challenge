@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		90FF9F5BC8A5F57B014F514E /* Pods_IOS_Challenge_IOS_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEB3DD5FB4C4A79C34BBB81 /* Pods_IOS_Challenge_IOS_ChallengeUITests.framework */; };
+		9FBF2BD6240EE96300067B85 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BD5240EE96300067B85 /* Movie.swift */; };
+		9FBF2BD7240EE96300067B85 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BD5240EE96300067B85 /* Movie.swift */; };
+		9FBF2BDA240F031C00067B85 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BD9240F031C00067B85 /* NetworkManager.swift */; };
+		9FBF2BDB240F031C00067B85 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BD9240F031C00067B85 /* NetworkManager.swift */; };
 		9FD92C7D240ED4CD0049AF28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD92C7C240ED4CD0049AF28 /* AppDelegate.swift */; };
 		9FD92C7F240ED4CD0049AF28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD92C7E240ED4CD0049AF28 /* SceneDelegate.swift */; };
 		9FD92C81240ED4CD0049AF28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD92C80240ED4CD0049AF28 /* ViewController.swift */; };
@@ -43,6 +47,8 @@
 		759E1F4C4238C5BCEBC674F7 /* Pods-IOS_Challenge-IOS_ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS_Challenge-IOS_ChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-IOS_Challenge-IOS_ChallengeUITests/Pods-IOS_Challenge-IOS_ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7EC90CF3754071B509E243AF /* Pods-IOS_Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS_Challenge.debug.xcconfig"; path = "Target Support Files/Pods-IOS_Challenge/Pods-IOS_Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		9A667A2540E9ECB2E83D25CD /* Pods-IOS_ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS_ChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-IOS_ChallengeTests/Pods-IOS_ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9FBF2BD5240EE96300067B85 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		9FBF2BD9240F031C00067B85 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9FD92C79240ED4CD0049AF28 /* IOS_Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD92C7C240ED4CD0049AF28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FD92C7E240ED4CD0049AF28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,8 +107,23 @@
 				9A667A2540E9ECB2E83D25CD /* Pods-IOS_ChallengeTests.debug.xcconfig */,
 				0C53667182131C228A7BDE2D /* Pods-IOS_ChallengeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9FBF2BD4240EE65E00067B85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FBF2BD5240EE96300067B85 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9FBF2BD8240F030F00067B85 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9FBF2BD9240F031C00067B85 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		9FD92C70240ED4CD0049AF28 = {
@@ -130,6 +151,8 @@
 		9FD92C7B240ED4CD0049AF28 /* IOS_Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				9FBF2BD8240F030F00067B85 /* Network */,
+				9FBF2BD4240EE65E00067B85 /* Model */,
 				9FD92C7C240ED4CD0049AF28 /* AppDelegate.swift */,
 				9FD92C7E240ED4CD0049AF28 /* SceneDelegate.swift */,
 				9FD92C80240ED4CD0049AF28 /* ViewController.swift */,
@@ -410,6 +433,8 @@
 			files = (
 				9FD92C81240ED4CD0049AF28 /* ViewController.swift in Sources */,
 				9FD92C7D240ED4CD0049AF28 /* AppDelegate.swift in Sources */,
+				9FBF2BDA240F031C00067B85 /* NetworkManager.swift in Sources */,
+				9FBF2BD6240EE96300067B85 /* Movie.swift in Sources */,
 				9FD92C7F240ED4CD0049AF28 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +443,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBF2BDB240F031C00067B85 /* NetworkManager.swift in Sources */,
+				9FBF2BD7240EE96300067B85 /* Movie.swift in Sources */,
 				9FD92C94240ED4D00049AF28 /* IOS_ChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
