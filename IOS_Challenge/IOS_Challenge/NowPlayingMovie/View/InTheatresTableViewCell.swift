@@ -8,14 +8,14 @@
 
 import UIKit
 
-class NowPlayingTableViewCell: UITableViewCell {
+class InTheatresTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var moviePoster: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
     
-    var viewModel: NowPlayingCellViewModelProtocol!{
+    var viewModel: InTheatresCellViewModelProtocol!{
         didSet{
             self.viewModel.didReceiveImageData = { [unowned self] viewModel in
                 guard let data = viewModel.imageData else{

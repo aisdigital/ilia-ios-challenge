@@ -8,11 +8,11 @@
 
 import UIKit
 
-class NowPlayingViewController: UIViewController {
+class InTheatresViewController: UIViewController {
     
     
     @IBOutlet weak var tableView: UITableView!
-    var viewModel: NowPlayingViewModelProtocol!{
+    var viewModel: InTheatresViewModelProtocol!{
         didSet{
             self.viewModel.didChangeNowPlaying = { _ in
                 self.tableView.reloadData()
@@ -26,28 +26,28 @@ class NowPlayingViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        viewModel = NowPlayingViewModel(networkManager: NetworkManager())
+        viewModel = InTheatresViewModel(networkManager: NetworkManager())
         viewModel.fetchNowPlayingMovies()
         
     }
 }
 
-extension NowPlayingViewController : UITableViewDelegate, UITableViewDataSource {
+extension InTheatresViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.nowPlaying.movies.count
+        return viewModel.inTheatres.movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let identifier = "MovieCell"
         
-        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? NowPlayingTableViewCell else{
+        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? InTheatresTableViewCell else{
             fatalError("Could not setup table view cell.")
         }
         
-        cell.movieTitle.text = viewModel.nowPlaying.movies[indexPath.row].title
-        cell.fetchImageData(imagePath: viewModel.nowPlaying.movies[indexPath.row].posterPath)
+        cell.movieTitle.text = viewModel.inTheatres.movies[indexPath.row].title
+        cell.fetchImageData(imagePath: viewModel.inTheatres.movies[indexPath.row].posterPath)
         return cell
     }
     

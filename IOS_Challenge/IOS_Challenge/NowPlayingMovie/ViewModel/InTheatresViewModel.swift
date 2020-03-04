@@ -8,41 +8,41 @@
 
 import Foundation
 
-protocol NowPlayingViewModelProtocol: class{
+protocol InTheatresViewModelProtocol: class{
     
-    var nowPlaying : NowPlaying {get set}
-    var didChangeNowPlaying: ((NowPlayingViewModelProtocol) -> ())? {get set}
+    var inTheatres : InTheatres {get set}
+    var didChangeNowPlaying: ((InTheatresViewModelProtocol) -> ())? {get set}
     
 
     init(networkManager : NetworkManager)
     func fetchNowPlayingMovies()
 }
 
-class NowPlayingViewModel : NowPlayingViewModelProtocol{
+class InTheatresViewModel : InTheatresViewModelProtocol{
     
     private let networkManager : NetworkManager
     
-    var nowPlaying: NowPlaying{
+    var inTheatres: InTheatres{
         didSet{
             didChangeNowPlaying?(self)
         }
     }
     
-    var didChangeNowPlaying: ((NowPlayingViewModelProtocol) -> ())?
+    var didChangeNowPlaying: ((InTheatresViewModelProtocol) -> ())?
     
     
     required init(networkManager: NetworkManager) {
         self.networkManager = networkManager
-        self.nowPlaying = NowPlaying(movies: [], page: 0, totalPages: 0)
+        self.inTheatres = InTheatres(movies: [], page: 0, totalPages: 0)
     }
     
     
     
     func fetchNowPlayingMovies() {
         
-        networkManager.fetchNowPlayingMovies { (nowPlaying, error) in
+        networkManager.fetchInTheatresMovies { (nowPlaying, error) in
             
-                self.nowPlaying = nowPlaying!
+                self.inTheatres = nowPlaying!
             
         }
     }

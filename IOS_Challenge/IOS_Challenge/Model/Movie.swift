@@ -70,7 +70,7 @@ struct SpokenLanguage: Codable {
 
 // MARK: - NowPlaying
 
-struct NowPlaying: Codable {
+struct InTheatres: Codable {
     
     let movies: [MovieBasicInfo]
     let page: Int

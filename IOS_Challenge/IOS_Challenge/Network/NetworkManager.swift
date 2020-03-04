@@ -9,13 +9,13 @@
 import Foundation
 import Alamofire
 
-typealias FetchMoviesClosure = ((_ moviesNowPlaying : NowPlaying?, _ error : AFError?) -> Void)
+typealias FetchMoviesClosure = ((_ moviesNowPlaying : InTheatres?, _ error : AFError?) -> Void)
 typealias FetchMovieClosure = ((_ movie: Movie?, _ error: AFError?) -> Void)
 typealias FetchImageClosure = ((_ imageData : Data?,_ error : AFError?)-> Void)
 
 protocol NetworkManagerProtocol {
     
-    func fetchNowPlayingMovies(page: Int, completionHandler: @escaping FetchMoviesClosure)
+    func fetchInTheatresMovies(page: Int, completionHandler: @escaping FetchMoviesClosure)
     func fetchMovieDetail(movieID: Int, completionHandler: @escaping FetchMovieClosure)
     func fetchMoviePoster(imagePath : String, completionHandler: @escaping FetchImageClosure)
     
@@ -34,7 +34,7 @@ class NetworkManager : NetworkManagerProtocol{
     //MARK: - Fetch now playing movies
     
     /*Function to fetch now playing movies on theathers. It can receive language and page as parameters and a closure.*/
-    func fetchNowPlayingMovies(page: Int = 1, completionHandler: @escaping FetchMoviesClosure){
+    func fetchInTheatresMovies(page: Int = 1, completionHandler: @escaping FetchMoviesClosure){
         
         let params : Parameters = [
             "api_key" : apiKey,
@@ -47,7 +47,7 @@ class NetworkManager : NetworkManagerProtocol{
             switch response.result{
                 
             case .success:
-                guard let data = response.data, let movieAPI = try? JSONDecoder().decode(NowPlaying.self, from: data) else{
+                guard let data = response.data, let movieAPI = try? JSONDecoder().decode(InTheatres.self, from: data) else{
                     
                     print("Erro de conversão.")
                     return

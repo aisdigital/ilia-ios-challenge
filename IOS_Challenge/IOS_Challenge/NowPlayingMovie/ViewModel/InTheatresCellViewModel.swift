@@ -8,17 +8,17 @@
 
 import Foundation
 
-protocol NowPlayingCellViewModelProtocol: class {
+protocol InTheatresCellViewModelProtocol: class {
     
     var imageData : Data? {get set}
-    var didReceiveImageData: ((NowPlayingCellViewModelProtocol)->())? {get set}
+    var didReceiveImageData: ((InTheatresCellViewModelProtocol)->())? {get set}
     
     init(networkManager : NetworkManager)
     func fetchImage(imagePath: String)
 }
 
 
-class NowPlayingCellViewModel: NowPlayingCellViewModelProtocol {
+class NowPlayingCellViewModel: InTheatresCellViewModelProtocol {
     
     let networkManager: NetworkManager
     
@@ -28,7 +28,7 @@ class NowPlayingCellViewModel: NowPlayingCellViewModelProtocol {
         }
     }
     
-    var didReceiveImageData: ((NowPlayingCellViewModelProtocol) -> ())?
+    var didReceiveImageData: ((InTheatresCellViewModelProtocol) -> ())?
     
     required init(networkManager: NetworkManager) {
         self.networkManager = networkManager
