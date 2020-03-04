@@ -5,6 +5,7 @@ target 'IOS_Challenge' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 	pod 'Alamofire', '~> 5.0'
+	pod "YoutubePlayer-in-WKWebView", "~> 0.3.0"
 
   # Pods for IOS_Challenge
 
