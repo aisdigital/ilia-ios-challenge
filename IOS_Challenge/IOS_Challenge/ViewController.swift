@@ -14,8 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let data = NetworkManager()
-        data.fetchNowPlayingMovies { (movies, error) in
-            print("lol")
+        data.fetchMovieDetail(movieID: 3) { (movie, error) in
+            print(movie)
         }
        
     }
