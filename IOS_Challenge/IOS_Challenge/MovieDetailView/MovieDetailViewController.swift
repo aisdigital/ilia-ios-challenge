@@ -19,6 +19,8 @@ class MovieDetailViewController: UIViewController {
         super.viewDidLoad()
         loadYoutube(videoID: "2LqzF5WauAw")
     }
+    
+    
     func loadYoutube(videoID:String) {
         guard
             let youtubeURL = URL(string: "https://www.youtube.com/embed/\(videoID)")

@@ -91,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="131.91964285714286"/>
         </scene>
-        <!--Movie Detail View Controller-->
+        <!--Movie-->
         <scene sceneID="MIi-GG-jo3">
             <objects>
                 <viewController id="S1b-2l-Tc9" customClass="MovieDetailViewController" customModule="IOS_Challenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,11 +99,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afV-9T-w89">
-                                <rect key="frame" x="0.0" y="88" width="414" height="225"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iEv-2k-Zyy">
+                                <rect key="frame" x="0.0" y="88" width="414" height="200"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="225" id="HrV-eT-y1i"/>
+                                    <constraint firstAttribute="height" constant="200" id="b99-bE-7zn"/>
                                 </constraints>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -113,15 +113,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="afV-9T-w89" firstAttribute="leading" secondItem="6w3-9v-vwK" secondAttribute="leading" id="IIY-Nk-sl9"/>
-                            <constraint firstItem="afV-9T-w89" firstAttribute="top" secondItem="6w3-9v-vwK" secondAttribute="top" id="cL9-gg-n8M"/>
-                            <constraint firstItem="6w3-9v-vwK" firstAttribute="trailing" secondItem="afV-9T-w89" secondAttribute="trailing" id="e65-0T-sIG"/>
+                            <constraint firstItem="iEv-2k-Zyy" firstAttribute="top" secondItem="6w3-9v-vwK" secondAttribute="top" id="0L3-9w-LwH"/>
+                            <constraint firstItem="iEv-2k-Zyy" firstAttribute="trailing" secondItem="6w3-9v-vwK" secondAttribute="trailing" id="6LL-5c-ZEp"/>
+                            <constraint firstItem="iEv-2k-Zyy" firstAttribute="leading" secondItem="6w3-9v-vwK" secondAttribute="leading" id="DTg-vP-XgX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6w3-9v-vwK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dlK-cy-gbt"/>
+                    <navigationItem key="navigationItem" title="Movie" id="dlK-cy-gbt"/>
                     <connections>
-                        <outlet property="playerView" destination="afV-9T-w89" id="TQ7-yW-Del"/>
+                        <outlet property="playerView" destination="iEv-2k-Zyy" id="ogY-v1-Wy7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xy9-8t-fsE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
