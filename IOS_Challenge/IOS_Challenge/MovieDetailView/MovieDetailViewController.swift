@@ -7,20 +7,24 @@
 //
 
 import UIKit
+import Alamofire
 import WebKit
-
-class MovieDetailViewController: UIViewController, WKUIDelegate {
+class MovieDetailViewController: UIViewController {
     
-
+  
+    @IBOutlet weak var playerView: WKWebView!
     
-    override func loadView() {
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadYoutube(videoID: "2LqzF5WauAw")
+    }
+    func loadYoutube(videoID:String) {
+        guard
+            let youtubeURL = URL(string: "https://www.youtube.com/embed/\(videoID)")
+            else { return }
+        playerView.load( URLRequest(url: youtubeURL) )
         
-        // Do any additional setup after loading the view.
     }
 
 }
