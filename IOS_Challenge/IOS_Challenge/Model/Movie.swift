@@ -30,7 +30,6 @@ struct Movie: Codable {
         case adult
         case backdropPath = "backdrop_path"
         case genres, id
-        
         case originalLanguage = "original_language"
         case originalTitle = "original_title"
         case overview, popularity
