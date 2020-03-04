@@ -9,27 +9,54 @@
 import Foundation
 import UIKit
 
+
+protocol ReloadViewDelegate {
+    func reloadView()
+}
+
 class FilmsTableViewModel{
     
-    var films: [Film]{
-        didSet{
-            self.filmsImage = [UIImage]()
-            for film in films{
-                self.filmsImage.append(NetworkUtils.loadImage(imagePath: film.imagePath))
-            }
-        }
-    }
+    var films: [Film]!
+    var theMovieAPI: TheMovieServiceAPI!
+    
+    var viewDelegate: ReloadViewDelegate?
     
     var filmsImage: [UIImage] = [UIImage]()
-    var theMoviesApi: TheMovieServiceAPI
     
     init() {
-        self.theMoviesApi = TheMovieServiceAPI()
-        self.films = theMoviesApi.fetchMovies(page: 1)
+        self.theMovieAPI = TheMovieServiceAPI()
+        self.theMovieAPI.fetchMovies(page: 1)
+        self.theMovieAPI.dataDelegate = self
+        self.films = [Film]()
     }
     
     func updateFilms(page: Int){
-        films = theMoviesApi.fetchMovies(page: page)
+        self.theMovieAPI.fetchMovies(page: page)
+    }
+    
+    
+}
+
+extension FilmsTableViewModel: UpdateDataDelegate{
+    func updateData(result: [Film]?) {
+        
+        if let res = result{
+            DispatchQueue.main.sync {
+                self.films = res
+                self.viewDelegate?.reloadView()
+            }
+        }
+    }
+}
+
+extension FilmsTableViewModel: UpdateImageDelegate{
+    
+    func updateImage(result: UIImage?) {
+        if let image = result{
+            DispatchQueue.main.sync {
+                
+            }
+        }
     }
     
     

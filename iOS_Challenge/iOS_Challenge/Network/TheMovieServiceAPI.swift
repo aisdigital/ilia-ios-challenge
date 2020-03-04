@@ -7,17 +7,31 @@
 //
 
 import Foundation
+import UIKit
+
+protocol UpdateDataDelegate {
+    func updateData(result: [Film]?)
+}
+
+protocol UpdateImageDelegate{
+    func updateImage(result: UIImage?)
+}
 
 class TheMovieServiceAPI {
     
     private let urlSession = URLSession.shared
     private let apiKey = NetworkConstants.apiKey
     
-    func fetchMovies(page: Int) -> [Film]{
+    var dataDelegate: UpdateDataDelegate?
+    var imageDelegate: UpdateImageDelegate?
+    
+    func fetchMovies(page: Int){
         var films = [Film]()
         let url = URL(string: NetworkConstants.baseUrl + "/movie/now_playing?api_key=\(self.apiKey)&language=pt_BR&page=\(page)")!
         
-        let task = urlSession.dataTask(with: url) {(data, response, error) in
+        let urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        
+        let task = urlSession.dataTask(with: urlRequest) {(data, response, error) in
             if error == nil{
                 
                 do {
@@ -29,18 +43,16 @@ class TheMovieServiceAPI {
                                 let title = movie["title"] as! String
                                 let overview = movie["overview"] as! String
                                 let releaseDate = movie["release_date"] as! String
-                                let genre = NetworkUtils.getGenre(genresId: movie["genre_ids"] as! [Int])
-                                print(genre)
                                 let imagePath = movie["poster_path"] as! String
                                 
                                 let film = Film(name: title,
                                                 description: overview,
                                                 releaseDate: String(releaseDate.dropLast(6)),
-                                                genre: genre,
                                                 imagePath: imagePath)
                                 
                                 films.append(film)
                             }
+                            self.dataDelegate?.updateData(result: films)
                         }
                     }
                 } catch let err {
@@ -51,7 +63,20 @@ class TheMovieServiceAPI {
         
         task.resume()
         
-        return films
+    }
+    
+    func loadImage(imagePath: String){
+        var image: UIImage? = UIImage()
+        let url = URL(string: NetworkConstants.baseImageUrl + imagePath)
+        
+        let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
+            if error == nil{
+                image = UIImage(data: data!)
+                self.imageDelegate?.updateImage(result: image)
+            }
+        }
+        
+        task.resume()
     }
     
     

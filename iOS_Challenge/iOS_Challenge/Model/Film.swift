@@ -12,14 +12,12 @@ class Film {
     var name: String
     var description: String
     var releaseDate: String
-    var genre: String
     var imagePath: String
     
-    init(name: String, description: String, releaseDate: String, genre: String, imagePath: String) {
+    init(name: String, description: String, releaseDate: String, imagePath: String) {
         self.name = name
         self.description = description
         self.releaseDate = releaseDate
-        self.genre = genre
         self.imagePath = imagePath
     }
 }
