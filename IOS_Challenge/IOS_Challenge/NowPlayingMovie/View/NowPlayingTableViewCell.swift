@@ -13,11 +13,24 @@ class NowPlayingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var moviePoster: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
-    
     @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
+    
+    var viewModel: NowPlayingCellViewModelProtocol!{
+        didSet{
+            self.viewModel.didReceiveImageData = { [unowned self] viewModel in
+                guard let data = viewModel.imageData else{
+                    return
+                }
+                self.moviePoster.image = UIImage(data: data)
+                self.imageActivityIndicator.stopAnimating()
+                self.imageActivityIndicator.isHidden = true
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        viewModel = NowPlayingCellViewModel(networkManager: NetworkManager())
         // Initialization code
     }
 
@@ -25,6 +38,11 @@ class NowPlayingTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func fetchImageData(imagePath: String){
+        self.imageActivityIndicator.startAnimating()
+        self.viewModel.fetchImage(imagePath: imagePath)
     }
 
 }

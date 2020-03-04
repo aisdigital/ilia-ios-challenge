@@ -20,7 +20,6 @@ class NowPlayingViewController: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +29,6 @@ class NowPlayingViewController: UIViewController {
         viewModel = NowPlayingViewModel(networkManager: NetworkManager())
         viewModel.fetchNowPlayingMovies()
         
-       
     }
 }
 
@@ -49,13 +47,7 @@ extension NowPlayingViewController : UITableViewDelegate, UITableViewDataSource 
         }
         
         cell.movieTitle.text = viewModel.nowPlaying.movies[indexPath.row].title
-        cell.imageActivityIndicator.startAnimating()
-        let data = NetworkManager()
-        data.fetchMoviePoster(imagePath: viewModel.nowPlaying.movies[indexPath.row].posterPath) { (data, error) in
-            cell.imageActivityIndicator.stopAnimating()
-            cell.imageActivityIndicator.isHidden = true
-            cell.moviePoster.image = UIImage(data: data!)
-        }
+        cell.fetchImageData(imagePath: viewModel.nowPlaying.movies[indexPath.row].posterPath)
         return cell
     }
     
