@@ -11,27 +11,29 @@ import Alamofire
 
 typealias FetchMoviesClosure = ((_ moviesNowPlaying : NowPlaying?, _ error : AFError?) -> Void)
 typealias FetchMovieClosure = ((_ movie: Movie?, _ error: AFError?) -> Void)
+typealias FetchImageClosure = ((_ imageData : Data?,_ error : AFError?)-> Void)
 
 protocol NetworkManagerProtocol {
     
     func fetchNowPlayingMovies(page: Int, completionHandler: @escaping FetchMoviesClosure)
-    //func fetchImages()
+    func fetchMovieDetail(movieID: Int, completionHandler: @escaping FetchMovieClosure)
+    func fetchMoviePoster(imagePath : String, completionHandler: @escaping FetchImageClosure)
     
 }
 
 class NetworkManager : NetworkManagerProtocol{
     
-    private let apiKey = "4d36c680390ba8046573f3e491db3ef5"
-    private let nowPlayingURL = "https://api.themoviedb.org/3/movie/now_playing"
-    private let movieDetailsURL = "https://api.themoviedb.org/3/movie/"
+    private let apiKey = "4d36c680390ba8046573f3e491db3ef5" //API key necessary to make the calls.
+    private let nowPlayingURL = "https://api.themoviedb.org/3/movie/now_playing" //URL to access movies that are playing on theathers
+    private let movieDetailsURL = "https://api.themoviedb.org/3/movie/" //URL to access details of a movie
+    private let posterURL = "https://image.tmdb.org/t/p/w500/" //URL to access the poster of a movie
     
     
     init() {}
     
+    //MARK: - Fetch now playing movies
     
-    
-    /*Function to fetch now playing movies on theathers. It can receive language and page as parameters.
-     Also receives a closure to send data.*/
+    /*Function to fetch now playing movies on theathers. It can receive language and page as parameters and a closure.*/
     func fetchNowPlayingMovies(page: Int = 1, completionHandler: @escaping FetchMoviesClosure){
         
         let params : Parameters = [
@@ -61,6 +63,7 @@ class NetworkManager : NetworkManagerProtocol{
     
     //MARK: - Fetch movie detail
 
+    /*Function to fetch full details of a single movie. It receives the movie id and a closure.**/
     func fetchMovieDetail(movieID: Int, completionHandler: @escaping FetchMovieClosure){
 
         let params : Parameters = [
@@ -83,8 +86,24 @@ class NetworkManager : NetworkManagerProtocol{
                 completionHandler(nil, error)
             }
         }
-
-
     }
     
+    
+    //MARK: - Fetch image
+    
+    /*Function to fetch the movie's poster. It receive an string with the path for the image and a closure**/
+    func fetchMoviePoster(imagePath : String, completionHandler: @escaping FetchImageClosure){
+        
+        AF.request("\(posterURL)\(imagePath)").response { (response) in
+            
+            switch response.result{
+            case .success(let data):
+                completionHandler(data, nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+            }
+        }
+        
+        
+    }
 }
