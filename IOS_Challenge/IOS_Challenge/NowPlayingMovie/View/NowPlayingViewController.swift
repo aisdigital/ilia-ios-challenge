@@ -12,39 +12,50 @@ class NowPlayingViewController: UIViewController {
     
     
     @IBOutlet weak var tableView: UITableView!
-    var nowPlaying : NowPlaying = NowPlaying(movies: [], page: 0, totalPages: 0)
+    var viewModel: NowPlayingViewModelProtocol!{
+        didSet{
+            self.viewModel.didChangeNowPlaying = { _ in
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        let data = NetworkManager()
+        viewModel = NowPlayingViewModel(networkManager: NetworkManager())
+        viewModel.fetchNowPlayingMovies()
         
-        data.fetchNowPlayingMovies { (nowPlaying, error) in
-            
-            self.nowPlaying = nowPlaying!
-            self.tableView.reloadData()
-            
-            
-        }
        
     }
 }
 
 extension NowPlayingViewController : UITableViewDelegate, UITableViewDataSource {
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return nowPlaying.movies.count
+        return viewModel.nowPlaying.movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell()
-        cell.textLabel?.text = self.nowPlaying.movies[indexPath.row].title
+        let identifier = "MovieCell"
+        
+        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? NowPlayingTableViewCell else{
+            fatalError("Could not setup table view cell.")
+        }
+        
+        cell.movieTitle.text = viewModel.nowPlaying.movies[indexPath.row].title
+        cell.imageActivityIndicator.startAnimating()
+        let data = NetworkManager()
+        data.fetchMoviePoster(imagePath: viewModel.nowPlaying.movies[indexPath.row].posterPath) { (data, error) in
+            cell.imageActivityIndicator.stopAnimating()
+            cell.imageActivityIndicator.isHidden = true
+            cell.moviePoster.image = UIImage(data: data!)
+        }
         return cell
     }
     
