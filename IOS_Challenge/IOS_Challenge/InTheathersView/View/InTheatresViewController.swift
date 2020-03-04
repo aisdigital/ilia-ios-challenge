@@ -14,7 +14,10 @@ class InTheatresViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var viewModel: InTheatresViewModelProtocol!{
         didSet{
-            self.viewModel.didChangeNowPlaying = { _ in
+            if self.tableView.isHidden{
+                self.tableView.isHidden = false
+            }
+            self.viewModel.didChangeInTheathers = { [unowned self] viewModel in
                 self.tableView.reloadData()
             }
         }
@@ -32,7 +35,9 @@ class InTheatresViewController: UIViewController {
     }
 }
 
-extension InTheatresViewController : UITableViewDelegate, UITableViewDataSource {
+extension InTheatresViewController : UITableViewDelegate, UITableViewDataSource{
+    
+    //MARK: - TableView Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.inTheatres.movies.count
@@ -47,11 +52,22 @@ extension InTheatresViewController : UITableViewDelegate, UITableViewDataSource 
         }
         
         cell.movieTitle.text = viewModel.inTheatres.movies[indexPath.row].title
-        cell.fetchImageData(imagePath: viewModel.inTheatres.movies[indexPath.row].posterPath)
+        if viewModel.inTheatres.movies[indexPath.row].posterPath != nil{
+            cell.fetchImageData(imagePath: viewModel.inTheatres.movies[indexPath.row].posterPath!)
+        }
+       
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.inTheatres.movies.count - 1{
+            viewModel.fetchNowPlayingMovies()
+        }
+    }
+    
+    //MARK: - Table View Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "MovieDetailSegue", sender: self)
     }
+    
 }

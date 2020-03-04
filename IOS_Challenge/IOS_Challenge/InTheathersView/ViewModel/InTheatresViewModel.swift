@@ -11,7 +11,7 @@ import Foundation
 protocol InTheatresViewModelProtocol: class{
     
     var inTheatres : InTheatres {get set}
-    var didChangeNowPlaying: ((InTheatresViewModelProtocol) -> ())? {get set}
+    var didChangeInTheathers: ((InTheatresViewModelProtocol) -> ())? {get set}
     
 
     init(networkManager : NetworkManager)
@@ -24,27 +24,40 @@ class InTheatresViewModel : InTheatresViewModelProtocol{
     
     var inTheatres: InTheatres{
         didSet{
-            didChangeNowPlaying?(self)
+            didChangeInTheathers?(self)
         }
     }
     
-    var didChangeNowPlaying: ((InTheatresViewModelProtocol) -> ())?
+    var didChangeInTheathers: ((InTheatresViewModelProtocol) -> ())?
     
     
     required init(networkManager: NetworkManager) {
         self.networkManager = networkManager
         self.inTheatres = InTheatres(movies: [], page: 0, totalPages: 0)
+        
     }
     
     
     
     func fetchNowPlayingMovies() {
+        print(self.inTheatres.page + 1)
         
-        networkManager.fetchInTheatresMovies { (nowPlaying, error) in
+            networkManager.fetchInTheatresMovies(page: self.inTheatres.page + 1) { (nowPlaying, error) in
+                
+                var inTheatresHelper = self.inTheatres
+                inTheatresHelper.movies.append(contentsOf: nowPlaying!.movies)
+                inTheatresHelper.page = nowPlaying!.page
+                
+                
+                self.inTheatres = inTheatresHelper
+            }
             
-                self.inTheatres = nowPlaying!
+        
+        
+        
+        
             
-        }
+            
     }
     
     
