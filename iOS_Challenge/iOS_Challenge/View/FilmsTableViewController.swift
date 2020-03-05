@@ -20,10 +20,8 @@ class FilmsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if filmsViewModel.films.count == 0{
-            return 3
-        }
-        return filmsViewModel.films.count
+        
+        return filmsViewModel.films.count 
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

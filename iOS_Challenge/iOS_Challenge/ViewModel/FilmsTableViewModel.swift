@@ -46,7 +46,6 @@ extension FilmsTableViewModel: UpdateDataDelegate{
                 self.films = res
                 self.viewDelegate?.reloadView()
                 for film in films{
-                    //filmsImage.append(theMovieAPI.loadImage(imagePath: film.imagePath))
                     theMovieAPI.loadImage(imagePath: film.imagePath)
                 }
             }

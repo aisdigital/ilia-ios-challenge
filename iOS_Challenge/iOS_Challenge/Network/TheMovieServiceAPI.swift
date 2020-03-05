@@ -25,6 +25,7 @@ class TheMovieServiceAPI {
     var dataDelegate: UpdateDataDelegate?
     var imageDelegate: UpdateImageDelegate?
     
+    
     func fetchMovies(page: Int){
         var films = [Film]()
         let url = URL(string: NetworkConstants.baseUrl + "/movie/now_playing?api_key=\(self.apiKey)&language=pt_BR&page=\(page)")!
@@ -65,14 +66,10 @@ class TheMovieServiceAPI {
         
     }
     
-    func loadImage(imagePath: String) /*-> UIImageView*/{
+    func loadImage(imagePath: String){
         var image: UIImage = UIImage()
         let urlString = NetworkConstants.baseImageUrl + imagePath
         let url = URL(string: urlString)!
-        
-//        let image = UIImageView()
-//
-//        image.load(url: url)
         
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             if error == nil{
@@ -82,8 +79,6 @@ class TheMovieServiceAPI {
         }
 
         task.resume()
-        
-        //return image
     }
     
     

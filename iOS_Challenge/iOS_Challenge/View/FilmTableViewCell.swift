@@ -12,10 +12,5 @@ class FilmTableViewCell: UITableViewCell {
 
     @IBOutlet weak var filmNameLabel: UILabel!
     @IBOutlet weak var filmImageView: UIImageView!
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 
 }
