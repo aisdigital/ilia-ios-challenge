@@ -17,7 +17,6 @@ protocol MovieDetailViewModelProtocol: class {
     init(networkManager : NetworkManager)
     func fetchMovie(movieID: Int)
     
-    
 }
 
 class MovieDetailViewModel : MovieDetailViewModelProtocol{

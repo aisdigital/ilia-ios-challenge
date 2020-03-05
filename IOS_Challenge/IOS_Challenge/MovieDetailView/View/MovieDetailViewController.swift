@@ -28,7 +28,6 @@ class MovieDetailViewController: UIViewController {
         didSet{
             self.viewModel.didChangeMovie = { [unowned self] viewModel in
                 
-                
                 self.titleLabel.text = viewModel.movie?.title
                 self.overviewTextView.text = viewModel.movie?.overview
                 
@@ -50,7 +49,6 @@ class MovieDetailViewController: UIViewController {
                 if viewModel.movie!.videos?.results!.count != 0{
                     self.loadYoutube(videoID: (viewModel.movie!.videos?.results![0].key)!)
                 }
-                
             }
         }
     }
