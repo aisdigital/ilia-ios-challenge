@@ -15,13 +15,13 @@ protocol MovieDetailViewModelProtocol: class {
     var didChangeMovie: ((MovieDetailViewModelProtocol) -> ())? {get set}
     
     init(networkManager : NetworkManager)
-    func fetchMovie(movieID: Int)
+    func fetchMovie(movieID: Int, completionHandler: @escaping (_ success: Bool) -> ())
     
 }
 
 class MovieDetailViewModel : MovieDetailViewModelProtocol{
     
-    let networkManager : NetworkManager
+    private let networkManager : NetworkManager
     var movie: Movie?{
         didSet{
             self.didChangeMovie?(self)
@@ -34,9 +34,10 @@ class MovieDetailViewModel : MovieDetailViewModelProtocol{
         self.networkManager = networkManager
     }
     
-    func fetchMovie(movieID: Int) {
+    func fetchMovie(movieID: Int, completionHandler: @escaping (_ success: Bool) -> ()) {
         networkManager.fetchMovieDetail(movieID: movieID) { (movie, error) in
             self.movie = movie
+            completionHandler(true)
         }
     }
     

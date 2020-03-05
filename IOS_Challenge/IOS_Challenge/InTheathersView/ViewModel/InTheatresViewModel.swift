@@ -15,7 +15,7 @@ protocol InTheatresViewModelProtocol: class{
     
 
     init(networkManager : NetworkManager)
-    func fetchNowPlayingMovies()
+    func fetchNowPlayingMovies(completionHandler: @escaping (_ success : Bool)->())
 }
 
 class InTheatresViewModel : InTheatresViewModelProtocol{
@@ -39,7 +39,7 @@ class InTheatresViewModel : InTheatresViewModelProtocol{
     
     
     
-    func fetchNowPlayingMovies() {
+    func fetchNowPlayingMovies(completionHandler: @escaping (_ success : Bool)->()) {
         print(self.inTheatres.page + 1)
         
             networkManager.fetchInTheatresMovies(page: self.inTheatres.page + 1) { (nowPlaying, error) in
@@ -50,6 +50,8 @@ class InTheatresViewModel : InTheatresViewModelProtocol{
                 
                 
                 self.inTheatres = inTheatresHelper
+                
+                completionHandler(true)
             }
     }
     

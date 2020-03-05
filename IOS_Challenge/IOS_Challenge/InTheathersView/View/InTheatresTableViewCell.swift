@@ -17,9 +17,6 @@ class InTheatresTableViewCell: UITableViewCell {
     
     var viewModel: InTheatresCellViewModelProtocol!{
         didSet{
-            
-            //TODO: - unowned bugging rotation for some reason
-            
             self.viewModel.didReceiveImageData = { [unowned self] viewModel in
                 guard let data = viewModel.imageData else{
                     return
@@ -34,13 +31,10 @@ class InTheatresTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         viewModel = NowPlayingCellViewModel(networkManager: NetworkManager())
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func fetchImageData(imagePath: String){

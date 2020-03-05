@@ -33,7 +33,9 @@ class NetworkManager : NetworkManagerProtocol{
     
     //MARK: - Fetch now playing movies
     
-    /*Function to fetch now playing movies on theathers. It can receive language and page as parameters and a closure.*/
+    /*
+     Function to fetch now playing movies on theathers. It can receive language and page as parameters and a closure.
+     */
     func fetchInTheatresMovies(page: Int = 1, completionHandler: @escaping FetchMoviesClosure){
         
         let params : Parameters = [
@@ -63,7 +65,9 @@ class NetworkManager : NetworkManagerProtocol{
     
     //MARK: - Fetch movie detail
 
-    /*Function to fetch full details of a single movie. It receives the movie id and a closure.**/
+    /*
+     Function to fetch full details of a single movie. It receives the movie id and a closure.
+     **/
     func fetchMovieDetail(movieID: Int, completionHandler: @escaping FetchMovieClosure){
 
         let params : Parameters = [
@@ -91,7 +95,9 @@ class NetworkManager : NetworkManagerProtocol{
     
     //MARK: - Fetch image
     
-    /*Function to fetch the movie's poster. It receive an string with the path for the image and a closure**/
+    /*
+     Function to fetch the movie's poster. It receive an string with the path for the image and a closure
+     **/
     func fetchMoviePoster(imagePath : String, completionHandler: @escaping FetchImageClosure){
         
         AF.request("\(posterURL)\(imagePath)").response { (response) in

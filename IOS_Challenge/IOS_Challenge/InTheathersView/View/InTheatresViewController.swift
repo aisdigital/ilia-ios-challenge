@@ -10,13 +10,12 @@ import UIKit
 
 class InTheatresViewController: UIViewController {
     
-    
+    //Outlets
     @IBOutlet weak var tableView: UITableView!
+    
+    //Local variables
     var viewModel: InTheatresViewModelProtocol!{
         didSet{
-            if self.tableView.isHidden{
-                self.tableView.isHidden = false
-            }
             self.viewModel.didChangeInTheathers = { [unowned self] viewModel in
                 self.tableView.reloadData()
             }
@@ -30,7 +29,7 @@ class InTheatresViewController: UIViewController {
         self.tableView.dataSource = self
         
         viewModel = InTheatresViewModel(networkManager: NetworkManager())
-        viewModel.fetchNowPlayingMovies()
+        viewModel.fetchNowPlayingMovies { _ in}
         
     }
 }
@@ -43,6 +42,7 @@ extension InTheatresViewController : UITableViewDelegate, UITableViewDataSource{
         return viewModel.inTheatres.movies.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let identifier = "MovieCell"
@@ -50,7 +50,6 @@ extension InTheatresViewController : UITableViewDelegate, UITableViewDataSource{
         guard let cell = self.tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? InTheatresTableViewCell else{
             fatalError("Could not setup table view cell.")
         }
-        
         cell.movieTitle.text = viewModel.inTheatres.movies[indexPath.row].title
         if viewModel.inTheatres.movies[indexPath.row].posterPath != nil{
             cell.fetchImageData(imagePath: viewModel.inTheatres.movies[indexPath.row].posterPath!)
@@ -61,24 +60,25 @@ extension InTheatresViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == viewModel.inTheatres.movies.count - 1{
-            viewModel.fetchNowPlayingMovies()
+            viewModel.fetchNowPlayingMovies { (_ ) in}
         }
     }
     
     //MARK: - Table View Delegate
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "MovieDetailSegue", sender: indexPath)
     }
+    
+    //MARK: - Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MovieDetailSegue"{
             if let destination = segue.destination as? MovieDetailViewController{
                 if let indexPath = sender as? IndexPath{
-                    
                     destination.movieID = viewModel.inTheatres.movies[indexPath.row].id
-                    
                 }
-                
             }
         }
     }
