@@ -16,10 +16,10 @@ class FilmsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.filmsViewModel = FilmsTableViewModel()
+        self.filmsViewModel.viewDelegate = self
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         if filmsViewModel.films.count == 0{
             return 3
         }
@@ -29,24 +29,25 @@ class FilmsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "filmCell", for: indexPath) as! FilmTableViewCell
         
-        if filmsViewModel.films.count == 0{
-            cell.filmNameLabel.text = "teste"
-            
-            return cell
+        if filmsViewModel.films.count > indexPath.row{
+            cell.filmNameLabel.text = filmsViewModel.films[indexPath.row].name
         }
-        cell.filmNameLabel.text = filmsViewModel.films[indexPath.row].name
-        //cell.filmImageView.image = filmsViewModel.filmsImage[indexPath.row]
         
+        if filmsViewModel.filmsImage.count > indexPath.row{
+            cell.filmImageView.image = filmsViewModel.filmsImage[indexPath.row]
+        }
 
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(filmsViewModel.films.count)
-        //print(filmsViewModel.theMovieAPI.films.count)
-        tableView.reloadData()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let detailViewController = segue.destination as? DetailViewController, let index = tableView.indexPathForSelectedRow?.row else {return}
+        
+        let detailViewModel = DetailViewModel(film: filmsViewModel.films[index])
+        
+        detailViewController.detailViewModel = detailViewModel
     }
-
 }
 
 extension FilmsTableViewController: ReloadViewDelegate{

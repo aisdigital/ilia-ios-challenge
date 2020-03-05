@@ -10,21 +10,31 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var releaseYearLabel: UILabel!
+    @IBOutlet weak var overviewLabel: UILabel!
+    
+    var detailViewModel: DetailViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        configInfo()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        self.detailViewModel = (sender as! DetailViewModel)
+
     }
-    */
+    
+    func configInfo(){
+        self.nameLabel.text = detailViewModel.name
+        self.releaseYearLabel.text = detailViewModel.releaseYear
+        self.overviewLabel.text = detailViewModel.overview
+    }
+
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        self.detailViewModel = (sender as! DetailViewModel)
+    }
 
 }

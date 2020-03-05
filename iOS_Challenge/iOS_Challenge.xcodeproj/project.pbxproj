@@ -19,6 +19,7 @@
 		8E2AAE94240FDC8D00C642E1 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AAE93240FDC8D00C642E1 /* NetworkConstants.swift */; };
 		8E2AAE98240FF9E700C642E1 /* FilmsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AAE97240FF9E700C642E1 /* FilmsTableViewModel.swift */; };
 		8E2AAE9A2410276800C642E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AAE992410276800C642E1 /* DetailViewController.swift */; };
+		8E2AAE9E24105AA900C642E1 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AAE9D24105AA900C642E1 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8E2AAE93240FDC8D00C642E1 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		8E2AAE97240FF9E700C642E1 /* FilmsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTableViewModel.swift; sourceTree = "<group>"; };
 		8E2AAE992410276800C642E1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8E2AAE9D24105AA900C642E1 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				8E2AAE97240FF9E700C642E1 /* FilmsTableViewModel.swift */,
+				8E2AAE9D24105AA900C642E1 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				8E2AAE94240FDC8D00C642E1 /* NetworkConstants.swift in Sources */,
 				8E2AAE92240FDC2D00C642E1 /* TheMovieServiceAPI.swift in Sources */,
 				8E2AAE8E240FCF0700C642E1 /* Film.swift in Sources */,
+				8E2AAE9E24105AA900C642E1 /* DetailViewModel.swift in Sources */,
 				8E2AAE8C240FCEE400C642E1 /* FilmsTableViewController.swift in Sources */,
 				8E2AAE90240FD8C900C642E1 /* FilmTableViewCell.swift in Sources */,
 				8E2AAE98240FF9E700C642E1 /* FilmsTableViewModel.swift in Sources */,

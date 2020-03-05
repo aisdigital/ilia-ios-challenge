@@ -44,6 +44,9 @@ extension FilmsTableViewModel: UpdateDataDelegate{
             DispatchQueue.main.sync {
                 self.films = res
                 self.viewDelegate?.reloadView()
+                for film in films{
+                    theMovieAPI.loadImage(imagePath: film.imagePath)
+                }
             }
         }
     }
@@ -54,7 +57,8 @@ extension FilmsTableViewModel: UpdateImageDelegate{
     func updateImage(result: UIImage?) {
         if let image = result{
             DispatchQueue.main.sync {
-                
+                self.filmsImage.append(image)
+                self.viewDelegate?.reloadView()
             }
         }
     }
