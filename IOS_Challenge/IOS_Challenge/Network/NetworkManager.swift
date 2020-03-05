@@ -33,9 +33,7 @@ class NetworkManager : NetworkManagerProtocol{
     
     //MARK: - Fetch now playing movies
     
-    /*
-     Function to fetch now playing movies on theathers. It can receive language and page as parameters and a closure.
-     */
+    /*Function to fetch now playing movies on theathers. It can receive language and page as parameters and a closure.*/
     func fetchInTheatresMovies(page: Int = 1, completionHandler: @escaping FetchMoviesClosure){
         
         let params : Parameters = [
