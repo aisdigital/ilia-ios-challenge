@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Filmes-->
+        <!--Films-->
         <scene sceneID="zB3-jx-acH">
             <objects>
                 <tableViewController interfaceStyle="dark" id="aZn-Rv-DJz" customClass="FilmsTableViewController" customModule="TheMovies" sceneMemberID="viewController">
@@ -64,7 +64,7 @@
                             <outlet property="delegate" destination="aZn-Rv-DJz" id="AW6-uh-aof"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Filmes" id="j0s-XP-rq4"/>
+                    <navigationItem key="navigationItem" title="Films" id="j0s-XP-rq4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9e-1s-xnf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

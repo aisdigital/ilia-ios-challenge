@@ -7,27 +7,57 @@
 //
 
 import XCTest
+@testable import TheMovies
 
 class iOS_ChallengeTests: XCTestCase {
 
+    var film: Film!
+    var image: UIImage!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.film = Film(name: "Nome", description: "Descricao", releaseDate: "2020", imagePath: "")
+        self.image = UIImage()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testTheMovieServiceAPIMovies(){
+        let theMoviesAPI = TheMovieServiceAPI()
+        let filmsViewModel = FilmsTableViewModel()
+        
+        theMoviesAPI.imageDelegate = filmsViewModel
+        theMoviesAPI.dataDelegate = filmsViewModel
+        
+        theMoviesAPI.fetchMovies(page: 1)
+        
+        XCTAssertEqual(filmsViewModel.films.count, 0)
+        
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testDetailViewModel(){
+        
+        let detailVM = DetailViewModel(film: film, image: image)
+        
+        XCTAssertEqual(detailVM.name, film.name)
+        XCTAssertEqual(detailVM.overview, film.description)
+        XCTAssertEqual(detailVM.releaseYear, film.releaseDate)
+    }
+    
+    func testDetailViewController(){
+        let detailVC = DetailViewController()
+        let detailVM = DetailViewModel(film: self.film, image: self.image)
+        
+        XCTAssertNotEqual(detailVC.detailViewModel?.name, detailVM.name)
+        XCTAssertNotEqual(detailVC.detailViewModel?.overview, detailVM.overview)
+        XCTAssertNotEqual(detailVC.detailViewModel?.releaseYear, detailVM.releaseYear)
+        
+        detailVC.detailViewModel = detailVM
+        
+        XCTAssertEqual(detailVC.detailViewModel?.name, detailVM.name)
+        XCTAssertEqual(detailVC.detailViewModel?.overview, detailVM.overview)
+        XCTAssertEqual(detailVC.detailViewModel?.releaseYear, detailVM.releaseYear)
     }
 
 }

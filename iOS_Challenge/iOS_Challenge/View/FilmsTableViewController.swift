@@ -42,7 +42,7 @@ class FilmsTableViewController: UITableViewController {
         
         guard let detailViewController = segue.destination as? DetailViewController, let index = tableView.indexPathForSelectedRow?.row else {return}
         
-        let detailViewModel = DetailViewModel(film: (filmsViewModel?.films[index])!, imageView: (filmsViewModel?.filmsImage[index])!)
+        let detailViewModel = DetailViewModel(film: (filmsViewModel?.films[index])!, image: (filmsViewModel?.filmsImage[index])!)
         
         detailViewController.detailViewModel = detailViewModel
     }
