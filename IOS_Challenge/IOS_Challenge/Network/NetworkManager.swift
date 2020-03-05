@@ -67,11 +67,11 @@ class NetworkManager : NetworkManagerProtocol{
     func fetchMovieDetail(movieID: Int, completionHandler: @escaping FetchMovieClosure){
 
         let params : Parameters = [
-            "api_key" : apiKey
+            "api_key" : apiKey,
+            "append_to_response" : "videos"
         ]
 
         AF.request("\(movieDetailsURL)\(movieID)", parameters: params).response { (response) in
-
             switch response.result{
 
             case .success:

@@ -51,13 +51,6 @@ class InTheatresViewModel : InTheatresViewModelProtocol{
                 
                 self.inTheatres = inTheatresHelper
             }
-            
-        
-        
-        
-        
-            
-            
     }
     
     

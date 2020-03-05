@@ -67,7 +67,20 @@ extension InTheatresViewController : UITableViewDelegate, UITableViewDataSource{
     
     //MARK: - Table View Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "MovieDetailSegue", sender: self)
+        performSegue(withIdentifier: "MovieDetailSegue", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MovieDetailSegue"{
+            if let destination = segue.destination as? MovieDetailViewController{
+                if let indexPath = sender as? IndexPath{
+                    
+                    destination.movieID = viewModel.inTheatres.movies[indexPath.row].id
+                    
+                }
+                
+            }
+        }
     }
     
 }
