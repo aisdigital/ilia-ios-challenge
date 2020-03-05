@@ -65,19 +65,25 @@ class TheMovieServiceAPI {
         
     }
     
-    func loadImage(imagePath: String){
-        var image: UIImage? = UIImage()
+    func loadImage(imagePath: String) /*-> UIImageView*/{
+        var image: UIImage = UIImage()
         let urlString = NetworkConstants.baseImageUrl + imagePath
         let url = URL(string: urlString)!
         
+//        let image = UIImageView()
+//
+//        image.load(url: url)
+        
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             if error == nil{
-                image = UIImage(data: data!)
+                image = UIImage(data: data!)!
                 self.imageDelegate?.updateImage(result: image)
             }
         }
-        
+
         task.resume()
+        
+        //return image
     }
     
     

@@ -27,6 +27,7 @@ class FilmsTableViewModel{
         self.theMovieAPI = TheMovieServiceAPI()
         self.theMovieAPI.fetchMovies(page: 1)
         self.theMovieAPI.dataDelegate = self
+        self.theMovieAPI.imageDelegate = self
         self.films = [Film]()
     }
     
@@ -45,6 +46,7 @@ extension FilmsTableViewModel: UpdateDataDelegate{
                 self.films = res
                 self.viewDelegate?.reloadView()
                 for film in films{
+                    //filmsImage.append(theMovieAPI.loadImage(imagePath: film.imagePath))
                     theMovieAPI.loadImage(imagePath: film.imagePath)
                 }
             }

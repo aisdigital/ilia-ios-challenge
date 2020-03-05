@@ -13,6 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var releaseYearLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     var detailViewModel: DetailViewModel!
     
@@ -31,6 +32,7 @@ class DetailViewController: UIViewController {
         self.nameLabel.text = detailViewModel.name
         self.releaseYearLabel.text = detailViewModel.releaseYear
         self.overviewLabel.text = detailViewModel.overview
+        self.imageView.image = detailViewModel.image
     }
 
     override func performSegue(withIdentifier identifier: String, sender: Any?) {
