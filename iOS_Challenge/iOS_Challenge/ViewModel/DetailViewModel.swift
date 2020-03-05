@@ -16,10 +16,10 @@ class DetailViewModel {
     var overview: String!
     var image: UIImage!
     
-    init(film: Film, imageView: UIImage) {
+    init(film: Film, image: UIImage) {
         self.name = film.name
         self.releaseYear = film.releaseDate
         self.overview = film.description
-        self.image = imageView
+        self.image = image
     }
 }

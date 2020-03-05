@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
-    var detailViewModel: DetailViewModel!
+    var detailViewModel: DetailViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +29,10 @@ class DetailViewController: UIViewController {
     }
     
     func configInfo(){
-        self.nameLabel.text = detailViewModel.name
-        self.releaseYearLabel.text = detailViewModel.releaseYear
-        self.overviewLabel.text = detailViewModel.overview
-        self.imageView.image = detailViewModel.image
+        self.nameLabel.text = detailViewModel?.name
+        self.releaseYearLabel.text = detailViewModel?.releaseYear
+        self.overviewLabel.text = detailViewModel?.overview
+        self.imageView.image = detailViewModel?.image
     }
 
     override func performSegue(withIdentifier identifier: String, sender: Any?) {
