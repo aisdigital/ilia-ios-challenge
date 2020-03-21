@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MoviesTableViewController.swift
 //  MoviesChallenge
 //
 //  Created by Lucas Santana Brito on 21/03/20.
@@ -8,13 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MoviesTableViewController: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
