@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 class DetailsMovieViewController: UIViewController, Storyboarded {
     
@@ -21,13 +22,84 @@ class DetailsMovieViewController: UIViewController, Storyboarded {
     @IBOutlet weak var watchTrailerButton: UIButton!
     
     var viewModel: DetailsMovieViewModel!
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(viewModel.detailsMovie.value?.title)
+        setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     @IBAction func goWatchTrailer(_ sender: UIButton) {
     }
     
+}
+
+extension DetailsMovieViewController {
+    private func setup() {
+        setupPoster()
+        setupTitleLabel()
+        setupYear()
+        setupGenres()
+        setupRuntime()
+        setupDescription()
+        setupButton()
+    }
+    
+    private func setupPoster() {
+        viewModel.detailsMovie
+            .asObservable()
+            .subscribe(onNext: { [unowned self] movie in
+                self.posterImageView.kf.setImage(with: movie?.getImagePoster())
+            }).disposed(by: disposeBag)
+    }
+    
+    private func setupTitleLabel() {
+        viewModel.detailsMovie
+            .asObservable()
+            .map { $0?.title ?? "Sem titulo" }
+            .bind(to: titleLabel.rx.text)
+            .disposed(by: disposeBag)
+    }
+    
+    private func setupYear() {
+        viewModel.detailsMovie
+            .asObservable()
+            .map { $0?.getDate() }
+            .bind(to: yearLabel.rx.text)
+            .disposed(by: disposeBag)
+    }
+    
+    private func setupGenres() {
+        viewModel.detailsMovie
+            .asObservable()
+            .map { $0?.genres.first?.name ?? "" }
+            .bind(to: genresLabel.rx.text)
+            .disposed(by: disposeBag)
+    }
+    
+    private func setupRuntime() {
+        viewModel.detailsMovie
+            .asObservable()
+            .map { $0?.getRuntime() }
+            .bind(to: runtimeLabels.rx.text)
+            .disposed(by: disposeBag)
+    }
+    
+    private func setupDescription() {
+        viewModel.detailsMovie
+            .asObservable()
+            .map { $0?.description }
+            .bind(to: desctiptionTextView.rx.text)
+            .disposed(by: disposeBag)
+    }
+    
+    private func setupButton() {
+        
+    }
+
 }

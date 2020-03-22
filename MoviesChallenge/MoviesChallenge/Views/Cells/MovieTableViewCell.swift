@@ -23,7 +23,7 @@ class MovieTableViewCell: UITableViewCell {
     func configureWithMovie(movie: Movie) {
         titleLabel.text = movie.title
         voteLabel.text = String(movie.vote) + "/10"
-        dateLabel.text = movie.date
+        dateLabel.text = Utils.getFormattedDate(dateString: movie.date)
         setupMovieImage(movie: movie)
     }
     

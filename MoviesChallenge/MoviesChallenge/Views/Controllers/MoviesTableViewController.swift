@@ -18,14 +18,34 @@ class MoviesTableViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTitle()
-        setupLoadMovies()
-        setupCellConfiguration()
-        setupCellTapHandling()
+        setup()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.barStyle = .black
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.largeTitleDisplayMode = .always
     }
 }
 
 extension MoviesTableViewController {
+    
+    private func setup() {
+        setupTitle()
+        setupLoadMovies()
+        setupCellConfiguration()
+        setupCellTapHandling()
+//        setupNavController()
+    }
+    
+    private func setupNavController() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     private func setupTitle() {
         title = "Movies List"
     }
@@ -56,13 +76,17 @@ extension MoviesTableViewController {
     }
     
     private func loadMoreMovies() {
-        tableView.rx.willDisplayCell.map { $0.indexPath.item }.distinctUntilChanged().withLatestFrom(viewModel.moviesList) {
-            (item, movies) -> Bool in
-            return item == movies.count - 10
-        }
-        .filter { $0 }
-        .subscribe(onNext: { [unowned self] _ in
-            self.viewModel.loadMovies()
-        }).disposed(by: disposeBag)
+        tableView
+            .rx
+            .willDisplayCell
+            .map { $0.indexPath.item }
+            .distinctUntilChanged()
+            .withLatestFrom(viewModel.moviesList) { (item, movies) -> Bool in
+                return item == movies.count - 10
+            }
+            .filter { $0 }
+            .subscribe(onNext: { [unowned self] _ in
+                self.viewModel.loadMovies()
+            }).disposed(by: disposeBag)
     }
 }
