@@ -10,7 +10,14 @@ import UIKit
 
 class MoviesTableViewController: UIViewController, Storyboarded {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTitle()
+    }
+    
+    private func setupTitle() {
+        title = "Movies List"
     }
 }
