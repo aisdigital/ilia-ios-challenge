@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Details Movie View Controller-->
         <scene sceneID="aDe-ix-7gz">
             <objects>
-                <viewController id="lhQ-mg-aKr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsMovieViewController" id="lhQ-mg-aKr" customClass="DetailsMovieViewController" customModule="MoviesChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Edb-Wz-Itm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,6 +139,9 @@
                                     <constraint firstAttribute="height" constant="40" id="mD1-JB-bnz"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goWatchTrailer:" destination="lhQ-mg-aKr" eventType="touchUpInside" id="HfF-Bj-k5O"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kIX-ui-1YN">
                                 <rect key="frame" x="20" y="420" width="193" height="49"/>
@@ -204,6 +207,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dHy-xt-Tz2"/>
                     </view>
+                    <connections>
+                        <outlet property="desctiptionTextView" destination="u7o-cy-p12" id="itI-UD-kKh"/>
+                        <outlet property="genresLabel" destination="cXR-ok-ibM" id="bDO-7o-CJD"/>
+                        <outlet property="posterImageView" destination="TLM-1o-bEh" id="W3H-Uj-OOq"/>
+                        <outlet property="runtimeLabels" destination="9Zu-4R-XJ1" id="lP8-QD-f93"/>
+                        <outlet property="titleLabel" destination="Jjj-ra-Kgb" id="moe-Kn-kLG"/>
+                        <outlet property="watchTrailerButton" destination="gDl-VF-sUT" id="ffU-EV-fKb"/>
+                        <outlet property="yearLabel" destination="jAJ-0f-fCP" id="6ko-fb-jsX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bi-Gt-pX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

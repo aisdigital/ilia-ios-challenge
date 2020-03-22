@@ -9,6 +9,7 @@
 import Foundation
 
 struct Movie: Decodable {
+    let id: Int
     let title: String
     let vote: Double
     let description: String
@@ -17,6 +18,7 @@ struct Movie: Decodable {
     let backdropPath: String?
     
     enum CodingKeys: String, CodingKey {
+        case id
         case title
         case vote = "vote_average"
         case description = "overview"

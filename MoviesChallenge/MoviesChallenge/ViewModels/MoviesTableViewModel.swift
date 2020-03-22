@@ -13,8 +13,8 @@ class MoviesTableViewModel {
     
     var resultMovies = BehaviorRelay<ResultMovies?>(value: nil)
     var moviesList = BehaviorRelay<[Movie]>(value: [])
-    var movie = BehaviorRelay<Movie?>(value: nil)
     var currentPage = 1
+    weak var coordinator: MainCoordinator?
     private var disposeBag = DisposeBag()
     
     func loadMovies() {
@@ -24,9 +24,19 @@ class MoviesTableViewModel {
             let newValue = self.moviesList.value + result.movies
             self.moviesList.accept(newValue)
             
-        }, onError: { (error) in
+        }, onError: { error in
             print(error)
         }).disposed(by: disposeBag)
+    }
+    
+    func showDetailsMovie(id: Int) {
+        API.getDetailsMovie(id: id)
+            .subscribe(onNext: { [unowned self] movie in
+                self.coordinator?.goToDetailsMovie(movie: movie)
+            }, onError: { error in
+                print(error)
+                
+            }).disposed(by: disposeBag)
     }
     
 }

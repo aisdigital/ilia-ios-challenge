@@ -18,6 +18,18 @@ class MainCoordinator: Coordinator {
     
     func start() {
         let vc = MoviesTableViewController.instantiate()
+        let viewModel = MoviesTableViewModel()
+        viewModel.coordinator = self
+        vc.viewModel = viewModel
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func goToDetailsMovie(movie: DetailsMovie) {
+        let vc = DetailsMovieViewController.instantiate()
+        let viewModel = DetailsMovieViewModel()
+        viewModel.detailsMovie.accept(movie)
+        viewModel.coordinator = self
+        vc.viewModel = viewModel
         navigationController.pushViewController(vc, animated: true)
     }
 }

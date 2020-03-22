@@ -13,7 +13,7 @@ import RxCocoa
 class MoviesTableViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var tableView: UITableView!
-    private var viewModel = MoviesTableViewModel()
+    var viewModel: MoviesTableViewModel!
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -21,6 +21,7 @@ class MoviesTableViewController: UIViewController, Storyboarded {
         setupTitle()
         setupLoadMovies()
         setupCellConfiguration()
+        setupCellTapHandling()
     }
 }
 
@@ -45,7 +46,16 @@ extension MoviesTableViewController {
         }.disposed(by: disposeBag)
     }
     
-    func loadMoreMovies() {
+    private func setupCellTapHandling() {
+        tableView
+            .rx
+            .modelSelected(Movie.self)
+            .subscribe(onNext: { [unowned self] movie in
+                self.viewModel.showDetailsMovie(id: movie.id)
+        }).disposed(by: disposeBag)
+    }
+    
+    private func loadMoreMovies() {
         tableView.rx.willDisplayCell.map { $0.indexPath.item }.distinctUntilChanged().withLatestFrom(viewModel.moviesList) {
             (item, movies) -> Bool in
             return item == movies.count - 10

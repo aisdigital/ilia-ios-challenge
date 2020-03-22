@@ -14,9 +14,22 @@ struct DetailsMovie: Decodable {
     let poster: String
     let runtime: Int
     let genres: [Genre]
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case description = "overview"
+        case poster = "poster_path"
+        case genres
+        case runtime
+    }
 }
 
 struct Genre: Decodable {
     let id: Int
     let name: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+    }
 }
