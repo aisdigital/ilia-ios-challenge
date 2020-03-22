@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieTableViewCell: UITableViewCell {
     
@@ -17,7 +18,22 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var voteLabel: UILabel!
     
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    static let identifier = "cell"
+    
+    func configureWithMovie(movie: Movie) {
+        titleLabel.text = movie.title
+        voteLabel.text = String(movie.vote) + "/10"
+        dateLabel.text = movie.date
+        setupMovieImage(movie: movie)
+    }
+    
+    func setupMovieImage(movie: Movie) {
+        movieImageView.kf.setImage(with: movie.imagePoster())
+        
+        movieImageView.layer.cornerRadius = 16
+        movieImageView.clipsToBounds = true
+        movieImageView.layer.shadowColor = UIColor.white.cgColor
+        movieImageView.layer.shadowOpacity = 1
+        movieImageView.layer.shadowOffset = CGSize.zero
     }
 }

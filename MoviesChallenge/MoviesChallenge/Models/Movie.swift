@@ -13,8 +13,8 @@ struct Movie: Decodable {
     let vote: Double
     let description: String
     let date: String
-    let posterPath: String
-    let backdropPath: String
+    let posterPath: String?
+    let backdropPath: String?
     
     enum CodingKeys: String, CodingKey {
         case title
@@ -24,9 +24,14 @@ struct Movie: Decodable {
         case posterPath = "poster_path"
         case backdropPath = "backdrop_path"
     }
+    
+    func imagePoster() -> URL? {
+        guard let posterPath = posterPath else { return nil }
+        return URL(string: API.urlBaseImageBig + posterPath)
+    }
 }
 
-struct Result: Decodable {
+struct ResultMovies: Decodable {
     let movies: [Movie]
     let totalPages: Int
     
