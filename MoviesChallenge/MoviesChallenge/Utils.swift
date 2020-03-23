@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class Utils {
     
@@ -32,4 +33,9 @@ final class Utils {
         return "\(hour)h \(min)m"
     }
     
+    static func alert(title: String, message: String, handler: @escaping ((UIAlertAction) -> Void)) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: handler))
+        return alert
+    }
 }

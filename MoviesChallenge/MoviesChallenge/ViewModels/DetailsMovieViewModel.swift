@@ -24,6 +24,7 @@ class DetailsMovieViewModel {
     }
     
     func getDetailsMovie() {
+        checkInternet()
         API.getDetailsMovie(id: idMovie)
             .subscribe(onNext: { [unowned self] movie in
                 self.detailsMovie.accept(movie)
@@ -35,5 +36,15 @@ class DetailsMovieViewModel {
     
     func showTrailer() {
         coordinator?.gotToTrailerMovie(idMovie: idMovie)
+    }
+    
+    private func checkInternet() {
+        if !API.isConnectedToInternet() {
+            let alert = Utils.alert(title: "Ops!", message: "Porfavor, verifique sua conexão com a internet.") { [unowned self] _ in
+                self.getDetailsMovie()
+            }
+            coordinator?.showAlert(alert: alert)
+            return
+        }
     }
 }

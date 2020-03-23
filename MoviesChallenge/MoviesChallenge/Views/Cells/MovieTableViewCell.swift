@@ -28,7 +28,7 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     func setupMovieImage(movie: Movie) {
-        movieImageView.kf.setImage(with: movie.imagePoster())
+        movieImageView.kf.setImage(with: movie.imagePoster(), placeholder: UIImage(named: "ic_movie_placeholder"))
         
         movieImageView.layer.cornerRadius = 16
         movieImageView.clipsToBounds = true

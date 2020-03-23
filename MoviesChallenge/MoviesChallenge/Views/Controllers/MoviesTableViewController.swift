@@ -39,13 +39,8 @@ extension MoviesTableViewController {
         setupLoadMovies()
         setupCellConfiguration()
         setupCellTapHandling()
-//        setupNavController()
     }
-    
-    private func setupNavController() {
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
+
     private func setupTitle() {
         title = "Movies List"
     }

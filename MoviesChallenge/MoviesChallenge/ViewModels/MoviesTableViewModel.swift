@@ -13,11 +13,13 @@ class MoviesTableViewModel {
     
     var resultMovies = BehaviorRelay<ResultMovies?>(value: nil)
     var moviesList = BehaviorRelay<[Movie]>(value: [])
+    var filterMoviesList = BehaviorRelay<[Movie]>(value: [])
     var currentPage = 1
     weak var coordinator: MainCoordinator?
     private var disposeBag = DisposeBag()
     
     func loadMovies() {
+        checkInternet()
         API.getMovies(page: currentPage).filter { $0.totalPages >= self.currentPage }
             .subscribe(onNext: { [unowned self] result in
             self.currentPage += 1
@@ -31,5 +33,15 @@ class MoviesTableViewModel {
     
     func showDetailsMovie(idMovie: Int) {
         coordinator?.goToDetailsMovie(idMovie: idMovie)
+    }
+    
+    private func checkInternet() {
+        if !API.isConnectedToInternet() {
+            let alert = Utils.alert(title: "Ops!", message: "Porfavor verifique sua conexão com a internet!") { [unowned self] _ in
+                self.loadMovies()
+            }
+            coordinator?.showAlert(alert: alert)
+            return
+        }
     }
 }

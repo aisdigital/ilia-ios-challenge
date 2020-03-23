@@ -36,7 +36,16 @@ class MainCoordinator: Coordinator {
     func gotToTrailerMovie(idMovie: Int) {
         let vc = TrailerMovieViewController.instantiate()
         let viewModel = TrailerMovieViewModel(idMovie: idMovie)
+        viewModel.coordinator = self
         vc.viewModel = viewModel
         navigationController.present(vc, animated: true, completion: nil)
+    }
+    
+    func back() {
+        navigationController.dismiss(animated: true, completion: nil)
+    }
+    
+    func showAlert(alert: UIAlertController) {
+        navigationController.present(alert, animated: true, completion: nil)
     }
 }

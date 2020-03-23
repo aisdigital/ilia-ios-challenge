@@ -51,7 +51,7 @@ extension DetailsMovieViewController {
         viewModel.detailsMovie
             .asObservable()
             .subscribe(onNext: { [unowned self] movie in
-                self.posterImageView.kf.setImage(with: movie?.getImagePoster())
+                self.posterImageView.kf.setImage(with: movie?.getImagePoster(), placeholder: UIImage(named: "ic_movie_placeholder"))
             }).disposed(by: disposeBag)
     }
     
