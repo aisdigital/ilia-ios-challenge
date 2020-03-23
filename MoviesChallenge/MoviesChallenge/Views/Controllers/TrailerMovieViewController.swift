@@ -29,7 +29,6 @@ extension TrailerMovieViewController {
         viewModel
             .getUrlTrailer()
             .subscribe(onNext: { [unowned self] urlRequest in
-                print(urlRequest)
                 self.webView.load(urlRequest)
             }).disposed(by: disposeBag)
     }

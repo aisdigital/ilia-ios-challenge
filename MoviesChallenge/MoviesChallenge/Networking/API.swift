@@ -14,7 +14,7 @@ struct API {
     
     static let urlBaseMovies = "https://api.themoviedb.org/3/movie/"
     static let endPointMovies = "now_playing"
-    static let apiKey = "659643b883f3e5aa46a5fc88f1e3f01f"
+    static let apiKey = ""
     static let language = "pt-BR"
     static let urlBaseImage = "http://image.tmdb.org/t/p/w185"
     static let urlBaseImageBig = "http://image.tmdb.org/t/p/w500"

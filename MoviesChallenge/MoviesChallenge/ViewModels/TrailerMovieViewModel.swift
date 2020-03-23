@@ -27,13 +27,14 @@ class TrailerMovieViewModel {
         API.getTrailer(id: idMovie)
             .subscribe(onNext: { [unowned self] resultTrailer in
                 self.trailerMovie.accept(resultTrailer.results)
+                self.checkUrlTrailer()
             }, onError: { error in
                 print(error)
             }).disposed(by: disposeBag)
     }
     
     func getUrlTrailer() -> Observable<URLRequest> {
-        trailerMovie.asObservable()
+       return trailerMovie.asObservable()
             .filter { $0.count > 0 }
             .map { $0.first!.getUrlTrailer() }.asObservable()
             
@@ -42,14 +43,8 @@ class TrailerMovieViewModel {
     func checkUrlTrailer() {
         trailerMovie.asObservable()
             .filter { $0.isEmpty }
-            .subscribe(onNext: { [unowned self] trailer in
-                print(trailer)
-                let alert = Utils.alert(title: "Ops!", message: "Não encontramos o trailer desse filme :/") { _ in
-                    self.coordinator?.back()
-                }
-                DispatchQueue.main.async {
-                    self.coordinator?.showAlert(alert: alert)
-                }
+            .subscribe(onNext: { [unowned self] _ in
+                self.coordinator?.back()
             }).disposed(by: disposeBag)
     }
     

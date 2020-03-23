@@ -26,8 +26,10 @@ class MoviesTableViewModel {
             let newValue = self.moviesList.value + result.movies
             self.moviesList.accept(newValue)
             
-        }, onError: { error in
-            print(error)
+        }, onError: { [unowned self] error in
+            let msg = API.apiKey.isEmpty ? "Porfavor, adicione uma key da api The moviesDB." : "Ocorreu um error!"
+            let alert = Utils.alert(title: "Ops!", message: msg, handler: nil)
+            self.coordinator?.showAlert(alert: alert)
         }).disposed(by: disposeBag)
     }
     

@@ -138,10 +138,10 @@
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kIX-ui-1YN">
-                                <rect key="frame" x="32" y="417.5" width="166.5" height="61"/>
+                                <rect key="frame" x="32" y="417.5" width="362" height="61"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjj-ra-Kgb">
-                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="32.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjj-ra-Kgb">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="32.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -182,6 +182,9 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Jjj-ra-Kgb" secondAttribute="trailing" constant="20" id="YQx-WH-xX2"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -196,6 +199,7 @@
                             <constraint firstItem="dHy-xt-Tz2" firstAttribute="bottom" secondItem="gDl-VF-sUT" secondAttribute="bottom" constant="16" id="Rcs-ze-K0N"/>
                             <constraint firstItem="kIX-ui-1YN" firstAttribute="leading" secondItem="dHy-xt-Tz2" secondAttribute="leading" constant="32" id="Rzj-X8-8sX"/>
                             <constraint firstItem="TLM-1o-bEh" firstAttribute="trailing" secondItem="dHy-xt-Tz2" secondAttribute="trailing" id="bFI-oE-7Aa"/>
+                            <constraint firstItem="dHy-xt-Tz2" firstAttribute="trailing" secondItem="kIX-ui-1YN" secondAttribute="trailing" constant="20" id="byd-dJ-QHE"/>
                             <constraint firstItem="u7o-cy-p12" firstAttribute="leading" secondItem="dHy-xt-Tz2" secondAttribute="leading" constant="32" id="joO-xi-qvR"/>
                             <constraint firstItem="kIX-ui-1YN" firstAttribute="top" secondItem="TLM-1o-bEh" secondAttribute="bottom" constant="12" id="leT-Oi-eyR"/>
                             <constraint firstItem="TLM-1o-bEh" firstAttribute="leading" secondItem="dHy-xt-Tz2" secondAttribute="leading" id="yV9-ZR-qS7"/>
