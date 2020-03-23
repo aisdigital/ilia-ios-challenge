@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class MainCoordinator: Coordinator {
     var childCoordinators =  [Coordinator]()
@@ -24,12 +25,18 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func goToDetailsMovie(movie: DetailsMovie) {
+    func goToDetailsMovie(idMovie: Int) {
         let vc = DetailsMovieViewController.instantiate()
-        let viewModel = DetailsMovieViewModel()
-        viewModel.detailsMovie.accept(movie)
+        let viewModel = DetailsMovieViewModel(idMovie: idMovie)
         viewModel.coordinator = self
         vc.viewModel = viewModel
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func gotToTrailerMovie(idMovie: Int) {
+        let vc = TrailerMovieViewController.instantiate()
+        let viewModel = TrailerMovieViewModel(idMovie: idMovie)
+        vc.viewModel = viewModel
+        navigationController.present(vc, animated: true, completion: nil)
     }
 }

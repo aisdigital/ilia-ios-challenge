@@ -9,6 +9,7 @@
 import Foundation
 
 struct DetailsMovie: Decodable {
+    let id: Int
     let title: String
     let description: String
     let poster: String?
@@ -17,6 +18,7 @@ struct DetailsMovie: Decodable {
     let date: String
     
     enum CodingKeys: String, CodingKey {
+        case id
         case title
         case description = "overview"
         case poster = "poster_path"

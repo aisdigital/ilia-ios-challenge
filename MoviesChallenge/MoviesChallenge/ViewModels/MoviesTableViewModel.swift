@@ -29,14 +29,7 @@ class MoviesTableViewModel {
         }).disposed(by: disposeBag)
     }
     
-    func showDetailsMovie(id: Int) {
-        API.getDetailsMovie(id: id)
-            .subscribe(onNext: { [unowned self] movie in
-                self.coordinator?.goToDetailsMovie(movie: movie)
-            }, onError: { error in
-                print(error)
-                
-            }).disposed(by: disposeBag)
+    func showDetailsMovie(idMovie: Int) {
+        coordinator?.goToDetailsMovie(idMovie: idMovie)
     }
-    
 }

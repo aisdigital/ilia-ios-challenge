@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Kingfisher
+import WebKit
 
 class DetailsMovieViewController: UIViewController, Storyboarded {
     
@@ -33,10 +34,6 @@ class DetailsMovieViewController: UIViewController, Storyboarded {
         super.viewWillAppear(animated)
         navigationItem.largeTitleDisplayMode = .never
     }
-    
-    @IBAction func goWatchTrailer(_ sender: UIButton) {
-    }
-    
 }
 
 extension DetailsMovieViewController {
@@ -47,7 +44,7 @@ extension DetailsMovieViewController {
         setupGenres()
         setupRuntime()
         setupDescription()
-        setupButton()
+        goToTrailer()
     }
     
     private func setupPoster() {
@@ -98,8 +95,12 @@ extension DetailsMovieViewController {
             .disposed(by: disposeBag)
     }
     
-    private func setupButton() {
-        
+    private func goToTrailer() {
+        watchTrailerButton
+            .rx
+            .tap
+            .subscribe(onNext: { [unowned self] _ in
+                self.viewModel.showTrailer()
+        }).disposed(by: disposeBag)
     }
-
 }

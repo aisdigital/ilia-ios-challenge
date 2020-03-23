@@ -71,7 +71,7 @@ extension MoviesTableViewController {
             .rx
             .modelSelected(Movie.self)
             .subscribe(onNext: { [unowned self] movie in
-                self.viewModel.showDetailsMovie(id: movie.id)
+                self.viewModel.showDetailsMovie(idMovie: movie.id)
         }).disposed(by: disposeBag)
     }
     

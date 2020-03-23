@@ -20,7 +20,7 @@ struct API {
     static let urlBaseImageBig = "http://image.tmdb.org/t/p/w500"
     
     static func getMovies(page: Int) -> Observable<ResultMovies> {
-        guard let url = URL(string: "\(urlBaseMovies)\(endPointMovies)?api_key=\(apiKey)&&language=\(language)&page=\(page)")
+        guard let url = URL(string: "\(urlBaseMovies)\(endPointMovies)?api_key=\(apiKey)&language=\(language)&page=\(page)")
         else { fatalError("Can't created URL") }
         
         return Observable.create { observer in
@@ -37,7 +37,7 @@ struct API {
     }
     
     static func getDetailsMovie(id: Int) -> Observable<DetailsMovie> {
-        guard let url = URL(string: "\(urlBaseMovies)\(id)?api_key=\(apiKey)&&language=\(language)")
+        guard let url = URL(string: "\(urlBaseMovies)\(id)?api_key=\(apiKey)&language=\(language)")
         else { fatalError("Can't created URL") }
         
         return Observable.create({ observer in
@@ -49,6 +49,25 @@ struct API {
                     observer.onError(error)
                 }
             }
+            return Disposables.create()
+        })
+    }
+    
+    static func getTrailer(id: Int) -> Observable<ResultTrailer> {
+        guard let url = URL(string: "\(urlBaseMovies)\(id)/videos?api_key=\(apiKey)&language=\(language)")
+            else { fatalError("Can't created URL") }
+        
+        return Observable.create({ observer in
+            
+            AF.request(url).responseDecodable(of: ResultTrailer.self) { response in
+                switch response.result {
+                case .success(let resultTrailer):
+                    observer.onNext(resultTrailer)
+                case .failure(let error):
+                    observer.onError(error)
+                }
+            }
+            
             return Disposables.create()
         })
     }
