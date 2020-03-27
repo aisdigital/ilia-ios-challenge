@@ -1,0 +1,9 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+target 'AIS-Challenge-MovieDB' do
+    pod 'Alamofire'
+    pod 'SwiftMessages'
+    pod 'AlamofireImage', '~> 4.0'
+    pod 'SDWebImage', '~> 5.0'
+end

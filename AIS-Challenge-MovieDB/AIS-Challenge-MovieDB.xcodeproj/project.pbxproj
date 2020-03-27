@@ -1,0 +1,801 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F76D63F125AB9EDA6DF96FB /* Pods_AIS_Challenge_MovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A383328905F9F192BC8187 /* Pods_AIS_Challenge_MovieDB.framework */; };
+		A4092599242DA8FC00CE4C98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4092598242DA8FC00CE4C98 /* AppDelegate.swift */; };
+		A409259B242DA8FC00CE4C98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409259A242DA8FC00CE4C98 /* SceneDelegate.swift */; };
+		A40925A0242DA8FC00CE4C98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A409259E242DA8FC00CE4C98 /* Main.storyboard */; };
+		A40925A2242DA90500CE4C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40925A1242DA90500CE4C98 /* Assets.xcassets */; };
+		A40925A5242DA90500CE4C98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40925A3242DA90500CE4C98 /* LaunchScreen.storyboard */; };
+		A40925B0242DA90500CE4C98 /* AIS_Challenge_MovieDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40925AF242DA90500CE4C98 /* AIS_Challenge_MovieDBTests.swift */; };
+		A40925BB242DA90500CE4C98 /* AIS_Challenge_MovieDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40925BA242DA90500CE4C98 /* AIS_Challenge_MovieDBUITests.swift */; };
+		A40925C9242DA9B900CE4C98 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A40925C8242DA9B900CE4C98 /* Podfile */; };
+		A40925CC242DACC700CE4C98 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40925CB242DACC700CE4C98 /* Home.swift */; };
+		A40925CE242DAFA600CE4C98 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40925CD242DAFA600CE4C98 /* HomePresenter.swift */; };
+		A40925D0242DB12700CE4C98 /* HomeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40925CF242DB12700CE4C98 /* HomeDelegate.swift */; };
+		A40925D2242DB1C000CE4C98 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40925D1242DB1C000CE4C98 /* HomeService.swift */; };
+		A40925D5242DB43900CE4C98 /* Requestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40925D4242DB43900CE4C98 /* Requestion.swift */; };
+		A40925D8242DB97C00CE4C98 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A40925D7242DB97C00CE4C98 /* Config.plist */; };
+		A40925DB242DC64700CE4C98 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40925DA242DC64700CE4C98 /* Constants.swift */; };
+		A4700836242DE88E00F9FFA7 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4700835242DE88E00F9FFA7 /* Movie.swift */; };
+		A4700838242DF0A100F9FFA7 /* NowPlayingMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4700837242DF0A100F9FFA7 /* NowPlayingMovies.swift */; };
+		A470083B242E06E400F9FFA7 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A470083A242E06E400F9FFA7 /* MovieTableViewCell.swift */; };
+		A470083E242E08A500F9FFA7 /* RootNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A470083D242E08A500F9FFA7 /* RootNavigationViewController.swift */; };
+		A4ADA627242E35A0009DACAC /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ADA626242E35A0009DACAC /* MovieDetails.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A40925AC242DA90500CE4C98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A409258D242DA8FC00CE4C98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4092594242DA8FC00CE4C98;
+			remoteInfo = "AIS-Challenge-MovieDB";
+		};
+		A40925B7242DA90500CE4C98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A409258D242DA8FC00CE4C98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4092594242DA8FC00CE4C98;
+			remoteInfo = "AIS-Challenge-MovieDB";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		42A383328905F9F192BC8187 /* Pods_AIS_Challenge_MovieDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIS_Challenge_MovieDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		686B20E1B0ED9C0B8DA65EC3 /* Pods-AIS-Challenge-MovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIS-Challenge-MovieDB.release.xcconfig"; path = "Target Support Files/Pods-AIS-Challenge-MovieDB/Pods-AIS-Challenge-MovieDB.release.xcconfig"; sourceTree = "<group>"; };
+		95009610DE3126F0C55BB5DE /* Pods-AIS-Challenge-MovieDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIS-Challenge-MovieDB.debug.xcconfig"; path = "Target Support Files/Pods-AIS-Challenge-MovieDB/Pods-AIS-Challenge-MovieDB.debug.xcconfig"; sourceTree = "<group>"; };
+		A4092595242DA8FC00CE4C98 /* AIS-Challenge-MovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AIS-Challenge-MovieDB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4092598242DA8FC00CE4C98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A409259A242DA8FC00CE4C98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A409259F242DA8FC00CE4C98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A40925A1242DA90500CE4C98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A40925A4242DA90500CE4C98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A40925A6242DA90500CE4C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A40925AB242DA90500CE4C98 /* AIS-Challenge-MovieDBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AIS-Challenge-MovieDBTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A40925AF242DA90500CE4C98 /* AIS_Challenge_MovieDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIS_Challenge_MovieDBTests.swift; sourceTree = "<group>"; };
+		A40925B1242DA90500CE4C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A40925B6242DA90500CE4C98 /* AIS-Challenge-MovieDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AIS-Challenge-MovieDBUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A40925BA242DA90500CE4C98 /* AIS_Challenge_MovieDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIS_Challenge_MovieDBUITests.swift; sourceTree = "<group>"; };
+		A40925BC242DA90500CE4C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A40925C8242DA9B900CE4C98 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A40925CB242DACC700CE4C98 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		A40925CD242DAFA600CE4C98 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		A40925CF242DB12700CE4C98 /* HomeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDelegate.swift; sourceTree = "<group>"; };
+		A40925D1242DB1C000CE4C98 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		A40925D4242DB43900CE4C98 /* Requestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestion.swift; sourceTree = "<group>"; };
+		A40925D7242DB97C00CE4C98 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		A40925DA242DC64700CE4C98 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A4700835242DE88E00F9FFA7 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		A4700837242DF0A100F9FFA7 /* NowPlayingMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingMovies.swift; sourceTree = "<group>"; };
+		A470083A242E06E400F9FFA7 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		A470083D242E08A500F9FFA7 /* RootNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationViewController.swift; sourceTree = "<group>"; };
+		A4ADA626242E35A0009DACAC /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4092592242DA8FC00CE4C98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F76D63F125AB9EDA6DF96FB /* Pods_AIS_Challenge_MovieDB.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A40925A8242DA90500CE4C98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A40925B3242DA90500CE4C98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76FE00002D77BC90B9ABC0B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42A383328905F9F192BC8187 /* Pods_AIS_Challenge_MovieDB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DDF47FD62DBD3085C51AB0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95009610DE3126F0C55BB5DE /* Pods-AIS-Challenge-MovieDB.debug.xcconfig */,
+				686B20E1B0ED9C0B8DA65EC3 /* Pods-AIS-Challenge-MovieDB.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A409258C242DA8FC00CE4C98 = {
+			isa = PBXGroup;
+			children = (
+				A40925C8242DA9B900CE4C98 /* Podfile */,
+				A4092597242DA8FC00CE4C98 /* AIS-Challenge-MovieDB */,
+				A40925AE242DA90500CE4C98 /* AIS-Challenge-MovieDBTests */,
+				A40925B9242DA90500CE4C98 /* AIS-Challenge-MovieDBUITests */,
+				A4092596242DA8FC00CE4C98 /* Products */,
+				9DDF47FD62DBD3085C51AB0C /* Pods */,
+				76FE00002D77BC90B9ABC0B5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A4092596242DA8FC00CE4C98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4092595242DA8FC00CE4C98 /* AIS-Challenge-MovieDB.app */,
+				A40925AB242DA90500CE4C98 /* AIS-Challenge-MovieDBTests.xctest */,
+				A40925B6242DA90500CE4C98 /* AIS-Challenge-MovieDBUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4092597242DA8FC00CE4C98 /* AIS-Challenge-MovieDB */ = {
+			isa = PBXGroup;
+			children = (
+				A4ADA61D242E2A0A009DACAC /* Cache */,
+				A4ADA619242E0F34009DACAC /* Common */,
+				A470083C242E087200F9FFA7 /* Controllers */,
+				A4700839242E06B100F9FFA7 /* Cells */,
+				A4700834242DE87900F9FFA7 /* Model */,
+				A40925D6242DB8C500CE4C98 /* Resources */,
+				A40925D3242DB3FE00CE4C98 /* MovieDB API */,
+				A4092598242DA8FC00CE4C98 /* AppDelegate.swift */,
+				A409259A242DA8FC00CE4C98 /* SceneDelegate.swift */,
+				A409259E242DA8FC00CE4C98 /* Main.storyboard */,
+				A40925A1242DA90500CE4C98 /* Assets.xcassets */,
+				A40925A3242DA90500CE4C98 /* LaunchScreen.storyboard */,
+				A40925A6242DA90500CE4C98 /* Info.plist */,
+			);
+			path = "AIS-Challenge-MovieDB";
+			sourceTree = "<group>";
+		};
+		A40925AE242DA90500CE4C98 /* AIS-Challenge-MovieDBTests */ = {
+			isa = PBXGroup;
+			children = (
+				A40925AF242DA90500CE4C98 /* AIS_Challenge_MovieDBTests.swift */,
+				A40925B1242DA90500CE4C98 /* Info.plist */,
+			);
+			path = "AIS-Challenge-MovieDBTests";
+			sourceTree = "<group>";
+		};
+		A40925B9242DA90500CE4C98 /* AIS-Challenge-MovieDBUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A40925BA242DA90500CE4C98 /* AIS_Challenge_MovieDBUITests.swift */,
+				A40925BC242DA90500CE4C98 /* Info.plist */,
+			);
+			path = "AIS-Challenge-MovieDBUITests";
+			sourceTree = "<group>";
+		};
+		A40925CA242DACAA00CE4C98 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A40925CB242DACC700CE4C98 /* Home.swift */,
+				A40925CF242DB12700CE4C98 /* HomeDelegate.swift */,
+				A40925CD242DAFA600CE4C98 /* HomePresenter.swift */,
+				A40925D1242DB1C000CE4C98 /* HomeService.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A40925D3242DB3FE00CE4C98 /* MovieDB API */ = {
+			isa = PBXGroup;
+			children = (
+				A40925D4242DB43900CE4C98 /* Requestion.swift */,
+			);
+			path = "MovieDB API";
+			sourceTree = "<group>";
+		};
+		A40925D6242DB8C500CE4C98 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A40925D7242DB97C00CE4C98 /* Config.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A40925D9242DC62600CE4C98 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A40925DA242DC64700CE4C98 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A4700834242DE87900F9FFA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4700835242DE88E00F9FFA7 /* Movie.swift */,
+				A4700837242DF0A100F9FFA7 /* NowPlayingMovies.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4700839242E06B100F9FFA7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A470083A242E06E400F9FFA7 /* MovieTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A470083C242E087200F9FFA7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A470083D242E08A500F9FFA7 /* RootNavigationViewController.swift */,
+				A4ADA625242E3578009DACAC /* MovieDetails */,
+				A40925CA242DACAA00CE4C98 /* Home */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A4ADA619242E0F34009DACAC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A4ADA622242E2B4A009DACAC /* Extensions */,
+				A40925D9242DC62600CE4C98 /* Constants */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A4ADA61D242E2A0A009DACAC /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		A4ADA622242E2B4A009DACAC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A4ADA625242E3578009DACAC /* MovieDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A4ADA626242E35A0009DACAC /* MovieDetails.swift */,
+			);
+			path = MovieDetails;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4092594242DA8FC00CE4C98 /* AIS-Challenge-MovieDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A40925BF242DA90500CE4C98 /* Build configuration list for PBXNativeTarget "AIS-Challenge-MovieDB" */;
+			buildPhases = (
+				C6653F73A50D97FC0B18C397 /* [CP] Check Pods Manifest.lock */,
+				A4092591242DA8FC00CE4C98 /* Sources */,
+				A4092592242DA8FC00CE4C98 /* Frameworks */,
+				A4092593242DA8FC00CE4C98 /* Resources */,
+				78F27D20F7027D7BB9BE6E4E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AIS-Challenge-MovieDB";
+			productName = "AIS-Challenge-MovieDB";
+			productReference = A4092595242DA8FC00CE4C98 /* AIS-Challenge-MovieDB.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A40925AA242DA90500CE4C98 /* AIS-Challenge-MovieDBTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A40925C2242DA90500CE4C98 /* Build configuration list for PBXNativeTarget "AIS-Challenge-MovieDBTests" */;
+			buildPhases = (
+				A40925A7242DA90500CE4C98 /* Sources */,
+				A40925A8242DA90500CE4C98 /* Frameworks */,
+				A40925A9242DA90500CE4C98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A40925AD242DA90500CE4C98 /* PBXTargetDependency */,
+			);
+			name = "AIS-Challenge-MovieDBTests";
+			productName = "AIS-Challenge-MovieDBTests";
+			productReference = A40925AB242DA90500CE4C98 /* AIS-Challenge-MovieDBTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A40925B5242DA90500CE4C98 /* AIS-Challenge-MovieDBUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A40925C5242DA90500CE4C98 /* Build configuration list for PBXNativeTarget "AIS-Challenge-MovieDBUITests" */;
+			buildPhases = (
+				A40925B2242DA90500CE4C98 /* Sources */,
+				A40925B3242DA90500CE4C98 /* Frameworks */,
+				A40925B4242DA90500CE4C98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A40925B8242DA90500CE4C98 /* PBXTargetDependency */,
+			);
+			name = "AIS-Challenge-MovieDBUITests";
+			productName = "AIS-Challenge-MovieDBUITests";
+			productReference = A40925B6242DA90500CE4C98 /* AIS-Challenge-MovieDBUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A409258D242DA8FC00CE4C98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Douglas Tonetto Pfeifer";
+				TargetAttributes = {
+					A4092594242DA8FC00CE4C98 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					A40925AA242DA90500CE4C98 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = A4092594242DA8FC00CE4C98;
+					};
+					A40925B5242DA90500CE4C98 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = A4092594242DA8FC00CE4C98;
+					};
+				};
+			};
+			buildConfigurationList = A4092590242DA8FC00CE4C98 /* Build configuration list for PBXProject "AIS-Challenge-MovieDB" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A409258C242DA8FC00CE4C98;
+			productRefGroup = A4092596242DA8FC00CE4C98 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4092594242DA8FC00CE4C98 /* AIS-Challenge-MovieDB */,
+				A40925AA242DA90500CE4C98 /* AIS-Challenge-MovieDBTests */,
+				A40925B5242DA90500CE4C98 /* AIS-Challenge-MovieDBUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4092593242DA8FC00CE4C98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A40925A5242DA90500CE4C98 /* LaunchScreen.storyboard in Resources */,
+				A40925A2242DA90500CE4C98 /* Assets.xcassets in Resources */,
+				A40925C9242DA9B900CE4C98 /* Podfile in Resources */,
+				A40925D8242DB97C00CE4C98 /* Config.plist in Resources */,
+				A40925A0242DA8FC00CE4C98 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A40925A9242DA90500CE4C98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A40925B4242DA90500CE4C98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78F27D20F7027D7BB9BE6E4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AIS-Challenge-MovieDB/Pods-AIS-Challenge-MovieDB-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AIS-Challenge-MovieDB/Pods-AIS-Challenge-MovieDB-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AIS-Challenge-MovieDB/Pods-AIS-Challenge-MovieDB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6653F73A50D97FC0B18C397 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AIS-Challenge-MovieDB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4092591242DA8FC00CE4C98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A470083E242E08A500F9FFA7 /* RootNavigationViewController.swift in Sources */,
+				A40925D5242DB43900CE4C98 /* Requestion.swift in Sources */,
+				A4ADA627242E35A0009DACAC /* MovieDetails.swift in Sources */,
+				A40925D2242DB1C000CE4C98 /* HomeService.swift in Sources */,
+				A4700836242DE88E00F9FFA7 /* Movie.swift in Sources */,
+				A40925D0242DB12700CE4C98 /* HomeDelegate.swift in Sources */,
+				A4700838242DF0A100F9FFA7 /* NowPlayingMovies.swift in Sources */,
+				A4092599242DA8FC00CE4C98 /* AppDelegate.swift in Sources */,
+				A409259B242DA8FC00CE4C98 /* SceneDelegate.swift in Sources */,
+				A40925CC242DACC700CE4C98 /* Home.swift in Sources */,
+				A40925CE242DAFA600CE4C98 /* HomePresenter.swift in Sources */,
+				A470083B242E06E400F9FFA7 /* MovieTableViewCell.swift in Sources */,
+				A40925DB242DC64700CE4C98 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A40925A7242DA90500CE4C98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A40925B0242DA90500CE4C98 /* AIS_Challenge_MovieDBTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A40925B2242DA90500CE4C98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A40925BB242DA90500CE4C98 /* AIS_Challenge_MovieDBUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A40925AD242DA90500CE4C98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4092594242DA8FC00CE4C98 /* AIS-Challenge-MovieDB */;
+			targetProxy = A40925AC242DA90500CE4C98 /* PBXContainerItemProxy */;
+		};
+		A40925B8242DA90500CE4C98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4092594242DA8FC00CE4C98 /* AIS-Challenge-MovieDB */;
+			targetProxy = A40925B7242DA90500CE4C98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A409259E242DA8FC00CE4C98 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A409259F242DA8FC00CE4C98 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A40925A3242DA90500CE4C98 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A40925A4242DA90500CE4C98 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A40925BD242DA90500CE4C98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A40925BE242DA90500CE4C98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A40925C0242DA90500CE4C98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95009610DE3126F0C55BB5DE /* Pods-AIS-Challenge-MovieDB.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HCF8GJX3JP;
+				INFOPLIST_FILE = "AIS-Challenge-MovieDB/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DouglasPfeifer.AIS-Challenge-MovieDB";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A40925C1242DA90500CE4C98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 686B20E1B0ED9C0B8DA65EC3 /* Pods-AIS-Challenge-MovieDB.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HCF8GJX3JP;
+				INFOPLIST_FILE = "AIS-Challenge-MovieDB/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DouglasPfeifer.AIS-Challenge-MovieDB";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A40925C3242DA90500CE4C98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HCF8GJX3JP;
+				INFOPLIST_FILE = "AIS-Challenge-MovieDBTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DouglasPfeifer.AIS-Challenge-MovieDBTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AIS-Challenge-MovieDB.app/AIS-Challenge-MovieDB";
+			};
+			name = Debug;
+		};
+		A40925C4242DA90500CE4C98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HCF8GJX3JP;
+				INFOPLIST_FILE = "AIS-Challenge-MovieDBTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DouglasPfeifer.AIS-Challenge-MovieDBTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AIS-Challenge-MovieDB.app/AIS-Challenge-MovieDB";
+			};
+			name = Release;
+		};
+		A40925C6242DA90500CE4C98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HCF8GJX3JP;
+				INFOPLIST_FILE = "AIS-Challenge-MovieDBUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DouglasPfeifer.AIS-Challenge-MovieDBUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AIS-Challenge-MovieDB";
+			};
+			name = Debug;
+		};
+		A40925C7242DA90500CE4C98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HCF8GJX3JP;
+				INFOPLIST_FILE = "AIS-Challenge-MovieDBUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DouglasPfeifer.AIS-Challenge-MovieDBUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AIS-Challenge-MovieDB";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4092590242DA8FC00CE4C98 /* Build configuration list for PBXProject "AIS-Challenge-MovieDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A40925BD242DA90500CE4C98 /* Debug */,
+				A40925BE242DA90500CE4C98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A40925BF242DA90500CE4C98 /* Build configuration list for PBXNativeTarget "AIS-Challenge-MovieDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A40925C0242DA90500CE4C98 /* Debug */,
+				A40925C1242DA90500CE4C98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A40925C2242DA90500CE4C98 /* Build configuration list for PBXNativeTarget "AIS-Challenge-MovieDBTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A40925C3242DA90500CE4C98 /* Debug */,
+				A40925C4242DA90500CE4C98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A40925C5242DA90500CE4C98 /* Build configuration list for PBXNativeTarget "AIS-Challenge-MovieDBUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A40925C6242DA90500CE4C98 /* Debug */,
+				A40925C7242DA90500CE4C98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A409258D242DA8FC00CE4C98 /* Project object */;
+}
