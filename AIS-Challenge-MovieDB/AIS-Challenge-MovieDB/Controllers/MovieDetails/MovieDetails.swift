@@ -28,13 +28,13 @@ class MovieDetails: UIViewController {
     }
     
     func setupUI() {
-        movieImage.sd_setImage(with: URL(string: movieImageURL!), placeholderImage: UIImage(named: "placeholder.png"))
+        movieImage.sd_setImage(with: URL(string: movieImageURL!), placeholderImage: UIImage(named: ImageStrings.placeholder))
         movieTitle.text = movie?.title
         movieDescription.text = movie?.overview
-        movieGenre.text = String(describing: movie?.genreIds!)
-        moviePopularity.text = String(describing: movie?.popularity!)
-        movieScore.text = String(describing: movie?.voteAverage!)
-        movieDate.text = String(describing: movie?.releaseDate!)
+        movieGenre.text = "\(movie!.genreIds!)"
+        moviePopularity.text = "\(movie!.popularity!)"
+        movieScore.text = "\(movie!.voteAverage!)"
+        movieDate.text = "\(movie!.releaseDate!)"
     }
 
     /*

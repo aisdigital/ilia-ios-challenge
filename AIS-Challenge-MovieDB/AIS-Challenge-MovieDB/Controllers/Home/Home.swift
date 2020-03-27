@@ -53,6 +53,7 @@ class Home: UIViewController {
             
             if success {
                 self.movies = moviesData?.results
+                self.movies = self.movies!.sorted(by: { $0.popularity! > $1.popularity! })
                 self.moviesTableView.reloadData()
             }
         }
@@ -79,7 +80,7 @@ class Home: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showMovieDetail" {
+        if segue.identifier == SegueStrings.movieToDetail {
             let destinationVC = segue.destination as! MovieDetails
             destinationVC.movie = selectedMovie!
             destinationVC.movieImageURL = selectedURL!

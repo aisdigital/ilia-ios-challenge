@@ -28,6 +28,7 @@
 		A470083B242E06E400F9FFA7 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A470083A242E06E400F9FFA7 /* MovieTableViewCell.swift */; };
 		A470083E242E08A500F9FFA7 /* RootNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A470083D242E08A500F9FFA7 /* RootNavigationViewController.swift */; };
 		A4ADA627242E35A0009DACAC /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ADA626242E35A0009DACAC /* MovieDetails.swift */; };
+		A4ADA629242E8CF1009DACAC /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ADA628242E8CF1009DACAC /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		A470083A242E06E400F9FFA7 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		A470083D242E08A500F9FFA7 /* RootNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationViewController.swift; sourceTree = "<group>"; };
 		A4ADA626242E35A0009DACAC /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
+		A4ADA628242E8CF1009DACAC /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				A40925DA242DC64700CE4C98 /* Constants.swift */,
+				A4ADA628242E8CF1009DACAC /* Strings.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				A40925D2242DB1C000CE4C98 /* HomeService.swift in Sources */,
 				A4700836242DE88E00F9FFA7 /* Movie.swift in Sources */,
 				A40925D0242DB12700CE4C98 /* HomeDelegate.swift in Sources */,
+				A4ADA629242E8CF1009DACAC /* Strings.swift in Sources */,
 				A4700838242DF0A100F9FFA7 /* NowPlayingMovies.swift in Sources */,
 				A4092599242DA8FC00CE4C98 /* AppDelegate.swift in Sources */,
 				A409259B242DA8FC00CE4C98 /* SceneDelegate.swift in Sources */,

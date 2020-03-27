@@ -20,18 +20,18 @@ protocol Requester {
 class Requestion: Requester {
     
     private func createURL(path: String, page: Int) -> String {
-        let bundlePath = Bundle.main.path(forResource: "Config", ofType: "plist")
+        let bundlePath = Bundle.main.path(forResource: BundleStrings.config, ofType: BundleStrings.plist)
         let config = NSDictionary(contentsOfFile: bundlePath!)
-        let baseURLString = config!["serverURL"] as! String
-        let apiKey = config!["movieDBAPIKey"] as! String
+        let baseURLString = config![BundleStrings.serverURL] as! String
+        let apiKey = config![BundleStrings.movieDBAPIKey] as! String
         
         return "\(baseURLString)/\(path)/?api_key=\(apiKey)&language=pt-BR&page=\(page)"
     }
     
     func createImageURL(path: String) -> String {
-        let bundlePath = Bundle.main.path(forResource: "Config", ofType: "plist")
+        let bundlePath = Bundle.main.path(forResource: BundleStrings.config, ofType: BundleStrings.plist)
         let config = NSDictionary(contentsOfFile: bundlePath!)
-        let baseURLString = config!["imageServerURL"] as! String
+        let baseURLString = config![BundleStrings.imageServerURL] as! String
         
         return "\(baseURLString)\(path)"
     }
@@ -43,9 +43,9 @@ class Requestion: Requester {
         .responseJSON {
             (response) in
             if let json = response.value as? Dictionary<String,Any> {
-                if let message = json["status_message"] as? String {
+                if let message = json[RequestStrings.statusMessage] as? String {
                     completion(false, String(message), nil)
-                } else if let _ = json["page"] {
+                } else if let _ = json[RequestStrings.page] {
                     let jsonData = response.data
                     let decoder = JSONDecoder()
                     do {
@@ -53,13 +53,13 @@ class Requestion: Requester {
                         completion(true, nil, nowPlayingMovies)
                     } catch {
                         print("JSON ERROR: ", error)
-                        completion(false, "Ocorreu um erro inesperado. #1", nil)
+                        completion(false, ErrorStrings.error1, nil)
                     }
                 } else {
-                    completion(false, "Ocorreu um erro inesperado. #2", nil)
+                    completion(false, ErrorStrings.error2, nil)
                 }
             } else {
-                completion(false, "Ocorreu um erro inesperado. #3", nil)
+                completion(false, ErrorStrings.error3, nil)
             }
         }
     }

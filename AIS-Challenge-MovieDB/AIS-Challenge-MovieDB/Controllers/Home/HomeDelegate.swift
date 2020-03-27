@@ -73,14 +73,14 @@ extension Home: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! MovieTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellStrings.movieCell, for: indexPath) as! MovieTableViewCell
         
         let imageURL = presenter.getMovieImageURL(path: movies![indexPath.row].backgroundPath!)
         
         if cell.movieImage.image == nil {
             cell.startLoading()
         }
-        cell.movieImage.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.png")) { (image, error, cache, url) in
+        cell.movieImage.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: ImageStrings.placeholder)) { (image, error, cache, url) in
             cell.stopLoading()
         }
         
@@ -94,7 +94,7 @@ extension Home: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         selectedMovie = movies![indexPath.row]
         selectedURL = presenter.getMovieImageURL(path: movies![indexPath.row].backgroundPath!)
-        performSegue(withIdentifier: "showMovieDetail", sender: indexPath)
+        performSegue(withIdentifier: SegueStrings.movieToDetail, sender: indexPath)
     }
 }
 
