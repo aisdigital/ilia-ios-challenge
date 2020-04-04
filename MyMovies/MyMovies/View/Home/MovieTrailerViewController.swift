@@ -21,5 +21,10 @@ class MovieTrailerViewController: UIViewController {
         
         playerView.play(videoID: youtubeKey)
     }
-
+    
+    
+    @IBAction func dismissView(_ sender: UITapGestureRecognizer) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

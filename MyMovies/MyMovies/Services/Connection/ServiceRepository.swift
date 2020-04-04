@@ -13,33 +13,18 @@ class ServiceRepository {
     static let API: String = getPlist(variable: "API")
     static let language: String = getPlist(variable: "language")
     static let movie: String = getPlist(variable: "movie")
+    static let videos: String = getPlist(variable: "videos")
+    static let search: String = getPlist(variable: "search")
     static let movieNowPlaying: String = getPlist(variable: "movieNowPlaying")
     static let movieUpcoming: String = getPlist(variable: "movieUpcoming")
-    static let series: String = getPlist(variable: "series")
-    static let seriesOnTheAir: String = getPlist(variable: "seriesOnTheAir")
-    static let seriesAiringToday: String = getPlist(variable: "seriesAiringToday")
     static let topRated: String = getPlist(variable: "topRated")
     static let popular: String = getPlist(variable: "popular")
-    static let season: String = getPlist(variable: "season")
-    
     
     //movieURL
     static func movieUrl(page: Int) -> String {
         let url =
                 "\(baseUrl)" +
                 "\(movie)" +
-                "\(popular)" +
-                "\(API)" +
-                "\(language)" +
-                "&page=\(page)"
-        return url
-    }
-    
-    //serieURL
-    static func serieUrl(page: Int) -> String {
-        let url =
-                "\(baseUrl)" +
-                "\(series)" +
                 "\(popular)" +
                 "\(API)" +
                 "\(language)" +
@@ -58,27 +43,28 @@ class ServiceRepository {
         return url
     }
     
-    //seriesDetail
-    static func seriesDetailUrl(serieId: Int) -> String {
+    //movieTrailer
+    static func movieTrailerUrl(movieId: Int) -> String {
         let url =
             "\(baseUrl)" +
-                "\(series)" +
-                "/\(serieId)" +
+                "\(movie)" +
+                "/\(movieId)" +
+                "\(videos)" +
                 "\(API)" +
                 "\(language)"
         return url
     }
     
-    //seriesEpisodesUrl
-    static func seriesEpisodesUrl(serieId: Int, seasonNumber: Int) -> String {
+    //search
+    static func movieSearchUrl(query: String, page: Int) -> String {
         let url =
             "\(baseUrl)" +
-                "\(series)" +
-                "/\(serieId)" +
-                "\(season)" +
-                "/\(seasonNumber)" +
+                "\(search)" +
+                "\(movie)" +
                 "\(API)" +
-                "\(language)"
+                "\(language)" +
+                "&query=\(query)" +
+                "&page=\(page)"
         return url
     }
     
