@@ -1,0 +1,6 @@
+framework module YouTubePlayerSwift {
+  umbrella header "YouTubePlayerSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

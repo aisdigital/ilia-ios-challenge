@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   service.plist
+   MyMovies
+
+   Created by Wesley Brito on 02/04/20.
+   Copyright (c) 2020 Wesley Brito. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+        <key>series</key>
+        <string>/tv</string>
+        <key>seriesOnTheAir</key>
+        <string>/on_the_air</string>
+        <key>seriesAiringToday</key>
+        <string>/airing_today</string>
+        <key>season</key>
+        <string>/season</string>
+        <key>movie</key>
+        <string>/movie</string>
+        <key>movieNowPlaying</key>
+        <string>/now_playing</string>
+        <key>movieUpcoming</key>
+        <string>/upcoming</string>
+        <key>topRated</key>
+        <string>/top_rated</string>
+        <key>popular</key>
+        <string>/popular</string>
+        <key>language</key>
+        <string>&amp;language=pt-BR</string>
+        <key>API</key>
+        <string>?api_key=9a778ff0d243fdb296f590210aacdf35</string>
+        <key>url</key>
+        <string>https://api.themoviedb.org/3</string>
+    </dict>
+</plist>
