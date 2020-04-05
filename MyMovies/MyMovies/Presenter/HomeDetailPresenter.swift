@@ -54,33 +54,9 @@ class HomeDetailPresenter {
     // MARK: - Get Infors
     
     func getMovieKey() -> String {
-        movieTrailerKey[0].key
+        if movieTrailerKey.count > 0 {
+            return movieTrailerKey[0].key
+        }
+        return ""
     }
-//    func getPosterUrl(_ index: Int) -> URL? {
-//        if let image = URL(string: "https://image.tmdb.org/t/p/w342\(movieList[index].posterPath)") {
-//            return image
-//        }
-//        return nil
-//    }
-//
-//    func getBackdropPathUrl(_ index: Int) -> URL? {
-//        if let image = URL(string: "https://image.tmdb.org/t/p/w342\(movieList[index].backdropPath)") {
-//            return image
-//        }
-//        return nil
-//    }
-//
-//
-//    func getTitle(_ index: Int) -> String {
-//        movieList[index].title
-//    }
-//
-//    func getVoteAverage(_ index: Int) -> Double {
-//        movieList[index].voteAverage
-//    }
-//
-//    func getItensCount() -> Int {
-//        return movieList.count
-//    }
-    
 }

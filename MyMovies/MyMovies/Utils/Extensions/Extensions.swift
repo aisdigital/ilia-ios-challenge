@@ -17,7 +17,7 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func loadingView(isEnabled: Bool, message: String? = "Loading...") {
+    func loadingView(isEnabled: Bool, message: String? = "Carregando...") {
         self.view.isUserInteractionEnabled = isEnabled
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         if isEnabled {
@@ -31,8 +31,22 @@ extension UIViewController {
             loadingIndicator.style = UIActivityIndicatorView.Style.medium
             loadingIndicator.startAnimating()
             alert.view.addSubview(loadingIndicator)
-            alert.view.accessibilityIdentifier = "Alert"
+            alert.view.accessibilityIdentifier = "alertView"
             present(alert, animated: true, completion: nil)
         }
+    }
+}
+
+extension Array where Element: Hashable {
+    func removingDuplicates() -> [Element] {
+        var addedDict = [Element: Bool]()
+        
+        return filter {
+            addedDict.updateValue(true, forKey: $0) == nil
+        }
+    }
+    
+    mutating func removeDuplicates() {
+        self = self.removingDuplicates()
     }
 }

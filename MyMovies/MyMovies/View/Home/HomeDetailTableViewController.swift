@@ -22,6 +22,7 @@ class HomeDetailTableViewController: UITableViewController, Storyboarded {
     @IBOutlet weak var averageLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var trailerButton: UIButton!
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
     
 
     override func viewDidLoad() {
@@ -35,6 +36,9 @@ class HomeDetailTableViewController: UITableViewController, Storyboarded {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        loadingView.isHidden = false
+        loadingView.startAnimating()
+        self.view.isUserInteractionEnabled = false
         homeDetailPresenter.loadMovieDetailTrailer(movieId: movieId)
     }
     
@@ -45,6 +49,9 @@ class HomeDetailTableViewController: UITableViewController, Storyboarded {
 
 extension HomeDetailTableViewController: HomeDetailPresenterDelegate {
     func requestComplete(_ movieError: RequestErrors?, _ trailerError: RequestErrors?) {
+        loadingView.isHidden = true
+        loadingView.stopAnimating()
+        self.view.isUserInteractionEnabled = true
         if let movieError = movieError,
         movieError == .unexpectedError,
         let trailerError = trailerError,

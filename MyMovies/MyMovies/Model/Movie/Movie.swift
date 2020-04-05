@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct MovieList: Decodable {
+struct MovieList: Decodable, Hashable {
+    
     var page: Int
     var totalResults: Int
     var totalPages: Int
@@ -22,7 +23,7 @@ struct MovieList: Decodable {
     }
 }
 
-struct Movie: Decodable {
+struct Movie: Decodable, Hashable {
     var id: Int
     var title: String
     var voteAverage: Double

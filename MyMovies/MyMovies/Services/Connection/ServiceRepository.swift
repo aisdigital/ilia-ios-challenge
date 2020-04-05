@@ -25,7 +25,7 @@ class ServiceRepository {
         let url =
                 "\(baseUrl)" +
                 "\(movie)" +
-                "\(popular)" +
+                "\(movieNowPlaying)" +
                 "\(API)" +
                 "\(language)" +
                 "&page=\(page)"

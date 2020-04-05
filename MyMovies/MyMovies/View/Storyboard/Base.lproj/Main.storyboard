@@ -224,6 +224,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView hidden="YES" verifyAmbiguity="off" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-xE-Dq2">
+                                                    <rect key="frame" x="188.5" y="169" width="37" height="37"/>
+                                                    <color key="color" red="0.0" green="0.1137254902" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="lk1-ng-i3m" secondAttribute="trailing" constant="16" id="1eZ-43-pi2"/>
@@ -231,8 +235,10 @@
                                                 <constraint firstItem="lk1-ng-i3m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="d2U-OI-cRe" secondAttribute="trailing" id="7Wa-ho-rib"/>
                                                 <constraint firstItem="CkY-CK-DzY" firstAttribute="top" secondItem="d2U-OI-cRe" secondAttribute="bottom" constant="16" id="7xW-Ud-azi"/>
                                                 <constraint firstItem="CkY-CK-DzY" firstAttribute="leading" secondItem="osN-AR-Auf" secondAttribute="leadingMargin" id="8RV-09-RLe"/>
+                                                <constraint firstItem="dnU-xE-Dq2" firstAttribute="centerY" secondItem="osN-AR-Auf" secondAttribute="centerY" id="C4v-o2-qPU"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="CkY-CK-DzY" secondAttribute="bottom" constant="8" id="Mts-xP-WWb"/>
                                                 <constraint firstItem="d2U-OI-cRe" firstAttribute="leading" secondItem="osN-AR-Auf" secondAttribute="leadingMargin" id="Myc-Wo-fNw"/>
+                                                <constraint firstItem="dnU-xE-Dq2" firstAttribute="centerX" secondItem="osN-AR-Auf" secondAttribute="centerX" id="Om8-xc-z8F"/>
                                                 <constraint firstItem="iEK-Cq-fwy" firstAttribute="leading" secondItem="lIh-1G-oAO" secondAttribute="trailing" constant="16" id="aDR-aV-Lkc"/>
                                                 <constraint firstItem="d2U-OI-cRe" firstAttribute="top" secondItem="lIh-1G-oAO" secondAttribute="bottom" constant="8" id="aP0-WV-PFQ"/>
                                                 <constraint firstItem="lIh-1G-oAO" firstAttribute="leading" secondItem="osN-AR-Auf" secondAttribute="leadingMargin" id="fSc-IW-aG4"/>
@@ -258,6 +264,7 @@
                     <connections>
                         <outlet property="averageLabel" destination="d2U-OI-cRe" id="Uah-DD-kDT"/>
                         <outlet property="descLabel" destination="CkY-CK-DzY" id="4Lu-DK-fpx"/>
+                        <outlet property="loadingView" destination="dnU-xE-Dq2" id="OCE-0Z-J3T"/>
                         <outlet property="posterImageView" destination="lIh-1G-oAO" id="9y8-91-yjP"/>
                         <outlet property="titleLabel" destination="iEK-Cq-fwy" id="Q4J-uO-jyJ"/>
                         <outlet property="trailerButton" destination="lk1-ng-i3m" id="Uct-eR-sNm"/>

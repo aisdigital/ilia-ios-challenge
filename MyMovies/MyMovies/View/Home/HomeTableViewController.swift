@@ -30,7 +30,6 @@ class HomeTableViewController: UITableViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         homePresenter.delegate = self
         fsPagerView.delegate = self
         fsPagerView.dataSource = self
@@ -170,5 +169,8 @@ extension HomeTableViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         return cell
     }
     
+    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
+        self.coordinator?.goToHomeDetailTableViewController(movieId: homePresenter.getId(index, isSearching), movieTitle: homePresenter.getTitle(index, isSearching))
+    }
     
 }

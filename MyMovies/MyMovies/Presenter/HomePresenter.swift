@@ -29,6 +29,7 @@ class HomePresenter {
             if let total = result?.totalPages {
                 self.movieTotalPages = total
             }
+            self.movieList.removeDuplicates()
             self.delegate?.movieFound(error)
         }
     }
