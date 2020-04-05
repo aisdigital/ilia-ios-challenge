@@ -9,8 +9,9 @@
 import UIKit
 import YouTubePlayerSwift
 
-class MovieTrailerViewController: UIViewController {
+class MovieTrailerViewController: UIViewController, Storyboarded {
     
+    weak var coordinator: MovieTrailerCoordinator?
     var youtubeKey: String = ""
     
     @IBOutlet weak var playerView: YouTubePlayerView!
@@ -22,9 +23,9 @@ class MovieTrailerViewController: UIViewController {
         playerView.play(videoID: youtubeKey)
     }
     
-    
-    @IBAction func dismissView(_ sender: UITapGestureRecognizer) {
-        self.dismiss(animated: true, completion: nil)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        coordinator?.movieTrailerDidFinish()
     }
     
 }

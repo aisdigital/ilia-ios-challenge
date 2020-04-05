@@ -10,7 +10,9 @@ import UIKit
 import Kingfisher
 import FSPagerView
 
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController, Storyboarded {
+    
+    weak var coordinator: HomeCoordinator?
     
     @IBOutlet weak var fsPagerView: FSPagerView! {
         didSet {
@@ -52,6 +54,7 @@ class HomeTableViewController: UITableViewController {
     }
     
     func searchControllerConfiguration() {
+        self.navigationItem.setHidesBackButton(true, animated: false)
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
@@ -131,6 +134,10 @@ extension HomeTableViewController {
             cell.voteAverageLabel.text = "\(homePresenter.getVoteAverage(indexPath.row, isSearching))"
         }
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.coordinator?.goToHomeDetailTableViewController(movieId: homePresenter.getId(indexPath.row, isSearching), movieTitle: homePresenter.getTitle(indexPath.row, isSearching))
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

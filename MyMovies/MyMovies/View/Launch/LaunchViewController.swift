@@ -9,13 +9,21 @@
 import UIKit
 import Lottie
 
-class LaunchViewController: UIViewController {
+class LaunchViewController: UIViewController, Storyboarded {
+    
+    weak var coordinator: MainCoordinator?
     
     @IBOutlet weak var animationView: LOTAnimationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: false)
         startAnimation()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     func startAnimation() {
@@ -23,9 +31,7 @@ class LaunchViewController: UIViewController {
         animationView.contentMode = .scaleAspectFit
         animationView.play { (finished) in
             if finished {
-                let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeTableViewController")
-                mainVC.modalPresentationStyle = .fullScreen
-                self.present(mainVC, animated: true, completion: nil)
+                self.coordinator?.goToHomeTableViewController()
             }
         }
     }

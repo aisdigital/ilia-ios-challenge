@@ -9,9 +9,11 @@
 import UIKit
 import Kingfisher
 
-class HomeDetailTableViewController: UITableViewController {
+class HomeDetailTableViewController: UITableViewController, Storyboarded {
     
+    weak var coordinator: HomeDetailCoordinator?
     var movieId: Int = 0
+    var movieTitle: String = ""
     
     private var homeDetailPresenter = HomeDetailPresenter()
     
@@ -24,7 +26,7 @@ class HomeDetailTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.title = movieTitle
         homeDetailPresenter.delegate = self
         trailerButton.layer.cornerRadius = 15
         trailerButton.layer.borderWidth = 2.0
@@ -36,8 +38,19 @@ class HomeDetailTableViewController: UITableViewController {
         homeDetailPresenter.loadMovieDetailTrailer(movieId: movieId)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    @IBAction func goToMovieTrailer(_ sender: UIButton) {
+        coordinator?.goToMovieTrailerViewController(youtubeKey: homeDetailPresenter.getMovieKey())
+    }
+}
+
+extension HomeDetailTableViewController: HomeDetailPresenterDelegate {
+    func requestComplete(_ movieError: RequestErrors?, _ trailerError: RequestErrors?) {
+        if let movieError = movieError,
+        movieError == .unexpectedError,
+        let trailerError = trailerError,
+        trailerError == .unexpectedError {
+            return
+        }
         if let movieDetail = homeDetailPresenter.movieDetail {
             posterImageView.kf.indicatorType = .activity
             posterImageView.kf.setImage(with: URL(string: "https://image.tmdb.org/t/p/w342\(movieDetail.posterPath)"))
@@ -45,29 +58,6 @@ class HomeDetailTableViewController: UITableViewController {
             averageLabel.text = "Votos: \(movieDetail.voteAverage)"
             descLabel.text = movieDetail.overview
             self.tableView.reloadData()
-        }
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "movieTrailer" {
-            if let vc = segue.destination as? MovieTrailerViewController {
-                vc.youtubeKey = homeDetailPresenter.getMovieKey()
-            }
-        }
-    }
-
-}
-
-extension HomeDetailTableViewController: HomeDetailPresenterDelegate {
-    func movieTrailerFound(_ error: RequestErrors?) {
-        if let error = error, error == .noInternet {
-            return
-        }
-    }
-    
-    func movieDetailFound(_ error: RequestErrors?) {
-        if let error = error, error == .noInternet {
-            return
         }
     }
 }

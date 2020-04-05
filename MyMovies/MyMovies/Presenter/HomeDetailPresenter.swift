@@ -11,8 +11,7 @@ import Foundation
 import Foundation
 
 protocol HomeDetailPresenterDelegate: AnyObject {
-    func movieDetailFound(_ error: RequestErrors?)
-    func movieTrailerFound(_ error: RequestErrors?)
+    func requestComplete(_ movieError: RequestErrors?, _ trailerError: RequestErrors?)
 }
 
 class HomeDetailPresenter {
@@ -21,6 +20,8 @@ class HomeDetailPresenter {
     
     var movieDetail: MovieDetail?
     var movieTrailerKey: [MovieTrailerKey] = []
+    var movieDetailError: RequestErrors?
+    var movieTrailerError: RequestErrors?
     
     func loadMovieDetailTrailer(movieId: Int) {
         let dispatchGroup = DispatchGroup()
@@ -29,7 +30,7 @@ class HomeDetailPresenter {
         ServiceConnection().makeHTTPGetRequest(ServiceRepository.movieDetailUrl(movieId: movieId), MovieDetail.self) { (result, error) in
             DispatchQueue.main.async {
                 self.movieDetail = result
-                self.delegate?.movieDetailFound(error)
+                self.movieDetailError = error
                 dispatchGroup.leave()
             }
         }
@@ -38,13 +39,14 @@ class HomeDetailPresenter {
         ServiceConnection().makeHTTPGetRequest(ServiceRepository.movieTrailerUrl(movieId: movieId), MovieTrailer.self) { (result, error) in
             DispatchQueue.main.async {
                 self.movieTrailerKey += result?.results ?? []
-                self.delegate?.movieTrailerFound(error)
+                self.movieTrailerError = error
                 dispatchGroup.leave()
             }
         }
         
         dispatchGroup.notify(queue: .main) {
-            print("success")
+            self.delegate?.requestComplete(self.movieDetailError, self.movieTrailerError)
+    
         }
         
     }
