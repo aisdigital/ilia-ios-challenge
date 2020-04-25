@@ -27,7 +27,7 @@ class BaseViewControllerWithScroll: UIViewController, BaseViewControllerWithScro
     
     @objc func showLoader() {
         
-        guard let window = SceneDelegate.window else { return }
+        guard let window = AppDelegate.window else { return }
         
         activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         activityIndicator.center = window.center

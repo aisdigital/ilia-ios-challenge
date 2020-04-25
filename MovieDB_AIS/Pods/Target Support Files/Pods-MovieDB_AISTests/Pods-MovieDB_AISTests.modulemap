@@ -1,0 +1,6 @@
+framework module Pods_MovieDB_AISTests {
+  umbrella header "Pods-MovieDB_AISTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

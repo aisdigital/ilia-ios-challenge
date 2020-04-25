@@ -1,0 +1,15 @@
+/*
+ Localizable.strings
+ 
+ 
+ Created by Rhullian Damião on 21/11/19.
+ Copyright © 2019. All rights reserved.
+ */
+
+// MARK: - ERROR MESSAGES
+"ErrorMessages_noConnection" = "No connection to the internet";
+"ErrorMessages_generic" = "Generic error given. Please call support!";
+"ErrorMessages_noParse" = "Unable to parse the object.";
+
+//MARK: - HOME STRINGS
+"HomeTitle" = "In theaters";

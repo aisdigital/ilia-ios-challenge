@@ -1,0 +1,15 @@
+/*
+ Localizable.strings
+ Divoem
+ 
+ Created by Rhullian Damião on 21/11/19.
+ Copyright © 2019 MBLabs. All rights reserved.
+ */
+
+// MARK: - ERROR MESSAGES
+"ErrorMessages_noConnection" = "Sem conexão com a internet.";
+"ErrorMessages_generic" = "Erro genérico. Contate o suporte!";
+"ErrorMessages_noParse" = "Não foi possível fazer o parseamento.";
+
+//MARK: - HOME STRINGS
+"HomeTitle" = "Filmes em cartaz";
