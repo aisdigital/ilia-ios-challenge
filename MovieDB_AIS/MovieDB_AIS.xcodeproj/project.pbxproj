@@ -17,6 +17,7 @@
 		C73577B124529BB300DAB2E3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73577AD24529BB300DAB2E3 /* BaseViewController.swift */; };
 		C73577B224529BB300DAB2E3 /* BaseViewControllerWithScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73577AE24529BB300DAB2E3 /* BaseViewControllerWithScroll.swift */; };
 		C73577B424529BB300DAB2E3 /* BasePresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73577B024529BB300DAB2E3 /* BasePresenterDelegate.swift */; };
+		C77324DC245526720001084D /* KingfisherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77324DB245526720001084D /* KingfisherService.swift */; };
 		C785A5512454B07D00A01E76 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C785A5502454B07D00A01E76 /* MovieCell.xib */; };
 		C785A5532454B09E00A01E76 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785A5522454B09E00A01E76 /* MovieCell.swift */; };
 		C785A5562454B0C000A01E76 /* MovieObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785A5552454B0C000A01E76 /* MovieObject.swift */; };
@@ -70,6 +71,7 @@
 		C73577AD24529BB300DAB2E3 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C73577AE24529BB300DAB2E3 /* BaseViewControllerWithScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerWithScroll.swift; sourceTree = "<group>"; };
 		C73577B024529BB300DAB2E3 /* BasePresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenterDelegate.swift; sourceTree = "<group>"; };
+		C77324DB245526720001084D /* KingfisherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherService.swift; sourceTree = "<group>"; };
 		C785A5502454B07D00A01E76 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		C785A5522454B09E00A01E76 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		C785A5552454B0C000A01E76 /* MovieObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieObject.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				C785A5572454B29800A01E76 /* ReusableCells.swift */,
 				C73577AC24529BB300DAB2E3 /* Bases */,
+				C77324DB245526720001084D /* KingfisherService.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				C785A5532454B09E00A01E76 /* MovieCell.swift in Sources */,
 				C7116AC02452B8A300D4E901 /* MovieDescriptionViewController.swift in Sources */,
 				C785A5672454BD9300A01E76 /* MovieDAO.swift in Sources */,
+				C77324DC245526720001084D /* KingfisherService.swift in Sources */,
 				C785A5602454B7B800A01E76 /* LocalizableProjectStrings.swift in Sources */,
 				C73577B224529BB300DAB2E3 /* BaseViewControllerWithScroll.swift in Sources */,
 				C785A5642454B99A00A01E76 /* MovieTarget.swift in Sources */,
@@ -639,6 +643,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -699,6 +704,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

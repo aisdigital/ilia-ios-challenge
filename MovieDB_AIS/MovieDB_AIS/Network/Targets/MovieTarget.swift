@@ -10,17 +10,20 @@ import Foundation
 import Moya
 
 enum MovieTarget {
-    case getAll
+    case getAll(page: Int)
 }
 
 extension MovieTarget: TargetType {
     var baseURL: URL {
-        return URL(string:"https://api.themoviedb.org/3")!
+        switch self {
+        case .getAll(let page):
+            return URL(string:"https://api.themoviedb.org/3/discover/movie?api_key=\(AppDelegate.getAPIKey())&language=pt-br&page=\(page)")!
+        }
     }
     
     var path: String {
         switch self {
-        case .getAll: return "/discover/movie?api_key=\(AppDelegate.getApiKey())"
+        default: return ""
         }
     }
     
@@ -43,6 +46,4 @@ extension MovieTarget: TargetType {
     var headers: [String : String]? {
         return ["content-type" : "appliaction/json"]
     }
-    
-    
 }

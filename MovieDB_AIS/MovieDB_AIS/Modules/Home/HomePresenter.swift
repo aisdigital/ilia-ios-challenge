@@ -9,6 +9,7 @@
 import Foundation
 
 protocol HomePresenterDelegate: BasePresenterDelegate {
+    var currentPage: Int { get set }
     func homePresenter(didGetMoviesSuccessfully movies: [MovieObject])
     func homePresenter(didFailToGetMovies failMessage: String)
 }
@@ -33,7 +34,7 @@ class HomePresenter {
     }
     
     func getMovies() {
-        MovieDAO.getMovies(success: { movies in
+        MovieDAO.getMovies(with: self.delegate?.currentPage ?? 1, success: { movies in
             self.delegate?.homePresenter(didGetMoviesSuccessfully: movies)
         }, failure: { message in
             self.delegate?.homePresenter(didFailToGetMovies: message)

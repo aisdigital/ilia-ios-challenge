@@ -7,6 +7,7 @@ target 'MovieDB_AIS' do
 
   # Pods for MovieDB_AIS
   pod 'Moya'
+  pod 'Kingfisher'
 
   target 'MovieDB_AISTests' do
     inherit! :search_paths

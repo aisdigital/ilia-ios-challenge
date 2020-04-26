@@ -6,20 +6,21 @@
 //  Copyright © 2020 RDevign. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class MovieObject: Codable {
-    let popularity: Double
-    let voteCount: Int
-    let video: Bool
-    let posterPath: String
-    let id: Int
-    let adult: Bool
-    let backdropPath, originalLanguage, originalTitle: String
-    let genreIDS: [Int]
+    let popularity: Double?
+    let voteCount: Int?
+    let video: Bool?
+    let posterPath: String?
+    let id: Int?
+    let adult: Bool?
+    let backdropPath, originalLanguage, originalTitle: String?
+    let genreIDS: [Int]?
     let title: String
-    let voteAverage: Int
+    let voteAverage: Double?
     let overview, releaseDate: String
+    var imageGetted: UIImage?
 
     enum CodingKeys: String, CodingKey {
         case popularity

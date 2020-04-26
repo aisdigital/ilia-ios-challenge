@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-MovieDB_AIS/Pods-MovieDB_AIS-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/Moya/Moya.framework

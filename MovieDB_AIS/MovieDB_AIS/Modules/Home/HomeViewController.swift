@@ -10,18 +10,19 @@ import UIKit
 
 class HomeViewController: BaseViewController {
 
-    enum HomeRouter {}
+    enum HomeRouter {
+        case description
+    }
     
     // MARK: - Outlets
     @IBOutlet weak var movieCollectionView: UICollectionView!
     
     // MARK: - Properties
     var presenter: HomePresenter!
-    var movies: [MovieObject] = [] {
+    var movies: [MovieObject] = []
+    var currentPage = 1 {
         didSet {
-            DispatchQueue.main.async {
-                self.movieCollectionView.reloadData()
-            }
+            self.presenter.getMovies()
         }
     }
     
@@ -54,8 +55,14 @@ class HomeViewController: BaseViewController {
     // MARK: - Methods
     func setupConfig() {
         self.presenter = HomePresenter(delegate: self)
-        MovieCell.registerNib(for: self.movieCollectionView)
+        self.setupCollection()
         self.title = HomeStrings.title.localized()
+    }
+    
+    func setupCollection() {
+        self.movieCollectionView.dataSource = self
+        self.movieCollectionView.delegate = self
+        MovieCell.registerNib(for: self.movieCollectionView)
     }
     
     // MARK: - Actions
@@ -65,7 +72,10 @@ class HomeViewController: BaseViewController {
 // MARK: - HomePresenterDelegate
 extension HomeViewController: HomePresenterDelegate {
     func homePresenter(didGetMoviesSuccessfully movies: [MovieObject]) {
-        self.movies = movies
+        self.movies.append(contentsOf: movies)
+        DispatchQueue.main.async {
+            self.movieCollectionView.reloadData()
+        }
     }
     
     func homePresenter(didFailToGetMovies failMessage: String) {
@@ -84,6 +94,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = MovieCell.dequeueCell(from: collectionView, for: indexPath)
         cell.movie = movies[indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width*0.95, height: 150)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == movies.count - 1 {
+            self.currentPage += 1
+        }
     }
 }
 

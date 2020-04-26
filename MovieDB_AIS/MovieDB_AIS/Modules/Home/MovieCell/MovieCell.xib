@@ -10,42 +10,52 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RXd-um-O9L" customClass="MovieCell" customModule="MovieDB_AIS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="277" height="126"/>
+            <rect key="frame" x="0.0" y="0.0" width="311" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2Xd-VJ-yH8">
-                <rect key="frame" x="0.0" y="0.0" width="277" height="126"/>
+                <rect key="frame" x="0.0" y="0.0" width="311" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CI-yR-Lue">
-                        <rect key="frame" x="16" y="20" width="186" height="18"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CI-yR-Lue">
+                        <rect key="frame" x="123" y="20" width="183" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                         <color key="textColor" red="0.27450980390000002" green="0.4039215686" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="-" translatesAutoresizingMaskIntoConstraints="NO" id="LbP-Pg-A9S">
-                        <rect key="frame" x="11" y="38" width="186" height="83"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="-" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbP-Pg-A9S">
+                        <rect key="frame" x="118" y="39.5" width="183" height="95.5"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tuw-Fg-9uU">
+                        <rect key="frame" x="0.0" y="0.0" width="108" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="108" id="s3h-NM-ohA"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 <constraints>
+                    <constraint firstItem="tuw-Fg-9uU" firstAttribute="leading" secondItem="2Xd-VJ-yH8" secondAttribute="leading" id="6x2-1Y-J3V"/>
                     <constraint firstItem="2CI-yR-Lue" firstAttribute="top" secondItem="2Xd-VJ-yH8" secondAttribute="top" constant="20" id="BOd-xp-DYV"/>
-                    <constraint firstAttribute="trailing" secondItem="2CI-yR-Lue" secondAttribute="trailing" constant="75" id="I4k-oB-d5a"/>
+                    <constraint firstItem="2CI-yR-Lue" firstAttribute="leading" secondItem="tuw-Fg-9uU" secondAttribute="trailing" constant="15" id="Bgw-SL-uRN"/>
+                    <constraint firstAttribute="trailing" secondItem="2CI-yR-Lue" secondAttribute="trailing" constant="5" id="I4k-oB-d5a"/>
                     <constraint firstItem="LbP-Pg-A9S" firstAttribute="centerX" secondItem="2CI-yR-Lue" secondAttribute="centerX" constant="-5" id="O88-qz-U23"/>
                     <constraint firstItem="LbP-Pg-A9S" firstAttribute="top" secondItem="2CI-yR-Lue" secondAttribute="bottom" id="SKw-bS-qJj"/>
-                    <constraint firstItem="2CI-yR-Lue" firstAttribute="leading" secondItem="2Xd-VJ-yH8" secondAttribute="leading" constant="16" id="W67-hW-OKd"/>
                     <constraint firstItem="LbP-Pg-A9S" firstAttribute="width" secondItem="2CI-yR-Lue" secondAttribute="width" id="aQO-Mc-CXZ"/>
-                    <constraint firstAttribute="bottom" secondItem="LbP-Pg-A9S" secondAttribute="bottom" constant="5" id="zT7-ZH-xWc"/>
+                    <constraint firstItem="tuw-Fg-9uU" firstAttribute="height" secondItem="2Xd-VJ-yH8" secondAttribute="height" id="m0x-dz-7RC"/>
+                    <constraint firstItem="tuw-Fg-9uU" firstAttribute="centerY" secondItem="2Xd-VJ-yH8" secondAttribute="centerY" id="r3p-08-yzq"/>
+                    <constraint firstAttribute="bottom" secondItem="LbP-Pg-A9S" secondAttribute="bottom" constant="15" id="zT7-ZH-xWc"/>
                 </constraints>
             </collectionViewCellContentView>
-            <size key="customSize" width="277" height="126"/>
+            <size key="customSize" width="311" height="126"/>
             <connections>
                 <outlet property="descriptionTextView" destination="LbP-Pg-A9S" id="gqs-jg-Lsk"/>
+                <outlet property="posterImage" destination="tuw-Fg-9uU" id="nuU-R9-jdR"/>
                 <outlet property="titleLabel" destination="2CI-yR-Lue" id="aqf-CW-CfX"/>
             </connections>
-            <point key="canvasLocation" x="112" y="52"/>
+            <point key="canvasLocation" x="134.05797101449275" y="51.5625"/>
         </collectionViewCell>
     </objects>
 </document>

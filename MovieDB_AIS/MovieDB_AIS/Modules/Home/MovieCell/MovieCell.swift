@@ -7,15 +7,35 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieCell: UICollectionViewCell {
     var movie: MovieObject? {
         didSet {
             self.titleLabel.text = movie?.title
-            self.descriptionTextView.text = movie?.overview
+            if let text = movie?.overview,
+                !text.isEmpty {
+                self.descriptionTextView.text = text
+            }
+            if let url = movie?.posterPath {
+                self.urlImage = URL(string: "http://image.tmdb.org/t/p/w300/"+url)
+            }
+        }
+    }
+    
+    var urlImage: URL? {
+        didSet {
+            guard let url = self.urlImage,
+                self.movie?.imageGetted == nil else {
+                    self.posterImage.image = self.movie?.imageGetted
+                    return
+            }
+            posterImage.kf.setImage(with: url)
+            self.movie?.imageGetted = self.posterImage.image
         }
     }
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var posterImage: UIImageView!
 }

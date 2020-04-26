@@ -13,10 +13,15 @@ class MovieDescriptionViewController: BaseViewController {
     enum MovieDescriptionRouter {}
     
     // MARK: - Outlets
-    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionView: UITextView!
+    @IBOutlet weak var originalLabel: UILabel!
+    @IBOutlet weak var avaliationLabel: UILabel!
+    @IBOutlet weak var posterImage: UIImageView!
     
     // MARK: - Properties
     var presenter: MovieDescriptionPresenter!
+    var movie: MovieObject!
     
     // MARK: - View Lifecycle
     
@@ -47,6 +52,15 @@ class MovieDescriptionViewController: BaseViewController {
     // MARK: - Methods
     func setupConfig() {
         self.presenter = MovieDescriptionPresenter(delegate: self)
+        self.setupLayout()
+    }
+    
+    func setupLayout() {
+        self.nameLabel.text = movie.title
+        self.originalLabel.text = movie.originalTitle
+        self.avaliationLabel.text = movie.voteAverage?.description
+        self.descriptionView.text = movie.overview
+        self.posterImage.image = movie.imageGetted
     }
     
     // MARK: - Actions

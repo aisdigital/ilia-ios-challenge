@@ -7,65 +7,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "04B945BE-220D-4843-A6C5-6FA13A0FF943"
-            shouldBeEnabled = "Yes"
+            uuid = "4CBE2806-CE43-4635-9879-8CC4090DFA01"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieDB_AIS/Network/DAO/MovieDAO.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "getMovies(success:failure:)"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getMovies(with:success:failure:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "751D6A26-10B6-4271-A80B-74FD7B4F26C6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MovieDB_AIS/Network/Targets/MovieTarget.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "path"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "751D6A26-10B6-4271-A80B-74FD7B4F26C6 - 89fd438a5d99e4f5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieDB_AIS.MovieTarget.path.getter : Swift.String"
-                  moduleName = "MovieDB_AIS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rhulliandamiao/Documents/iOS/Swift%20Study/AISDigital/iOS_Challenge/MovieDB_AIS/MovieDB_AIS/Network/Targets/MovieTarget.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "42">
-               </Location>
-               <Location
-                  uuid = "751D6A26-10B6-4271-A80B-74FD7B4F26C6 - 89fd438a5d99e4f5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieDB_AIS.MovieTarget.path.getter : Swift.String"
-                  moduleName = "MovieDB_AIS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rhulliandamiao/Documents/iOS/Swift%20Study/AISDigital/iOS_Challenge/MovieDB_AIS/MovieDB_AIS/Network/Targets/MovieTarget.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "321">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -36,12 +36,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return nav
     }
     
-    static func getApiKey() -> String {
-//        if let plist = Bundle.main.path(forResource: "Info", ofType: "plist"),
-//            let dict = NSDictionary(contentsOf: URL(string: plist)!) as? [String: Any] {
-//            return dict["API-Key"] as! String
-//        }
-        return "b89d52595b079277c9e211a8f1a1d64d"
+    static func getAPIKey() -> String {
+        let bundlePath = Bundle.main.path(forResource: "Info", ofType: "plist")
+        let config = NSDictionary(contentsOfFile: bundlePath!)
+        let apiKey = config!["API-Key"] as! String
+
+        return apiKey
     }
 }
 

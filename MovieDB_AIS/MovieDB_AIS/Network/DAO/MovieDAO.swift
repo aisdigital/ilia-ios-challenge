@@ -9,11 +9,12 @@
 import Moya
 
 class MovieDAO {
-    static func getMovies(success: @escaping (([MovieObject]) -> Void),
+    static func getMovies(with page:Int,
+                          success: @escaping (([MovieObject]) -> Void),
                           failure: @escaping ((String) -> Void)) {
         let provider = MoyaProvider<MovieTarget>()
         
-        provider.request(.getAll, completion: { result in
+        provider.request(.getAll(page: page), completion: { result in
             switch result {
             case .success(let response):
                 print("RESPONSE_SUCCESS: [\n \(try? response.mapString())\n]")
