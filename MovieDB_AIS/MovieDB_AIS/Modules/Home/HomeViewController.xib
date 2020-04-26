@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,29 +14,31 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XBt-VV-QQn">
-                    <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                    <rect key="frame" x="0.0" y="2" width="414" height="791"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9uU-x2-4VN">
+                    <viewLayoutGuide key="contentLayoutGuide" id="OGZ-V7-Sc0"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="0y8-5i-Git"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="9uU-x2-4VN">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="6"/>
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="XBt-VV-QQn" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="L2k-to-6AK"/>
-                <constraint firstItem="XBt-VV-QQn" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="MJW-vS-IBZ"/>
+                <constraint firstItem="XBt-VV-QQn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="L2k-to-6AK"/>
+                <constraint firstItem="XBt-VV-QQn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-6.5" id="MJW-vS-IBZ"/>
                 <constraint firstItem="XBt-VV-QQn" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="ORG-No-EEX"/>
-                <constraint firstItem="XBt-VV-QQn" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="YXI-p1-MAH"/>
+                <constraint firstItem="XBt-VV-QQn" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" constant="-17" id="YXI-p1-MAH"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="142"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <point key="canvasLocation" x="137.68115942028987" y="141.96428571428569"/>
         </view>
     </objects>
 </document>

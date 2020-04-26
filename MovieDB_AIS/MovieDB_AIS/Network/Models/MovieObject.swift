@@ -19,7 +19,7 @@ class MovieObject: Codable {
     let genreIDS: [Int]?
     let title: String
     let voteAverage: Double?
-    let overview, releaseDate: String
+    let overview, releaseDate: String?
     var imageGetted: UIImage?
 
     enum CodingKeys: String, CodingKey {

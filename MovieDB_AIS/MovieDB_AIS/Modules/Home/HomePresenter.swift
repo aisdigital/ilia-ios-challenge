@@ -10,7 +10,9 @@ import Foundation
 
 protocol HomePresenterDelegate: BasePresenterDelegate {
     var currentPage: Int { get set }
+    var searchCurrentPage: Int { get set }
     func homePresenter(didGetMoviesSuccessfully movies: [MovieObject])
+    func homePresenter(didSearchMoviesSuccessfully movies: [MovieObject])
     func homePresenter(didFailToGetMovies failMessage: String)
 }
 
@@ -38,6 +40,17 @@ class HomePresenter {
             self.delegate?.homePresenter(didGetMoviesSuccessfully: movies)
         }, failure: { message in
             self.delegate?.homePresenter(didFailToGetMovies: message)
+        })
+    }
+    
+    func searchMovie(with title: String) {
+
+        MovieDAO.searchMovies(with: title, and: delegate?.searchCurrentPage ?? 1, success: { movies in
+            self.delegate?.homePresenter(didSearchMoviesSuccessfully: movies)
+            
+        }, failure: { error in
+            self.delegate?.homePresenter(didFailToGetMovies: error)
+            
         })
     }
 }

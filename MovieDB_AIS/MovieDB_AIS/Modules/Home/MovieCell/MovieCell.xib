@@ -28,7 +28,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tuw-Fg-9uU">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="tuw-Fg-9uU">
                         <rect key="frame" x="0.0" y="0.0" width="108" height="150"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="108" id="s3h-NM-ohA"/>
@@ -58,4 +58,7 @@
             <point key="canvasLocation" x="134.05797101449275" y="51.5625"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="placeHolder" width="189" height="267"/>
+    </resources>
 </document>
