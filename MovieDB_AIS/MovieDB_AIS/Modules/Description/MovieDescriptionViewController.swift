@@ -60,7 +60,13 @@ class MovieDescriptionViewController: BaseViewController {
         self.originalLabel.text = movie.originalTitle
         self.avaliationLabel.text = movie.voteAverage?.description
         self.descriptionView.text = movie.overview
-        self.posterImage.image = movie.imageGetted
+        DispatchQueue.main.async {
+            if let url = self.movie?.posterPath,
+                let link = URL(string: "http://image.tmdb.org/t/p/w300/"+url) {
+                self.posterImage.kf.setImage(with: link)
+            }
+            
+        }
     }
     
     // MARK: - Actions

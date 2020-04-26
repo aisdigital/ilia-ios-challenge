@@ -31,7 +31,6 @@ class MovieCell: UICollectionViewCell {
                     return
             }
             posterImage.kf.setImage(with: url)
-            self.movie?.imageGetted = self.posterImage.image
         }
     }
     

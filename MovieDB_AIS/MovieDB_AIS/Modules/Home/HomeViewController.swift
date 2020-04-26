@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: BaseViewController {
 
     enum HomeRouter {
-        case description
+        case description(movieSelected: MovieObject)
     }
     
     // MARK: - Outlets
@@ -64,7 +64,7 @@ class HomeViewController: BaseViewController {
         self.movieCollectionView.delegate = self
         MovieCell.registerNib(for: self.movieCollectionView)
     }
-    
+        
     // MARK: - Actions
 
 }
@@ -105,10 +105,20 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             self.currentPage += 1
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        navigate(to: .description(movieSelected: movies[indexPath.row]))
+    }
 }
 
 // MARK: - ROUTER FUNCTIONS
 extension HomeViewController {
     func navigate(to selected: HomeRouter) {
+        switch selected {
+        case .description(let movieSelected):
+            let vc = MovieDescriptionViewController()
+            vc.movie = movieSelected
+            self.present(vc, animated: true, completion: nil)
+        }
     }
 }
