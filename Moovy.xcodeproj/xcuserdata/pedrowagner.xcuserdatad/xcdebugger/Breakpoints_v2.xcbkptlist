@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1301467F-5962-48EE-81AF-22C9D5D2DBD7"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FD4DECF6-D8B4-4FE9-AAD1-87B5906AEB92"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Moovy/Core/Extensions/UIImageViewExtensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "downloadImage(for:withSize:imageType:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FD4DECF6-D8B4-4FE9-AAD1-87B5906AEB92 - 8bc0112ea360998d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in Moovy):__C.UIImageView.downloadImage(for: Swift.String, withSize: Moovy.ImageSize, imageType: Moovy.ImageType) -&gt; ()"
+                  moduleName = "Moovy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pedrowagner/Documents/Workspace/Personal/Moovy/Moovy/Core/Extensions/UIImageViewExtensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "798">
+               </Location>
+               <Location
+                  uuid = "FD4DECF6-D8B4-4FE9-AAD1-87B5906AEB92 - 523a0333b80e9b0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in (extension in Moovy):__C.UIImageView.downloadImage(for: Swift.String, withSize: Moovy.ImageSize, imageType: Moovy.ImageType) -&gt; ()"
+                  moduleName = "Moovy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pedrowagner/Documents/Workspace/Personal/Moovy/Moovy/Core/Extensions/UIImageViewExtensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "310">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "807066F5-AEBE-4950-9D77-C7A8E8A79E00"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Moovy/Core/Extensions/UIImageViewExtensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "downloadImage(for:withSize:imageType:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3637CA72-1AC6-437D-A022-9C3C56412B28"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Moovy/Scenes/Movies Detail View Controller/MovieDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "buildDataSource()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

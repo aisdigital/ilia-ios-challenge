@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Moovy
+
+  Created by Pedro Arenhardt Wagner  on 04/05/20.
+  Copyright © 2020 Pedro Arenhardt Wagner . All rights reserved.
+*/
+
+// MARK: - String Constants
+"Movies" = "Filmes";
+"MovieSearchBarPlaceholder" = "Procure por um filme...";
+"TotalRatings" = "Votos Totais";
+"AverageRatings" = "Nota Média";
+"Overview" = "DESCRIÇÃO";
+"Cast" = "ELENCO";
+"Crew" = "EQUIPE";
+
+// MARK: - Error Constants
+"Error" = "Erro";
+"GenericFetchErrorMessage" = "Houve um problema carregando os dados.";
+"GenericParseErrorMessage" = "Houve um problema ao ler os dados. Eles podem estar no formato incorreto";
+"NoConnectionTitle" = "Sem conexão a internet";
+"NoConnectionMessage" = "Você não está conectado na internet. Por favor, conecte-se, e tente novamente";

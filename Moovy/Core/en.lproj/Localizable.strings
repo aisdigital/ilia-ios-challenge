@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Moovy
+
+  Created by Pedro Arenhardt Wagner  on 04/05/20.
+  Copyright © 2020 Pedro Arenhardt Wagner . All rights reserved.
+*/
+
+// MARK: - String Constants
+"Movies" = "Movies";
+"MovieSearchBarPlaceholder" = "Search for a movie...";
+"TotalRatings" = "Total Ratings";
+"AverageRatings" = "Average Ratings";
+"Overview" = "OVERVIEW";
+"Cast" = "CAST";
+"Crew" = "CREW";
+
+// MARK: - Error Constants
+"Error" = "Error";
+"GenericFetchErrorMessage" = "There was a problem fetching the data";
+"GenericParseErrorMessage" = "There was an issue parsing the data. It may be in the incorrect format";
+"NoConnectionTitle" = "No Internet Connection";
+"NoConnectionMessage" = "You're not connected to the internet right now. Please go online and try again";
