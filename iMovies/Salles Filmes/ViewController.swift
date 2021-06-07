@@ -34,27 +34,27 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var nome_banner = NSString()
     var descricao_banner = NSString()
     var img_banner = NSString()
-    var img_outra_banner = #imageLiteral(resourceName: "sem.png")
+    var img_outra_banner = #imageLiteral(resourceName: "menorsemfundo.png")
     
     var nome_filme1 = [""]
     var descricao_filme1 = [""]
-    var foto_filme1 = [#imageLiteral(resourceName: "sairButton.png")]
+    var foto_filme1 = [#imageLiteral(resourceName: "menorsemfundo.png")]
     var id_filme1 = [0]
     
     var nome_filme2 = [""]
     var descricao_filme2 = [""]
-    var foto_filme2 = [#imageLiteral(resourceName: "sairButton.png")]
+    var foto_filme2 = [#imageLiteral(resourceName: "menorsemfundo.png")]
     var id_filme2 = [0]
     
     var nome_filme3 = [""]
     var descricao_filme3 = [""]
-    var foto_filme3 = [#imageLiteral(resourceName: "sairButton.png")]
-    var poster_filme3 = [#imageLiteral(resourceName: "sairButton.png")]
+    var foto_filme3 = [#imageLiteral(resourceName: "menorsemfundo.png")]
+    var poster_filme3 = [#imageLiteral(resourceName: "menorsemfundo.png")]
     var id_filme3 = [0]
     
     var nome_filme4 = [""]
     var descricao_filme4 = [""]
-    var foto_filme4 = [#imageLiteral(resourceName: "sairButton.png")]
+    var foto_filme4 = [#imageLiteral(resourceName: "menorsemfundo.png")]
     var id_filme4 = [0]
     
     var continuar1 = false

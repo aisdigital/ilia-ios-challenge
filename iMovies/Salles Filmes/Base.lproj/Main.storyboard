@@ -403,7 +403,7 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xb-ZS-pQh">
-                                <rect key="frame" x="5" y="20" width="40" height="40"/>
+                                <rect key="frame" x="10" y="20" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="97o-s1-mXK"/>
                                     <constraint firstAttribute="width" constant="40" id="wNg-u2-PZa"/>
@@ -533,7 +533,7 @@
                             <constraint firstItem="HY6-tp-UOF" firstAttribute="leading" secondItem="wPs-kO-kbp" secondAttribute="leading" constant="-300" id="TeN-Vk-pmu"/>
                             <constraint firstItem="e3J-co-hGy" firstAttribute="centerX" secondItem="xH1-Ut-m5I" secondAttribute="centerX" id="ZQ7-ag-WtE"/>
                             <constraint firstItem="HY6-tp-UOF" firstAttribute="top" secondItem="wPs-kO-kbp" secondAttribute="top" constant="-300" id="Zgj-xv-yk6"/>
-                            <constraint firstItem="8xb-ZS-pQh" firstAttribute="leading" secondItem="wPs-kO-kbp" secondAttribute="leading" constant="5" id="bNS-zY-clS"/>
+                            <constraint firstItem="8xb-ZS-pQh" firstAttribute="leading" secondItem="wPs-kO-kbp" secondAttribute="leading" constant="10" id="bNS-zY-clS"/>
                             <constraint firstItem="UjI-P8-0Oa" firstAttribute="leading" secondItem="wPs-kO-kbp" secondAttribute="leading" constant="10" id="c3M-RS-rcI"/>
                             <constraint firstAttribute="bottom" secondItem="YQh-hw-2GV" secondAttribute="bottom" id="ePe-dC-SlW"/>
                             <constraint firstItem="YQh-hw-2GV" firstAttribute="leading" secondItem="wPs-kO-kbp" secondAttribute="leading" id="gId-sr-Noh"/>
@@ -579,7 +579,7 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhY-LE-oFW">
-                                <rect key="frame" x="5" y="20" width="40" height="40"/>
+                                <rect key="frame" x="10" y="20" width="40" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cancel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sv2-B1-f4X">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -605,7 +605,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEw-Ix-Jsz">
-                                <rect key="frame" x="369" y="20" width="40" height="40"/>
+                                <rect key="frame" x="364" y="20" width="40" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vfr-9L-eCz">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -693,9 +693,9 @@
                             <constraint firstItem="QhY-LE-oFW" firstAttribute="top" secondItem="EoO-nJ-8D6" secondAttribute="top" constant="20" id="arP-YM-XNA"/>
                             <constraint firstItem="ES1-Or-eAp" firstAttribute="leading" secondItem="EoO-nJ-8D6" secondAttribute="leading" constant="5" id="bqB-ra-21h"/>
                             <constraint firstItem="Q92-eQ-C5X" firstAttribute="top" secondItem="Wdl-vC-mEV" secondAttribute="top" constant="-500" id="cA4-Qq-v0z"/>
-                            <constraint firstItem="EoO-nJ-8D6" firstAttribute="trailing" secondItem="BEw-Ix-Jsz" secondAttribute="trailing" constant="5" id="cry-vt-Ank"/>
+                            <constraint firstItem="EoO-nJ-8D6" firstAttribute="trailing" secondItem="BEw-Ix-Jsz" secondAttribute="trailing" constant="10" id="cry-vt-Ank"/>
                             <constraint firstItem="Ijq-6Q-Emr" firstAttribute="trailing" secondItem="EoO-nJ-8D6" secondAttribute="trailing" id="d01-TH-8Lf"/>
-                            <constraint firstItem="QhY-LE-oFW" firstAttribute="leading" secondItem="EoO-nJ-8D6" secondAttribute="leading" constant="5" id="duX-Fc-Eyy"/>
+                            <constraint firstItem="QhY-LE-oFW" firstAttribute="leading" secondItem="EoO-nJ-8D6" secondAttribute="leading" constant="10" id="duX-Fc-Eyy"/>
                             <constraint firstItem="lj2-b4-Jty" firstAttribute="top" secondItem="ES1-Or-eAp" secondAttribute="bottom" constant="10" id="ghv-BT-UdC"/>
                             <constraint firstItem="lpm-qA-Mri" firstAttribute="top" secondItem="EoO-nJ-8D6" secondAttribute="top" constant="20" id="hDv-70-Hvs"/>
                             <constraint firstItem="lj2-b4-Jty" firstAttribute="top" secondItem="QDr-z5-lWT" secondAttribute="bottom" constant="10" id="iuf-EJ-FUt"/>

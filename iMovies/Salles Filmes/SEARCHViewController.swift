@@ -20,7 +20,7 @@ class SEARCHViewController: UIViewController, UITableViewDataSource, UITableView
     
     var nome_filme = [""]
     var descricao_filme = [""]
-    var foto_filme = [#imageLiteral(resourceName: "sairButton.png")]
+    var foto_filme = [#imageLiteral(resourceName: "menorsemfundo.png")]
     var id_filme = [0]
     var pesquisa = ""
     var continuar = false
