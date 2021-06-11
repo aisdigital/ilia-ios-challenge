@@ -52,7 +52,6 @@
 		2F5A8DB42671984B007C616F /* ios-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F5A8DB82671984B007C616F /* ios_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_challengeUITests.swift; sourceTree = "<group>"; };
 		2F5A8DBA2671984B007C616F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F5A8DC6267198E9007C616F /* README_CAIOMADEIRA.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_CAIOMADEIRA.md; sourceTree = "<group>"; };
 		2FEA6C0E2672C73000257D1B /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		2FEA6C122672CA7500257D1B /* APIResquestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResquestTests.swift; sourceTree = "<group>"; };
 		2FEA6C142672D8AC00257D1B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -90,7 +89,6 @@
 		2F5A8D8F26719848007C616F = {
 			isa = PBXGroup;
 			children = (
-				2F5A8DC6267198E9007C616F /* README_CAIOMADEIRA.md */,
 				2F5A8D9A26719848007C616F /* ios-challenge */,
 				2F5A8DAC2671984B007C616F /* ios-challengeTests */,
 				2F5A8DB72671984B007C616F /* ios-challengeUITests */,
