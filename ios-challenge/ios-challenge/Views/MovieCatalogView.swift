@@ -26,7 +26,9 @@ struct MovieCatalogView: View {
 
 let movieList: Array = [
     MovieCatalog(id: 1, title: "Fight Club", year: "1999", poster: "Aaa"),
-    MovieCatalog(id: 2, title: "The Godfathers", year: "1999", poster: "Aaa")
-
+    MovieCatalog(id: 2, title: "The Godfathers", year: "1999", poster: "Aaa"),
+    MovieCatalog(id: 3, title: "The Godfathers", year: "1999", poster: "Aaa"),
+    MovieCatalog(id: 4, title: "The Godfathers", year: "1999", poster: "Aaa"),
+    MovieCatalog(id: 5, title: "The Godfathers", year: "1999", poster: "Aaa")
 ]
 
