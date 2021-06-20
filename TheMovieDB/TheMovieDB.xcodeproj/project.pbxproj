@@ -99,6 +99,12 @@
 		59CDD665267F97060021A8AD /* TheMovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				59CDD696267F978F0021A8AD /* Model */,
+				59CDD697267F97950021A8AD /* View */,
+				59CDD698267F979C0021A8AD /* ViewModel */,
+				59CDD69A267F97AA0021A8AD /* Controller */,
+				59CDD69C267F97C20021A8AD /* Utils */,
+				59CDD69B267F97BA0021A8AD /* API */,
 				59CDD666267F97060021A8AD /* AppDelegate.swift */,
 				59CDD668267F97060021A8AD /* SceneDelegate.swift */,
 				59CDD66A267F97060021A8AD /* ViewController.swift */,
@@ -126,6 +132,48 @@
 				59CDD68A267F97090021A8AD /* Info.plist */,
 			);
 			path = TheMovieDBUITests;
+			sourceTree = "<group>";
+		};
+		59CDD696267F978F0021A8AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		59CDD697267F97950021A8AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		59CDD698267F979C0021A8AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		59CDD69A267F97AA0021A8AD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		59CDD69B267F97BA0021A8AD /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		59CDD69C267F97C20021A8AD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
