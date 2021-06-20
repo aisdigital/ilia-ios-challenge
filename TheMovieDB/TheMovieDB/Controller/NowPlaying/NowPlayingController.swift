@@ -14,10 +14,8 @@ class NowPlayingController: UICollectionViewController {
     
     //MARK: - Properties
     private var viewModel: NowPlayingViewModelProtocol
-    var movies: [Movie] = []
-    var loadingMovies = false
-    var currentPage: Int = 1
-
+    var refreshControl = UIRefreshControl()
+    
     //MARK: - Lifecycle
     init(viewModel:NowPlayingViewModelProtocol) {
         self.viewModel = viewModel
@@ -32,25 +30,15 @@ class NowPlayingController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        fetchNowPlaying()
+        setupBindings()
+        addPullToRefresh()
     }
-
-    //MARK: - API
-    func fetchNowPlaying() {
-        loadingMovies = true
-        TheMovieDBService.shared.fetchNowPlaying(page: currentPage) { (info) in
-            if let info = info {
-                self.movies.append(contentsOf: info.results!)
-                print("Inserted", self.movies.count)
-                DispatchQueue.main.async {
-                    self.loadingMovies = false
-                    self.collectionView.reloadData()
-                }
-            }
-        }
-    }
-
+    
     //MARK: - Selectors
+    @objc private func pullRefresh() {
+        viewModel.currentPage = 1
+        viewModel.pullRefresh()
+    }
 
     //MARK: - Helpers
     func configureUI() {
@@ -60,6 +48,30 @@ class NowPlayingController: UICollectionViewController {
         title = "Now Playing"
     }
     
+    func setupBindings() {
+        viewModel.loadingMovies = true
+        viewModel.movies.bind { [weak self] _ in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.viewModel.loadingMovies = false
+                self.collectionView.reloadData()
+            }
+        }
+        
+        viewModel.isPullRefresh.bind { [weak self] isLoading in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                isLoading ? print() : self.refreshControl.endRefreshing()
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    private func addPullToRefresh() {
+        refreshControl.tintColor = .white
+        refreshControl.addTarget(viewModel, action: #selector(pullRefresh), for: UIControl.Event.valueChanged)
+        collectionView.addSubview(refreshControl)
+    }
 }
 
 //MARK: - UICollectionViewDelegate/DataSource
@@ -69,14 +81,12 @@ extension NowPlayingController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movies.count
+        return viewModel.movies.value.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MovieCell
-        
-        print ("poster: \(movies[indexPath.row].getImagePosterPath())")
-        if let urlPoster = URL(string: "\(movies[indexPath.row].getImagePosterPath())") {
+        if let urlPoster = URL(string: "\(viewModel.movies.value[indexPath.row].getImagePosterPath())") {
             cell.movieImageView.kf.setImage(with: URL(string: "\(urlPoster)"))
         } else {
             cell.movieImageView.image = UIImage(named: "notimage")
@@ -94,17 +104,17 @@ extension NowPlayingController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let controller = MovieDetailsController()
-        controller.movie_id = movies[indexPath.row].id
+        controller.movie_id = viewModel.movies.value[indexPath.row].id
         navigationController?.pushViewController(controller, animated: true)
     }
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == movies.count - 1 && !loadingMovies {
-            currentPage += 1
-            if movies.count > 0 {
-                fetchNowPlaying()
+        if indexPath.row == viewModel.movies.value.count - 1 && !viewModel.loadingMovies {
+            viewModel.currentPage += 1
+            if viewModel.movies.value.count > 0 {
+                viewModel.fetchNowPlaying()
+                print("Loading more movies....")
             }
-            print("Loading more movies")
         }
     }
 }
