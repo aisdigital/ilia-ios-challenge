@@ -9,7 +9,7 @@ import Foundation
 
 //MARK: = Account Information
 let API_BASE = "https://api.themoviedb.org/3"
-let API_KEY = ""
+let API_KEY = "5880939b5a2066652cec90837b265b16"
 
 //MARK: - MOVIES
 let NOW_PLAYING = "/movie/now_playing?"
