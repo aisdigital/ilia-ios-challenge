@@ -19,7 +19,7 @@ class SimilarMoviesCell: UICollectionViewCell {
     
     var movie_id: Int? = 0
     var similarMovies: [SimilarMovies]? = []
-    var slidePhotoMoviesVC = SlidePhotoMoviesViewController()
+    var slidePhotoMoviesVC = SlidePhotoMoviesController()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
