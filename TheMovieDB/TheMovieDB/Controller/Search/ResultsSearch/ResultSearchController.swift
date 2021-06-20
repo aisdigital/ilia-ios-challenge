@@ -103,9 +103,9 @@ extension ResultSearchController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let controller = MovieDetailsController()
-        controller.movie_id = movies[indexPath.row].id
-        navigationController?.pushViewController(controller, animated: true)
+//        let controller = MovieDetailsController()
+//        controller.movie_id = movies[indexPath.row].id
+//        navigationController?.pushViewController(controller, animated: true)
     }
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

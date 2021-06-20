@@ -41,20 +41,25 @@ class HeaderLayout: UICollectionViewFlowLayout {
 
 class MovieDetailsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     //MARK: - Properties
+    
+    private var viewModel: MovieDetailsViewModelProtocol
+    
     var movie_id: Int?
     var moviesDetails: MovieDetails?
     var similiarMovies: [SimilarMovies] = []
     var currentPage: Int = 1
-    
-    init() {
-        super.init(collectionViewLayout: HeaderLayout())
+        
+    //MARK: - Lifecycle
+    init(viewModel: MovieDetailsViewModelProtocol) {
+        self.viewModel = viewModel
+        let layout = HeaderLayout()
+        super.init(collectionViewLayout: layout)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -81,7 +86,7 @@ class MovieDetailsController: UICollectionViewController, UICollectionViewDelega
     
     //MARK: - API
     func fetchMovieDetails() {
-        TheMovieDBService.shared.fetchMovieDetails(movie_id: movie_id!) { (info) in
+        TheMovieDBService.shared.fetchMovieDetails(movie_id: movie_id ?? 1) { (info) in
             if let info = info {
                 self.moviesDetails = info
                 DispatchQueue.main.async {
@@ -93,7 +98,7 @@ class MovieDetailsController: UICollectionViewController, UICollectionViewDelega
     
         //MARK: - API
         func fetchSimilarMovies() {
-            TheMovieDBService.shared.fetchSimilarMovies(movie_id: movie_id!, page: currentPage) { (info) in
+            TheMovieDBService.shared.fetchSimilarMovies(movie_id: movie_id ?? 1, page: currentPage) { (info) in
                     if let info = info {
                         self.similiarMovies.append(contentsOf: info.results!)
                         print("Inserted", self.similiarMovies.count)

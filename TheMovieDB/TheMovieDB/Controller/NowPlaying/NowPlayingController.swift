@@ -103,9 +103,7 @@ extension NowPlayingController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let controller = MovieDetailsController()
-        controller.movie_id = viewModel.movies.value[indexPath.row].id
-        navigationController?.pushViewController(controller, animated: true)
+        viewModel.selectMovieItemAt(indexPath: indexPath)
     }
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

@@ -33,6 +33,8 @@ extension UIViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
+    
+    
     func modal(_ viewController: UIViewController,animated: Bool = false, completion: (() -> Void)? = nil) {
         viewController.modalPresentationStyle = .overFullScreen
         self.navigationController?.present(viewController, animated: animated, completion: completion)

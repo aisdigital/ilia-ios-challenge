@@ -1,5 +1,5 @@
 //
-//  NowPlayingViewModel.swift
+//  TopRatedViewModel.swift
 //  TheMovieDB
 //
 //  Created by Edwy Lugo on 20/06/21.
@@ -8,11 +8,9 @@
 import Foundation
 import UIKit
 
-protocol NowPlayingNavigationProtocol: AnyObject {
-    func gotoMovieDetails(movie_id: Movie)
-}
+protocol TopRatedNavigationProtocol: AnyObject {}
 
-protocol NowPlayingViewModelProtocol {
+protocol TopRatedViewModelProtocol {
     var error: Observable<Error?> { get }
     var isLoading: Observable<Bool> { get }
     var isPullRefresh: Observable<Bool> { get }
@@ -20,14 +18,14 @@ protocol NowPlayingViewModelProtocol {
     var loadingMovies: Bool { get set }
     var currentPage: Int { get set }
     
-    func fetchNowPlaying()
+    func fetchTopRated()
     func pullRefresh()
     func selectMovieItemAt(indexPath: IndexPath)
 }
 
-struct NowPlayingViewModel: NowPlayingViewModelProtocol {
+struct TopRatedViewModel: TopRatedViewModelProtocol {
     
-    private var navigationDelegate: NowPlayingNavigationProtocol
+    private var navigationDelegate: TopRatedNavigationProtocol
     var error: Observable<Error?>
     var isLoading: Observable<Bool>
     var isPullRefresh: Observable<Bool>
@@ -35,7 +33,7 @@ struct NowPlayingViewModel: NowPlayingViewModelProtocol {
     var loadingMovies: Bool
     var currentPage: Int
     
-    init(navigationDelegate: NowPlayingNavigationProtocol) {
+    init(navigationDelegate: TopRatedNavigationProtocol) {
         self.navigationDelegate = navigationDelegate
         self.error = Observable(nil)
         self.isLoading = Observable(false)
@@ -43,11 +41,11 @@ struct NowPlayingViewModel: NowPlayingViewModelProtocol {
         self.movies = Observable([])
         self.loadingMovies = false
         self.currentPage = 1
-        fetchNowPlaying()
+        fetchTopRated()
     }
     
-    func fetchNowPlaying() {
-        TheMovieDBService.shared.fetchNowPlaying(page: currentPage) { (info) in
+    func fetchTopRated() {
+        TheMovieDBService.shared.fetchTopRated(page: currentPage) { (info) in
             if let info = info {
                 self.movies.value.append(contentsOf: info.results!)
             }
@@ -58,7 +56,7 @@ struct NowPlayingViewModel: NowPlayingViewModelProtocol {
         self.isPullRefresh.value = true
         self.movies.value.removeAll()
         
-        TheMovieDBService.shared.fetchNowPlaying(page: currentPage) { (info) in
+        TheMovieDBService.shared.fetchTopRated(page: currentPage) { (info) in
             if let info = info {
                 self.movies.value.append(contentsOf: info.results!)
                 self.isPullRefresh.value = false
@@ -68,9 +66,6 @@ struct NowPlayingViewModel: NowPlayingViewModelProtocol {
     }
     
     func selectMovieItemAt(indexPath: IndexPath) {
-        guard movies.value.indices.contains(indexPath.row) else { return }
-        let item = movies.value[indexPath.row]
-        navigationDelegate.gotoMovieDetails(movie_id: item)
     }
         
 }
