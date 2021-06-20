@@ -11,13 +11,24 @@ import Kingfisher
 private let reuseIdentifier = "MovieCell"
 
 class NowPlayingController: UICollectionViewController {
-
+    
     //MARK: - Properties
+    private var viewModel: NowPlayingViewModelProtocol
     var movies: [Movie] = []
     var loadingMovies = false
     var currentPage: Int = 1
 
     //MARK: - Lifecycle
+    init(viewModel:NowPlayingViewModelProtocol) {
+        self.viewModel = viewModel
+        let layout = UICollectionViewFlowLayout()
+        super.init(collectionViewLayout: layout)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()

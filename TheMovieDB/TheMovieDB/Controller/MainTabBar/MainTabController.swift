@@ -26,7 +26,8 @@ class MainTabController: UITabBarController {
     func configureViewControllers() {
         
         ///NowPlaying
-        let nowplaying = NowPlayingController(collectionViewLayout: UICollectionViewFlowLayout())
+        let viewModelNowplaying = NowPlayingViewModel(navigationDelegate: self)
+        let nowplaying = NowPlayingController(viewModel: viewModelNowplaying)
         let nav1 = templateNavigationController(image: UIImage(systemName: "house"), rootViewController: nowplaying, title: "Now Playing")
         
         ///Popular
@@ -51,5 +52,9 @@ class MainTabController: UITabBarController {
         nav.tabBarItem.title = title
         return nav
     }
+    
+}
+
+extension MainTabController: NowPlayingNavigationProtocol {
     
 }
