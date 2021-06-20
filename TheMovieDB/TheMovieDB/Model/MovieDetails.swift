@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-class MovieDetail: Mappable {
+class MovieDetails: Mappable {
     required init?(map: Map) {
         
     }
