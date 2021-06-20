@@ -39,3 +39,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+
+//MARK: - Properties
+
+//MARK: - Lifecycle
+
+//MARK: - API
+
+//MARK: - Selectors
+
+//MARK: - Helpers
+
