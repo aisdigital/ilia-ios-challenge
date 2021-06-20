@@ -20,6 +20,12 @@
 		59CDD6A8267FA40C0021A8AD /* PopularController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CDD6A7267FA40C0021A8AD /* PopularController.swift */; };
 		59CDD6AA267FA4180021A8AD /* TopRatedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CDD6A9267FA4180021A8AD /* TopRatedController.swift */; };
 		59CDD6AC267FA4220021A8AD /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CDD6AB267FA4220021A8AD /* SearchController.swift */; };
+		59CDD6AE267FA4E20021A8AD /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CDD6AD267FA4E20021A8AD /* UIView.swift */; };
+		59CDD6B0267FA4F50021A8AD /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CDD6AF267FA4F50021A8AD /* UIColor.swift */; };
+		59CDD6B2267FA50D0021A8AD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CDD6B1267FA50D0021A8AD /* Utilities.swift */; };
+		59CDD6B4267FA5210021A8AD /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CDD6B3267FA5210021A8AD /* UIImageView.swift */; };
+		59CDD6B6267FA5300021A8AD /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CDD6B5267FA5300021A8AD /* UILabel.swift */; };
+		59CDD6B8267FA54A0021A8AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CDD6B7267FA54A0021A8AD /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,12 @@
 		59CDD6A7267FA40C0021A8AD /* PopularController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularController.swift; sourceTree = "<group>"; };
 		59CDD6A9267FA4180021A8AD /* TopRatedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedController.swift; sourceTree = "<group>"; };
 		59CDD6AB267FA4220021A8AD /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		59CDD6AD267FA4E20021A8AD /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		59CDD6AF267FA4F50021A8AD /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		59CDD6B1267FA50D0021A8AD /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		59CDD6B3267FA5210021A8AD /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		59CDD6B5267FA5300021A8AD /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		59CDD6B7267FA54A0021A8AD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +199,12 @@
 		59CDD69C267F97C20021A8AD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				59CDD6AD267FA4E20021A8AD /* UIView.swift */,
+				59CDD6AF267FA4F50021A8AD /* UIColor.swift */,
+				59CDD6B1267FA50D0021A8AD /* Utilities.swift */,
+				59CDD6B3267FA5210021A8AD /* UIImageView.swift */,
+				59CDD6B5267FA5300021A8AD /* UILabel.swift */,
+				59CDD6B7267FA54A0021A8AD /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -362,13 +380,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				59CDD66B267F97060021A8AD /* ViewController.swift in Sources */,
+				59CDD6B6267FA5300021A8AD /* UILabel.swift in Sources */,
 				59CDD6A2267F9C3F0021A8AD /* NowPlayingController.swift in Sources */,
+				59CDD6B2267FA50D0021A8AD /* Utilities.swift in Sources */,
 				59CDD667267F97060021A8AD /* AppDelegate.swift in Sources */,
+				59CDD6B4267FA5210021A8AD /* UIImageView.swift in Sources */,
 				59CDD6AC267FA4220021A8AD /* SearchController.swift in Sources */,
 				59CDD6AA267FA4180021A8AD /* TopRatedController.swift in Sources */,
 				59CDD69E267F99CD0021A8AD /* MainTabController.swift in Sources */,
 				59CDD669267F97060021A8AD /* SceneDelegate.swift in Sources */,
+				59CDD6AE267FA4E20021A8AD /* UIView.swift in Sources */,
+				59CDD6B8267FA54A0021A8AD /* Constants.swift in Sources */,
 				59CDD6A8267FA40C0021A8AD /* PopularController.swift in Sources */,
+				59CDD6B0267FA4F50021A8AD /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
