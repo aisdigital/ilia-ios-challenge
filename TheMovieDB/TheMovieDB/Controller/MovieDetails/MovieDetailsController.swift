@@ -103,16 +103,23 @@ class MovieDetailsController: UICollectionViewController, UICollectionViewDelega
                     self.viewModel.similiarMovies.bind { [weak self] _ in
                             guard let self = self else { return }
                             DispatchQueue.main.async {
-                                self.collectionView.reloadData()
+                                self.viewModel.videoMovies.bind { [weak self] video in
+                                    guard let self = self else { return }
+                                        DispatchQueue.main.async {
+                                            self.collectionView.reloadData()
+                                        }
+                                    }
+                                }
                             }
                     }
                 }
             }
-        }
     }
 
 
 extension MovieDetailsController {
+    
+   
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
@@ -169,14 +176,13 @@ extension MovieDetailsController {
         } else if indexPath.item == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: videoId, for: indexPath) as!
                 VideoCell
-        
+            
+            cell.key = viewModel.videoMovies.value.first?.key?.description ?? ""
+            print("URLtrailler: \(cell.key ?? "")")
+            
+            
             return_cell = cell
         }
-        
-        
-        
-            
-
         return return_cell
     }
     
@@ -213,4 +219,7 @@ extension MovieDetailsController: HeaderViewDelegate {
         navigationController?.popViewController(animated: true)
     }
 }
+
+
+
 

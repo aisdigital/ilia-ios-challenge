@@ -23,3 +23,8 @@ let SEARCH = "/search/movie?"
 
 //MARK: - POSTERS
 let POSTER_URL = "https://image.tmdb.org/t/p/w500"
+
+//MARK: - VIDEOS
+////movie/{movie_id}/videos
+let VIDEOS = "/videos?"
+let YOUTUBE_URL = "https://www.youtube.com/watch?v="

@@ -9,6 +9,7 @@ target 'TheMovieDB' do
   pod 'Alamofire', '~> 4.0'
   pod 'Kingfisher', '~> 4.0'
   pod 'AlamofireObjectMapper', '~> 5.2'
+  pod 'YouTubePlayer'
 
   target 'TheMovieDBTests' do
     inherit! :search_paths

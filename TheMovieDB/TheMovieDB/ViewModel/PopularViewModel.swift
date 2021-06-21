@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-protocol PopularNavigationProtocol: AnyObject {}
+protocol PopularNavigationProtocol: AnyObject  {
+    func gotoMovieDetails(movie_id: Movie)
+}
 
 protocol PopularViewModelProtocol {
     var error: Observable<Error?> { get }
@@ -66,6 +68,9 @@ struct PopularViewModel: PopularViewModelProtocol {
     }
     
     func selectMovieItemAt(indexPath: IndexPath) {
+        guard movies.value.indices.contains(indexPath.row) else { return }
+        let item = movies.value[indexPath.row]
+        navigationDelegate.gotoMovieDetails(movie_id: item)
     }
         
 }

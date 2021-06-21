@@ -83,6 +83,17 @@ class TheMovieDBService {
         }
     }
     
+    //MARK: - Get Videos
+    func fetchVideoMovies(movie_id: Int, onComplete: @escaping (Videos?) -> Void) {
+        let url: String
+        url = "\(API_BASE)\(MOVIE)\(movie_id)\(VIDEOS)api_key=\(API_KEY)"
+        print("DEBUG: url...:\(url)")
+        
+        Alamofire.request(url).responseObject { (response: DataResponse<Videos>) in
+            onComplete(response.result.value)
+        }
+    }
+    
 }
 
 
