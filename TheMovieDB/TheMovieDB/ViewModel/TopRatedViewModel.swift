@@ -8,8 +8,10 @@
 import Foundation
 import UIKit
 
-protocol TopRatedNavigationProtocol: AnyObject {}
-
+protocol TopRatedNavigationProtocol: AnyObject { 
+    func gotoMovieDetails(movie_id: Movie)
+}
+    
 protocol TopRatedViewModelProtocol {
     var error: Observable<Error?> { get }
     var isLoading: Observable<Bool> { get }
@@ -66,6 +68,9 @@ struct TopRatedViewModel: TopRatedViewModelProtocol {
     }
     
     func selectMovieItemAt(indexPath: IndexPath) {
+        guard movies.value.indices.contains(indexPath.row) else { return }
+        let item = movies.value[indexPath.row]
+        navigationDelegate.gotoMovieDetails(movie_id: item)
     }
         
 }
