@@ -13,6 +13,8 @@ private let headerMovieId = "headerMovieId"
 private let infoMovieId = "infoMovieId"
 private let similarMovieId = "similarMovieId"
 private let footerMovieId = "footerMovieId"
+private let videoId = "videoId"
+
 
 //MARK: - UICollectionViewFlowLayout
 class HeaderLayout: UICollectionViewFlowLayout {
@@ -90,6 +92,8 @@ class MovieDetailsController: UICollectionViewController, UICollectionViewDelega
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerMovieId)
         collectionView.register(FooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: footerMovieId)
         collectionView.register(InfoMovieCell.self, forCellWithReuseIdentifier: infoMovieId)
+        collectionView.register(VideoCell.self, forCellWithReuseIdentifier: videoId)
+        
     }
     
     func setupBindings() {
@@ -111,7 +115,7 @@ class MovieDetailsController: UICollectionViewController, UICollectionViewDelega
 extension MovieDetailsController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -153,6 +157,8 @@ extension MovieDetailsController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var return_cell: UICollectionViewCell!
         
+        
+        if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: infoMovieId, for: indexPath) as!
                 InfoMovieCell
             
@@ -160,6 +166,16 @@ extension MovieDetailsController {
             cell.popularityLabel.text = "Popularity: \(viewModel.movieDetails.value?.popularity.rounded().description ?? "0.0")"
             cell.likesLabel.text = "\(viewModel.movieDetails.value?.vote_count?.description ?? "") Likes"
             return_cell = cell
+        } else if indexPath.item == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: videoId, for: indexPath) as!
+                VideoCell
+        
+            return_cell = cell
+        }
+        
+        
+        
+            
 
         return return_cell
     }
@@ -169,11 +185,23 @@ extension MovieDetailsController {
         let width: CGFloat = UIScreen.main.bounds.width
         var height: CGFloat = UIScreen.main.bounds.height
         
+        if indexPath.item == 0 {
             let cell = InfoMovieCell(frame: CGRect(x: 0, y: 0, width: width, height: height))
             cell.layoutIfNeeded()
             
             let estimativaTamanho = cell.systemLayoutSizeFitting(CGSize(width: width, height: 1000))
             height = estimativaTamanho.height
+        }
+        
+        if indexPath.item == 1 {
+            let cell = VideoCell(frame: CGRect(x: 0, y: 0, width: width, height: height))
+            cell.layoutIfNeeded()
+            
+            let estimativaTamanho = cell.systemLayoutSizeFitting(CGSize(width: width, height: width))
+            height = estimativaTamanho.height
+        }
+        
+            
         
         return .init(width: width , height: height)
     }

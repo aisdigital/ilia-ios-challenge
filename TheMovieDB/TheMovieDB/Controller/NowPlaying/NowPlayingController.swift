@@ -88,18 +88,12 @@ extension NowPlayingController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MovieCell
         if let urlPoster = URL(string: "\(viewModel.movies.value[indexPath.row].getImagePosterPath())") {
             cell.movieImageView.kf.setImage(with: URL(string: "\(urlPoster)"))
+            cell.movieImageView.contentMode = .scaleToFill
         } else {
             cell.movieImageView.image = UIImage(named: "notimage")
+            cell.movieImageView.contentMode = .scaleAspectFill
         }
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return Utilities().sectionInsets
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return Utilities().sectionInsets.left
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -115,14 +109,23 @@ extension NowPlayingController {
             }
         }
     }
+ 
 }
 
 //MARK: - UICollectionViewDelegateFlowLayout
 extension NowPlayingController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let paddingSpace = Utilities().sectionInsets.left * (Utilities().itemsPerRow + 1)
+        let paddingSpace = Utilities().sectionInsets.left
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / Utilities().itemsPerRow
         return CGSize(width: widthPerItem, height: widthPerItem + 50)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }
