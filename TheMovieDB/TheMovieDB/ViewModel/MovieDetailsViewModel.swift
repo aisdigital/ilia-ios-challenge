@@ -49,7 +49,7 @@ struct MovieDetailsViewModel: MovieDetailsViewModelProtocol {
     func fetchSimilarMovies() {
         TheMovieDBService.shared.fetchSimilarMovies(movie_id: movie_id, page: currentPage) { (info) in
                 if let info = info {
-                    self.similiarMovies.value.append(contentsOf: info.results!)
+                    similiarMovies.value.append(contentsOf: info.results!)
                 }
             }
     }

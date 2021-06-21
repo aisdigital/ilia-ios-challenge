@@ -14,7 +14,7 @@ class SlidePhotoMoviesCell: UICollectionViewCell {
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.setDimension(widht: 80, height: 100)
-        iv.backgroundColor = .mobile2You
+        iv.backgroundColor = .aisdigital
         iv.image = UIImage(named: "notimage")
         return iv
     }()

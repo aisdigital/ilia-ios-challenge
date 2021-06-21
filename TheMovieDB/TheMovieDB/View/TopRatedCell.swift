@@ -16,7 +16,7 @@ class TopRatedCell: UICollectionViewCell {
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.setDimension(widht: 80, height: 80)
-        iv.backgroundColor = .mobile2You
+        iv.backgroundColor = .aisdigital
         iv.layer.cornerRadius = 80 / 2
         return iv
     }()

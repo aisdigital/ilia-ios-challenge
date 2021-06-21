@@ -12,6 +12,7 @@ private let cellId = "cellId"
 private let headerMovieId = "headerMovieId"
 private let infoMovieId = "infoMovieId"
 private let similarMovieId = "similarMovieId"
+private let footerMovieId = "footerMovieId"
 
 //MARK: - UICollectionViewFlowLayout
 class HeaderLayout: UICollectionViewFlowLayout {
@@ -43,11 +44,7 @@ class MovieDetailsController: UICollectionViewController, UICollectionViewDelega
     //MARK: - Properties
     
     private var viewModel: MovieDetailsViewModelProtocol
-    
-    var movie_id: Int?
-    var moviesDetails: MovieDetails?
-    var similiarMovies: [SimilarMovies] = []
-    var currentPage: Int = 1
+    var similar: [SimilarMovies] = []
         
     //MARK: - Lifecycle
     init(viewModel: MovieDetailsViewModelProtocol) {
@@ -63,10 +60,7 @@ class MovieDetailsController: UICollectionViewController, UICollectionViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        fetchMovieDetails()
-        fetchSimilarMovies()
-        print("movie_id: \(movie_id?.description ?? "")")
-        
+        setupBindings()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,7 +68,6 @@ class MovieDetailsController: UICollectionViewController, UICollectionViewDelega
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.isHidden = true
         navigationController?.tabBarController?.tabBar.isHidden = true
-        self.collectionView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -83,119 +76,104 @@ class MovieDetailsController: UICollectionViewController, UICollectionViewDelega
         navigationController?.navigationBar.isHidden = false
         navigationController?.tabBarController?.tabBar.isHidden = false
     }
-    
-    //MARK: - API
-    func fetchMovieDetails() {
-        TheMovieDBService.shared.fetchMovieDetails(movie_id: movie_id ?? 1) { (info) in
-            if let info = info {
-                self.moviesDetails = info
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
-            }
-        }
-    }
-    
-        //MARK: - API
-        func fetchSimilarMovies() {
-            TheMovieDBService.shared.fetchSimilarMovies(movie_id: movie_id ?? 1, page: currentPage) { (info) in
-                    if let info = info {
-                        self.similiarMovies.append(contentsOf: info.results!)
-                        print("Inserted", self.similiarMovies.count)
-                        DispatchQueue.main.async {
-                            self.collectionView.reloadData()
-                        }
-                    }
-                }
-        }
-    
+        
     //MARK: - Selectors
     
     //MARK: - Helpers
     func configureUI() {
-        view.backgroundColor = .mobile2You
+        view.backgroundColor = .aisdigital
         title = "Details Movie"
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 134, right: 0)
         collectionView.backgroundColor = .black
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerMovieId)
+        collectionView.register(FooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: footerMovieId)
         collectionView.register(InfoMovieCell.self, forCellWithReuseIdentifier: infoMovieId)
-        collectionView.register(SimilarMoviesCell.self, forCellWithReuseIdentifier: similarMovieId)
-        collectionView.reloadData()
     }
-}
+    
+    func setupBindings() {
+        viewModel.movieDetails.bind { [weak self] _ in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    self.viewModel.similiarMovies.bind { [weak self] _ in
+                            guard let self = self else { return }
+                            DispatchQueue.main.async {
+                                self.collectionView.reloadData()
+                            }
+                    }
+                }
+            }
+        }
+    }
+
 
 extension MovieDetailsController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerMovieId, for: indexPath) as! HeaderView
         
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerMovieId, for: indexPath) as! HeaderView
+            
+            if let urlPoster = URL(string: "\(viewModel.movieDetails.value?.getImageBackDropPath().description ?? "")") {
+                header.imageMovie.kf.setImage(with: urlPoster)
+            } else {
+                header.imageMovie.image = UIImage(named: "spider")
+            }
+            
+            header.delegate = self
+            
+            return header
         
-        if let urlPoster = URL(string: "\(moviesDetails?.getImageBackDropPath().description ?? "")") {
-            header.imageMovie.kf.setImage(with: urlPoster)
-        } else {
-            header.imageMovie.image = UIImage(named: "spider")
+        case UICollectionView.elementKindSectionFooter:
+            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerMovieId, for: indexPath) as! FooterView
+            
+            footerView.setupSimilar(similar: viewModel.similiarMovies.value)
+            return footerView
+    
+        default:
+            assert(false, "Unexpected element kind")
         }
         
-        header.delegate = self
-        
-        return header
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return .init(width: view.bounds.width, height: view.bounds.height * 0.7)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return .init(width: view.bounds.width, height: view.bounds.height * 0.7)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        var return_cell: UICollectionViewCell!
         
-        if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: infoMovieId, for: indexPath) as!
                 InfoMovieCell
             
-            cell.nameMovieLabel.text = "\(moviesDetails?.title?.description ?? "")"
-            cell.popularityLabel.text = "Popularity: \(moviesDetails?.popularity.rounded().description ?? "0.0")"
-            cell.likesLabel.text = "\(moviesDetails?.vote_count?.description ?? "") Likes"
-    
-            return cell
-        }
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: similarMovieId, for: indexPath) as! SimilarMoviesCell
-        cell.movie_id = movie_id
-        cell.similarMovies = similiarMovies
-        cell.loadSimilar()
-        cell.changeText()
-        
-        
-        return cell
+            cell.nameMovieLabel.text = "\(viewModel.movieDetails.value?.title?.description ?? "")"
+            cell.popularityLabel.text = "Popularity: \(viewModel.movieDetails.value?.popularity.rounded().description ?? "0.0")"
+            cell.likesLabel.text = "\(viewModel.movieDetails.value?.vote_count?.description ?? "") Likes"
+            return_cell = cell
+
+        return return_cell
     }
-    
-   
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width: CGFloat = UIScreen.main.bounds.width
-        var height: CGFloat = UIScreen.main.bounds.width * 0.66
+        var height: CGFloat = UIScreen.main.bounds.height
         
-        if indexPath.item == 0 {
             let cell = InfoMovieCell(frame: CGRect(x: 0, y: 0, width: width, height: height))
             cell.layoutIfNeeded()
             
             let estimativaTamanho = cell.systemLayoutSizeFitting(CGSize(width: width, height: 1000))
             height = estimativaTamanho.height
-        }
-        
-        if indexPath.item == 1 {
-            let cell = SlidePhotoMoviesCell(frame: CGRect(x: 0, y: 0, width: width, height: height))
-            cell.layoutIfNeeded()
-            
-            let estimativaTamanho = cell.systemLayoutSizeFitting(CGSize(width: width, height: width ))
-            height = estimativaTamanho.height
-        }
         
         return .init(width: width , height: height)
     }
@@ -207,5 +185,4 @@ extension MovieDetailsController: HeaderViewDelegate {
         navigationController?.popViewController(animated: true)
     }
 }
-
 

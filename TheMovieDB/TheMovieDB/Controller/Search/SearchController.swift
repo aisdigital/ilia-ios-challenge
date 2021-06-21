@@ -50,7 +50,7 @@ class SearchController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Search now", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .mobile2You
+        button.backgroundColor = .aisdigital
         button.heightAnchor.constraint(equalToConstant: 50).isActive = true
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)

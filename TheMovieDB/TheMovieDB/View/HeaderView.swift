@@ -35,7 +35,7 @@ class HeaderView: UICollectionReusableView {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
-        iv.backgroundColor = .mobile2You
+        iv.backgroundColor = .aisdigital
         iv.image = UIImage(named: "notimage")
         return iv
     }()
