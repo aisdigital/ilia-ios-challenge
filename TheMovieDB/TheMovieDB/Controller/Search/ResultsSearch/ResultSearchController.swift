@@ -10,19 +10,24 @@ import UIKit
 private let reuseIdentifier = "TopRatedCell"
 
 class ResultSearchController: UICollectionViewController {
-   
     //MARK: - Properties
-    var name: String?
-    var movies: [Movie] = []
-    var loadingMovies = false
-    var currentPage: Int = 1
-    var total = 0
+    private var viewModel: ResultSearchViewModelProtocol
     
     //MARK: - Lifecycle
+    init(viewModel:ResultSearchViewModelProtocol) {
+        self.viewModel = viewModel
+        let layout = UICollectionViewFlowLayout()
+        super.init(collectionViewLayout: layout)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        fetchSearch()
+        setupBindings()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,23 +40,7 @@ class ResultSearchController: UICollectionViewController {
         navigationController?.tabBarController?.tabBar.isHidden = false
     }
     
-    //MARK: - API
-    
-    func fetchSearch() {
-        loadingMovies = true
-        
-        TheMovieDBService.shared.fetchSearch(title: name, page: currentPage) { (info) in
-            if let info = info {
-                self.movies.append(contentsOf: info.results!)
-                self.total = info.total_results!
-                print("Total:", self.total, "Inserted", self.movies.count)
-                DispatchQueue.main.async {
-                    self.loadingMovies = false
-                    self.collectionView.reloadData()
-                }
-            }
-        }
-    }
+   
     
     //MARK: - Selectors
     @objc func handleClose() {
@@ -73,6 +62,17 @@ class ResultSearchController: UICollectionViewController {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(handleClose))
     }
+    
+    func setupBindings() {
+        viewModel.loadingMovies = true
+        viewModel.movies.bind { [weak self] _ in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.viewModel.loadingMovies = false
+                self.collectionView.reloadData()
+            }
+        }
+    }
 }
 
 //MARK: - UICollectionViewDelegate/DataSource
@@ -83,37 +83,35 @@ extension ResultSearchController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movies.count
+        return viewModel.movies.value.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TopRatedCell
         
-        print("poster: \(movies[indexPath.row].getImagePosterPath())")
-        if let urlPoster = URL(string: "\(movies[indexPath.row].getImagePosterPath())") {
+        print("poster: \(viewModel.movies.value[indexPath.row].getImagePosterPath())")
+        if let urlPoster = URL(string: "\(viewModel.movies.value[indexPath.row].getImagePosterPath())") {
             cell.topRatedImageView.kf.setImage(with: URL(string: "\(urlPoster)"))
         } else {
             cell.topRatedImageView.image = UIImage(named: "notimage")
         }
         
-        cell.titleMovie.text = "\(movies[indexPath.row].title?.description ?? "")"
-        cell.overviewMovie.text = "\(movies[indexPath.row].overview?.description ?? "")"
+        cell.titleMovie.text = "\(viewModel.movies.value[indexPath.row].title?.description ?? "")"
+        cell.overviewMovie.text = "\(viewModel.movies.value[indexPath.row].overview?.description ?? "")"
         
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let controller = MovieDetailsController()
-//        controller.movie_id = movies[indexPath.row].id
-//        navigationController?.pushViewController(controller, animated: true)
+        viewModel.selectMovieItemAt(indexPath: indexPath)
     }
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == movies.count - 1 && !loadingMovies {
-            currentPage += 1
+        if indexPath.row == viewModel.movies.value.count - 1 && !viewModel.loadingMovies {
+            viewModel.currentPage += 1
             
-            if movies.count > 0 {
-                fetchSearch()
+            if viewModel.movies.value.count > 0 {
+                viewModel.fetchSearch()
             }
             
             print("Loading more movies")

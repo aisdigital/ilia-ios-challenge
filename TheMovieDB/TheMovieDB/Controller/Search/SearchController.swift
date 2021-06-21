@@ -65,17 +65,16 @@ class SearchController: UIViewController {
         super.viewDidLoad()
         configureUI()
     }
-    
-    //MARK: - API
+
     
     //MARK: - Selectors
-    
     @objc func handleSearch() {
-        let controller = ResultSearchController(collectionViewLayout: UICollectionViewFlowLayout())
-        
         if (searchTextField.text != "") {
-            controller.name = searchTextField.text
-            navigationController?.pushViewController(controller, animated: true)
+            ///ResultSearch
+            let viewModelResultSearch = ResultSearchViewModel(navigationDelegate: self, title: "\(searchTextField.text?.description ?? "")")
+            let controller = ResultSearchController(viewModel: viewModelResultSearch)
+            push(controller)
+            
         } else {
             showAlert()
         }
@@ -121,3 +120,13 @@ class SearchController: UIViewController {
         title = "Search Movies"
     }
 }
+
+extension SearchController: ResultSearchNavigationProtocol {
+    func gotoMovieDetails(movie_id: Movie) {
+        let viewModelMovieDetail = MovieDetailsViewModel(navigationDelegate: self, movie_id: movie_id.id!)
+        let controller = MovieDetailsController(viewModel: viewModelMovieDetail)
+        push(controller)
+    }
+}
+
+extension SearchController: MovieDetailsNavigationProtocol {}
