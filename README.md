@@ -1,6 +1,9 @@
 # ília - Code Challenge iOS
 
-##### English
+**English**
+##### Before we start ⚠️
+**Please create a fork from this repository**
+
 ## The Challenge:
 Using the API from [TheMovieDB](https://developers.themoviedb.org/3/getting-started/introduction), You must create an app that shows the featured movies in the Theaters, in a list.
 
@@ -16,7 +19,12 @@ In the end, a pull request must be created in the Github repo. As soon as you fi
 
 We are available to answer any questions.
 
-##### Portuguese
+***
+
+**Português**
+##### Antes de começar ⚠️
+**Por favor, crie um fork desse repositório**
+
 ## The Challenge:
 Utilizando a API do [TheMovieDB](https://developers.themoviedb.org/3/getting-started/introduction), Criar um app que mostre os filmes que estão em cartaz nos cinemas, em forma de lista.
 
