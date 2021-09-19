@@ -19,6 +19,7 @@
 		2EA703D626F038460039B198 /* MovieJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA703D526F038460039B198 /* MovieJson.swift */; };
 		2EA703D826F039D10039B198 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA703D726F039D10039B198 /* APIRequest.swift */; };
 		2EA703DC26F118AE0039B198 /* URLAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA703DB26F118AE0039B198 /* URLAccess.swift */; };
+		2EF8DAA426F65B1B00B06C2B /* SecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8DAA326F65B1B00B06C2B /* SecondScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		2EA703D526F038460039B198 /* MovieJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieJson.swift; sourceTree = "<group>"; };
 		2EA703D726F039D10039B198 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		2EA703DB26F118AE0039B198 /* URLAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLAccess.swift; sourceTree = "<group>"; };
+		2EF8DAA326F65B1B00B06C2B /* SecondScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				2EA703A426F01BA40039B198 /* ViewController.swift */,
+				2EF8DAA326F65B1B00B06C2B /* SecondScreenViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				2EA703A526F01BA40039B198 /* ViewController.swift in Sources */,
 				2EA703A126F01BA40039B198 /* AppDelegate.swift in Sources */,
 				2EA703D626F038460039B198 /* MovieJson.swift in Sources */,
+				2EF8DAA426F65B1B00B06C2B /* SecondScreenViewController.swift in Sources */,
 				2EA703DC26F118AE0039B198 /* URLAccess.swift in Sources */,
 				2EA703A326F01BA40039B198 /* SceneDelegate.swift in Sources */,
 				2EA703D326F020100039B198 /* MovieCell.swift in Sources */,
