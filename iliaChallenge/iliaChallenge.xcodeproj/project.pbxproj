@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D72326DB272DA99C00C5B2BC /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72326DA272DA99C00C5B2BC /* Network.swift */; };
+		D72326DF272DBD1700C5B2BC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72326DE272DBD1700C5B2BC /* NetworkError.swift */; };
 		D75AF7EE272C6369004A2CFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75AF7ED272C6369004A2CFB /* AppDelegate.swift */; };
 		D75AF7F0272C6369004A2CFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75AF7EF272C6369004A2CFB /* SceneDelegate.swift */; };
 		D75AF7F7272C636B004A2CFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75AF7F6272C636B004A2CFB /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 		1C2BA7CAE5F1C463417A90F5 /* Pods-iliaChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iliaChallenge.debug.xcconfig"; path = "Target Support Files/Pods-iliaChallenge/Pods-iliaChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		2D919FB03788DD239B71489C /* Pods-iliaChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iliaChallenge.release.xcconfig"; path = "Target Support Files/Pods-iliaChallenge/Pods-iliaChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		6FAF5D754B5AC44A8B8FBE99 /* Pods_iliaChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iliaChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D72326DA272DA99C00C5B2BC /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		D72326DE272DBD1700C5B2BC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		D75AF7EA272C6369004A2CFB /* iliaChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iliaChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75AF7ED272C6369004A2CFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D75AF7EF272C6369004A2CFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D72326D7272DA96700C5B2BC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D72326DA272DA99C00C5B2BC /* Network.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		D75AF7E1272C6369004A2CFB = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +95,7 @@
 				D75AF807272C8975004A2CFB /* View */,
 				D75AF808272C89AF004A2CFB /* View Model */,
 				D75AF806272C896A004A2CFB /* Model */,
+				D72326D7272DA96700C5B2BC /* Services */,
 				D75AF7ED272C6369004A2CFB /* AppDelegate.swift */,
 				D75AF7EF272C6369004A2CFB /* SceneDelegate.swift */,
 				D75AF7F6272C636B004A2CFB /* Assets.xcassets */,
@@ -96,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				D75AF809272CF02A004A2CFB /* Movie.swift */,
+				D72326DE272DBD1700C5B2BC /* NetworkError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,8 +243,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72326DB272DA99C00C5B2BC /* Network.swift in Sources */,
 				D75AF805272C8790004A2CFB /* MoviesTableViewController.swift in Sources */,
 				D75AF7EE272C6369004A2CFB /* AppDelegate.swift in Sources */,
+				D72326DF272DBD1700C5B2BC /* NetworkError.swift in Sources */,
 				D75AF80A272CF02A004A2CFB /* Movie.swift in Sources */,
 				D75AF7F0272C6369004A2CFB /* SceneDelegate.swift in Sources */,
 			);
