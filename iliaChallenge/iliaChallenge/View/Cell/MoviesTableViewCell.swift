@@ -32,7 +32,7 @@ class MoviesTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
+        //contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.clipsToBounds = true
         //contentView.addSubview(moviePhoto)
         contentView.addSubview(movieName)
@@ -57,7 +57,7 @@ class MoviesTableViewCell: UITableViewCell {
             //movieName.heightAnchor.constraint(equalToConstant: 88),
             releaseDate.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             releaseDate.topAnchor.constraint(equalTo: movieName.bottomAnchor,constant: 16),
-            releaseDate.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,constant: 16)
+            releaseDate.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,constant: -8)
         ])
         
     }
