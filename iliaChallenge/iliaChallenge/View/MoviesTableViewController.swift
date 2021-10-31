@@ -69,7 +69,7 @@ class MoviesTableViewController: UITableViewController {
 
         if let date = dateFormatterGet.date(from: releaseData) {
             print(dateFormatterPrint.string(from: date))
-            cell.releaseDate.text = "release on " + dateFormatterPrint.string(from: date)
+            cell.releaseDate.text = dateFormatterPrint.string(from: date)
         } else {
            cell.releaseDate.text = "data unavailable"
            print("There was an error decoding the string")
@@ -83,7 +83,7 @@ class MoviesTableViewController: UITableViewController {
         let rootVC = MovieDescriptionViewController()
         rootVC.movieId = movieId ?? 0
         self.navigationController?.pushViewController(rootVC, animated: true)
-
+        
     }
 
 }

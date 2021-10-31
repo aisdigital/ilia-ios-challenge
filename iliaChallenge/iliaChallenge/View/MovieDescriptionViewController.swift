@@ -10,13 +10,41 @@ import Alamofire
 
 class MovieDescriptionViewController: UIViewController  {
     
+    public let movieName: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 24, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.contentMode = .left
+        return label
+    }()
+    
+    public let movieOverView: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 17, weight: .regular)
+        label.baselineAdjustment = .alignBaselines
+        label.lineBreakMode = .byTruncatingTail
+        label.numberOfLines = 10
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.contentMode = .left
+        return label
+    }()
+    
+    //var photo = UIImage()
+    //var imageView = UIImageView()
     var movieId = Int()
     var movieDetails = MovieDetails()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         getMoviesDetails()
-        // Do any additional setup after loading the view.
+        //imageView.contentMode = .scaleAspectFit
+        //imageView = UIImageView(image: photo)
+        //view.addSubview(imageView)
+        view.addSubview(movieName)
+        view.addSubview(movieOverView)
+        
+        setupConstraints()
     }
     
     private func getMoviesDetails() {
@@ -33,15 +61,49 @@ class MovieDescriptionViewController: UIViewController  {
              
              do {
                  if let data = response.data {
-                     print(data)
+
                      let models = try JSONDecoder().decode(MovieDetails.self, from: data)
                      self.movieDetails = models
-                     //print(models)
+                     self.movieName.text = self.movieDetails.title
+                     self.movieOverView.text = self.movieDetails.overview
                  }
              } catch {
                  print("Error during JSON serialization: \(error)")
              }
          }
+        
+        
+        /*
+        let imagePAth = self.movieDetails.backdropPath ?? ""
+        var imageUrl = URL("https://www.themoviedb.org/t/p/original/" + imagePAth
+        AF.download(imageUrl).responseData { response in
+            switch response.result {
+            case .success(let data):
+                
+                self.photo = UIImage(data: data)!
+
+            default:
+                break
+            }
+        }*/
      }
+    
+    private func setupConstraints(){
+        
+        NSLayoutConstraint.activate([
+            movieName.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 16),
+            movieName.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
+            movieName.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8)
+           
+        ])
+        
+        NSLayoutConstraint.activate([
+            movieOverView.topAnchor.constraint(equalTo: movieName.bottomAnchor ,constant: 16),
+            movieOverView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+            //movieOverView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8),
+            movieOverView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8)
+        ])
+    
+    }
 
 }
