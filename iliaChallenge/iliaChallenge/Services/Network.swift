@@ -11,7 +11,11 @@ import UIKit
 
 final class Network {
     
-    private func getMovie(completed: @escaping (Result<[Movie], NetworkError>) -> Void) {
+    static let shared = Network()
+        
+    init() {}
+
+    func getMovie(completed: @escaping (Result<Movie, NetworkError>) -> Void) {
         
         let request = "https://api.themoviedb.org/3/movie/now_playing?api_key=f13794b05602015b7f895fed45d8e8f7"
 
@@ -23,7 +27,7 @@ final class Network {
             
             do {
                 if let data = response.data {
-                    let movies = try JSONDecoder().decode([Movie].self, from: data)
+                    let movies = try JSONDecoder().decode(Movie.self, from: data)
                         completed(.success(movies))
                     } else {
                         completed(.failure(.invalidData))
@@ -39,5 +43,6 @@ final class Network {
     
 }
     
+
 
 
