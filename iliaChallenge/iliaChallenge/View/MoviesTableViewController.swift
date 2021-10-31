@@ -7,7 +7,6 @@
 
 import UIKit
 import Alamofire
-import WebKit
 
 class MoviesTableViewController: UITableViewController {
     
@@ -20,11 +19,6 @@ class MoviesTableViewController: UITableViewController {
         tableView.register(MoviesTableViewCell.self, forCellReuseIdentifier: MoviesTableViewCell.identifier)
         //viewModel.fetchMovies()
         fillMovies()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -62,11 +56,34 @@ class MoviesTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MoviesTableViewCell.identifier, for: indexPath) as? MoviesTableViewCell else {
             return UITableViewCell()
         }
-
-        cell.movieName.text = movies.results?[indexPath.row].title
-        cell.releaseDate.text = "release on  \(movies.results?[indexPath.row].release_date) "
         
+        cell.movieName.text = movies.results?[indexPath.row].title
+        
+        let releaseData = movies.results?[indexPath.row].release_date ?? ""
+        
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd"
+
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "MMM d, yyyy"
+
+        if let date = dateFormatterGet.date(from: releaseData) {
+            print(dateFormatterPrint.string(from: date))
+            cell.releaseDate.text = "release on " + dateFormatterPrint.string(from: date)
+        } else {
+           cell.releaseDate.text = "data unavailable"
+           print("There was an error decoding the string")
+        }
+
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movieId = movies.results?[indexPath.row].id
+        let rootVC = MovieDescriptionViewController()
+        rootVC.movieId = movieId ?? 0
+        self.navigationController?.pushViewController(rootVC, animated: true)
+
     }
 
 }

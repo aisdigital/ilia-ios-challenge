@@ -125,8 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				D75AF809272CF02A004A2CFB /* Movie.swift */,
-				D72326DE272DBD1700C5B2BC /* NetworkError.swift */,
 				D72326E7272E324800C5B2BC /* MovieDetails.swift */,
+				D72326DE272DBD1700C5B2BC /* NetworkError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

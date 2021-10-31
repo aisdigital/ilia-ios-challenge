@@ -8,84 +8,113 @@
 import Foundation
 
 struct MovieDetails: Codable {
-    let adult: Bool
-    let backdropPath: String
-    let belongsToCollection: JSONNull?
-    let budget: Int
-    let genres: [Genre]
-    let homepage: String
-    let id: Int
-    let imdbID, originalLanguage, originalTitle, overview: String
-    let popularity: Double
-    let posterPath: JSONNull?
-    let productionCompanies: [ProductionCompany]
-    let productionCountries: [ProductionCountry]
-    let releaseDate: String
-    let revenue, runtime: Int
-    let spokenLanguages: [SpokenLanguage]
-    let status, tagline, title: String
-    let video: Bool
-    let voteAverage: Double
-    let voteCount: Int
+    var adult: Bool?
+    var backdropPath: String?
+    var belongsToCollection: Collection?
+    var budget: Int?
+    var genres: [Genre]?
+    var homepage: String?
+    var id: Int?
+    var imdbID, originalLanguage, originalTitle, overview: String?
+    var popularity: Double?
+    var posterPath: String?
+    var productionCompanies: [ProductionCompany]?
+    var productionCountries: [ProductionCountry]?
+    var releaseDate: String?
+    var revenue, runtime: Int?
+    var spokenLanguages: [SpokenLanguage]?
+    var status, tagline, title: String?
+    var video: Bool?
+    var voteAverage: Double?
+    var voteCount: Int?
 
     enum CodingKeys: String, CodingKey {
-        case adult
+        case adult = "adult"
         case backdropPath = "backdrop_path"
         case belongsToCollection = "belongs_to_collection"
-        case budget, genres, homepage, id
+        case budget = "budget"
+        case genres = "genres"
+        case homepage = "homepage"
+        case id = "id"
         case imdbID = "imdb_id"
         case originalLanguage = "original_language"
         case originalTitle = "original_title"
-        case overview, popularity
+        case overview = "overview"
+        case popularity = "popularity"
         case posterPath = "poster_path"
         case productionCompanies = "production_companies"
         case productionCountries = "production_countries"
         case releaseDate = "release_date"
-        case revenue, runtime
+        case revenue = "revenue"
+        case runtime = "runtime"
         case spokenLanguages = "spoken_languages"
-        case status, tagline, title, video
+        case status = "status"
+        case tagline = "tagline"
+        case title = "title"
+        case video = "video"
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
 }
 
 struct Genre: Codable {
-    let id: Int
-    let name: String
+    var id: Int?
+    var name: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case name = "name"
+    }
 }
 
 struct ProductionCompany: Codable {
-    let id: Int
-    let logoPath: String?
-    let name, originCountry: String
+    var id: Int?
+    var logoPath: String?
+    var name, originCountry: String?
 
     enum CodingKeys: String, CodingKey {
-        case id
+        case id = "id"
         case logoPath = "logo_path"
-        case name
+        case name = "name"
         case originCountry = "origin_country"
     }
 }
 
 struct ProductionCountry: Codable {
-    let iso3166_1, name: String
+    var iso3166_1, name: String?
 
     enum CodingKeys: String, CodingKey {
         case iso3166_1 = "iso_3166_1"
-        case name
+        case name = "name"
     }
 }
 
 struct SpokenLanguage: Codable {
-    let iso639_1, name: String
+    var iso639_1, name: String?
 
     enum CodingKeys: String, CodingKey {
         case iso639_1 = "iso_639_1"
-        case name
+        case name = "name"
     }
 }
 
-class JSONNull: Codable, Hashable {
+struct Collection: Codable {
+    var backdrop_path: String?
+    var id: Int?
+    var name: String?
+    var poster_path: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case backdrop_path = "backdrop_path"
+        case id = "id"
+        case name = "name"
+        case poster_path = "poster_path"
+        
+    }
+    
+}
+
+/*class JSONNull: Codable, Hashable {
 
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
         return true
@@ -109,3 +138,7 @@ class JSONNull: Codable, Hashable {
         try container.encodeNil()
     }
 }
+*/
+
+
+
