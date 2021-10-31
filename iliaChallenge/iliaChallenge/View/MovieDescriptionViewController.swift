@@ -10,9 +10,10 @@ import Alamofire
 
 class MovieDescriptionViewController: UIViewController  {
     
-    public let movieName: UILabel = {
+    public let overview: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 24, weight: .bold)
+        label.text = "Overview"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.contentMode = .left
         return label
@@ -38,10 +39,11 @@ class MovieDescriptionViewController: UIViewController  {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         getMoviesDetails()
+
         //imageView.contentMode = .scaleAspectFit
         //imageView = UIImageView(image: photo)
         //view.addSubview(imageView)
-        view.addSubview(movieName)
+        view.addSubview(overview)
         view.addSubview(movieOverView)
         
         setupConstraints()
@@ -64,8 +66,8 @@ class MovieDescriptionViewController: UIViewController  {
 
                      let models = try JSONDecoder().decode(MovieDetails.self, from: data)
                      self.movieDetails = models
-                     self.movieName.text = self.movieDetails.title
                      self.movieOverView.text = self.movieDetails.overview
+                     self.navigationItem.title = self.movieDetails.title
                  }
              } catch {
                  print("Error during JSON serialization: \(error)")
@@ -91,16 +93,15 @@ class MovieDescriptionViewController: UIViewController  {
     private func setupConstraints(){
         
         NSLayoutConstraint.activate([
-            movieName.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 16),
-            movieName.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-            movieName.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8)
+            overview.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 16),
+            overview.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            overview.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8)
            
         ])
         
         NSLayoutConstraint.activate([
-            movieOverView.topAnchor.constraint(equalTo: movieName.bottomAnchor ,constant: 16),
-            movieOverView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
-            //movieOverView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8),
+            movieOverView.topAnchor.constraint(equalTo: overview.bottomAnchor ,constant: 16),
+            movieOverView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             movieOverView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8)
         ])
     
