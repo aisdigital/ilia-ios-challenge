@@ -13,6 +13,7 @@
 		03099EC02734BA7100CC63FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03099EBF2734BA7100CC63FA /* Preview Assets.xcassets */; };
 		03099EC72734BB9200CC63FA /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03099EC62734BB9200CC63FA /* MoviesViewModel.swift */; };
 		03099EC92734BC7800CC63FA /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03099EC82734BC7800CC63FA /* Movies.swift */; };
+		03099ECB2734BD1600CC63FA /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03099ECA2734BD1600CC63FA /* MovieView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		03099EBF2734BA7100CC63FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03099EC62734BB9200CC63FA /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		03099EC82734BC7800CC63FA /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		03099ECA2734BD1600CC63FA /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				03099EB82734BA7000CC63FA /* now_playing_moviesApp.swift */,
 				03099EBA2734BA7000CC63FA /* ContentView.swift */,
 				03099EC62734BB9200CC63FA /* MoviesViewModel.swift */,
+				03099ECA2734BD1600CC63FA /* MovieView.swift */,
 				03099EC82734BC7800CC63FA /* Movies.swift */,
 				03099EBC2734BA7100CC63FA /* Assets.xcassets */,
 				03099EBE2734BA7100CC63FA /* Preview Content */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03099ECB2734BD1600CC63FA /* MovieView.swift in Sources */,
 				03099EBB2734BA7000CC63FA /* ContentView.swift in Sources */,
 				03099EC72734BB9200CC63FA /* MoviesViewModel.swift in Sources */,
 				03099EC92734BC7800CC63FA /* Movies.swift in Sources */,
