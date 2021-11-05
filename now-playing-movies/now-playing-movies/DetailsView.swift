@@ -15,45 +15,56 @@ struct DetailsView: View {
     }
     
     var body: some View {
-        VStack {
-            Text(movie.title)
-                .font(.title)
-                .lineLimit(-1)
-            
-            AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(movie.backdrop_path)")) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            } placeholder: {
-                ZStack{
-                    Color.gray.opacity(0.1)
-                    Image(systemName: "photo")
-                        .foregroundColor(Color.gray.opacity(0.5))
-                        .font(.system(size: 80))
-                }
-            }
-            .cornerRadius(20)
-            .frame(width: 380, height: 230)
-            
-            
-            HStack {
-                Text("Rating:")
-                Image(systemName: "star.fill")
-                    .foregroundColor(Color.yellow)
-                    .font(.system(size: 15))
-                    .padding(.trailing, -5.0)
-                Text(String(movie.vote_average))
+            VStack {
+                ScrollView{
+                HStack {
+                    Text(movie.title)
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(4)
+                        
+                    Spacer()
+                }.padding(.horizontal)
                 
-                Spacer()
-            }.padding(20)
-            
-            Text(movie.overview)
-                .font(.callout)
-                .multilineTextAlignment(.leading)
-                .padding([.leading, .bottom, .trailing], 20)
-            
-            Spacer()
-        }
+                AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(movie.backdrop_path)")) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    
+                } placeholder: {
+                    ZStack{
+                        Color.white.opacity(0.1)
+                        Image(systemName: "photo")
+                            .foregroundColor(Color.gray.opacity(0.5))
+                            .font(.system(size: 80))
+                    }.aspectRatio(contentMode: .fit)
+                }
+                .cornerRadius(20)
+                .padding(.horizontal)
+                
+                
+                HStack {
+                    Text("Rating:")
+                    Image(systemName: "star.fill")
+                        .foregroundColor(Color.yellow)
+                        .font(.system(size: 15))
+                        .padding(.trailing, -5.0)
+                    Text(String(movie.vote_average))
+                    
+                    Spacer()
+                }.padding(20)
+                
+                
+                    Text(movie.overview)
+                        .font(.callout)
+                        .multilineTextAlignment(.leading)
+                        .padding([.leading, .bottom, .trailing], 20)
+                    
+                    Spacer()
+                }
+ 
+            }
     }
 }
 
