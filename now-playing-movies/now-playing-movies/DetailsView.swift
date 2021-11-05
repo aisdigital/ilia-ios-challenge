@@ -15,15 +15,15 @@ struct DetailsView: View {
     }
     
     var body: some View {
-            VStack {
-                ScrollView{
+        VStack {
+            ScrollView{
                 HStack {
                     Text(movie.title)
                         .font(.title3)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
                         .lineLimit(4)
-                        
+                    
                     Spacer()
                 }.padding(.horizontal)
                 
@@ -43,7 +43,6 @@ struct DetailsView: View {
                 .cornerRadius(20)
                 .padding(.horizontal)
                 
-                
                 HStack {
                     Text("Rating:")
                     Image(systemName: "star.fill")
@@ -53,18 +52,18 @@ struct DetailsView: View {
                     Text(String(movie.vote_average))
                     
                     Spacer()
-                }.padding(20)
+                }.padding()
                 
-                
+                HStack {
                     Text(movie.overview)
                         .font(.callout)
                         .multilineTextAlignment(.leading)
-                        .padding([.leading, .bottom, .trailing], 20)
-                    
                     Spacer()
-                }
- 
+                }.padding([.leading, .bottom, .trailing])
+
+                Spacer()
             }
+        }
     }
 }
 

@@ -21,7 +21,7 @@ struct MovieView: View {
             Spacer()
             Text(String(movie.vote_average))
                 .font(.footnote)
-                
+            
             Image(systemName: "star.fill")
                 .foregroundColor(Color.yellow)
                 .font(.system(size: 11))

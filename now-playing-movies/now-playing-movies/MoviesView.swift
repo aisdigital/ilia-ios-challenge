@@ -28,10 +28,6 @@ struct MoviesView: View {
                                                title: movie.title,
                                                vote_average: movie.vote_average))
                     }
-                    
-//                    NavigationButton(destination: ShowView(feedResult: feedRow)) {
-//                        FeedRowView(feedResult: feedRow)
-//                    }
                 }
             }.navigationBarTitle(Text("In Theaters"))
         }
