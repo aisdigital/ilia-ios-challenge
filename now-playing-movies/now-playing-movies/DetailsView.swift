@@ -36,6 +36,7 @@ struct DetailsView: View {
                 } placeholder: {
                     ZStack{
                         Color.white.opacity(0)
+                            .frame(height: 161.5)
                         Image(systemName: "photo")
                             .foregroundColor(Color.gray.opacity(0.5))
                             .font(.system(size: 80))
