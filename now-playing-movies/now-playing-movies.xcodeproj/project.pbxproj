@@ -15,6 +15,7 @@
 		03099EC92734BC7800CC63FA /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03099EC82734BC7800CC63FA /* Movies.swift */; };
 		03099ECB2734BD1600CC63FA /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03099ECA2734BD1600CC63FA /* MovieView.swift */; };
 		03099ECD2734BE0700CC63FA /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03099ECC2734BE0700CC63FA /* MoviesView.swift */; };
+		03099ECF2734C0B800CC63FA /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03099ECE2734C0B800CC63FA /* DetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		03099EC82734BC7800CC63FA /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		03099ECA2734BD1600CC63FA /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 		03099ECC2734BE0700CC63FA /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
+		03099ECE2734C0B800CC63FA /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				03099EC62734BB9200CC63FA /* MoviesViewModel.swift */,
 				03099ECA2734BD1600CC63FA /* MovieView.swift */,
 				03099ECC2734BE0700CC63FA /* MoviesView.swift */,
+				03099ECE2734C0B800CC63FA /* DetailsView.swift */,
 				03099EC82734BC7800CC63FA /* Movies.swift */,
 				03099EBC2734BA7100CC63FA /* Assets.xcassets */,
 				03099EBE2734BA7100CC63FA /* Preview Content */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03099ECB2734BD1600CC63FA /* MovieView.swift in Sources */,
+				03099ECF2734C0B800CC63FA /* DetailsView.swift in Sources */,
 				03099ECD2734BE0700CC63FA /* MoviesView.swift in Sources */,
 				03099EBB2734BA7000CC63FA /* ContentView.swift in Sources */,
 				03099EC72734BB9200CC63FA /* MoviesViewModel.swift in Sources */,

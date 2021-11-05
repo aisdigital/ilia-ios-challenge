@@ -32,6 +32,6 @@ struct MovieView: View {
 
 struct MovieView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieView(movie: Movie(poster_path: "", overview: "", release_date: "", id: 0, title: "Spirited Away", vote_average: 8.6))
+        MovieView(movie: Movie(backdrop_path: "", overview: "", release_date: "", id: 0, title: "Spirited Away", vote_average: 8.6))
     }
 }

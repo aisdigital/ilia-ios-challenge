@@ -15,9 +15,14 @@ struct MoviesView: View {
             List {
                 ForEach(movies.movie) { movie in
                     
-                    NavigationLink(destination: Text(movie.title)) {
-                        MovieView(movie: Movie(poster_path: movie.poster_path,
-                                               overview: movie.poster_path,
+                    NavigationLink(destination: DetailsView(movie: Movie(backdrop_path: movie.backdrop_path,
+                                                                         overview: movie.overview,
+                                                                         release_date: movie.release_date,
+                                                                         id: movie.id,
+                                                                         title: movie.title,
+                                                                         vote_average: movie.vote_average))) {
+                        MovieView(movie: Movie(backdrop_path: movie.backdrop_path,
+                                               overview: movie.overview,
                                                release_date: movie.release_date,
                                                id: movie.id,
                                                title: movie.title,

@@ -15,7 +15,7 @@ struct Movies: Decodable{
 }
 
 struct Movie: Decodable, Identifiable{
-    var poster_path: String
+    var backdrop_path: String
     var overview: String
     var release_date: String
     var id: Int
