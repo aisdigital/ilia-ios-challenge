@@ -13,6 +13,7 @@ struct DetailsView: View {
     init(movie: Movie){
         self.movie = movie
     }
+    @StateObject var trailer = TrailerViewModel()
     
     var body: some View {
         VStack {
@@ -34,7 +35,7 @@ struct DetailsView: View {
                     
                 } placeholder: {
                     ZStack{
-                        Color.white.opacity(0.1)
+                        Color.white.opacity(0)
                         Image(systemName: "photo")
                             .foregroundColor(Color.gray.opacity(0.5))
                             .font(.system(size: 80))
@@ -52,6 +53,14 @@ struct DetailsView: View {
                     Text(String(movie.vote_average))
                     
                     Spacer()
+                    Link(destination: URL(string: "https://www.youtube.com/watch?v=\(trailer.trailer.key)")!) {
+                        Text("Play Trailer")
+                            .foregroundColor(Color.black)
+                            .padding(.horizontal, 15)
+                            .padding(.vertical, 2)
+                            .background(Color.yellow.opacity(0.7))
+                            .cornerRadius(10)
+                    }
                 }.padding()
                 
                 HStack {
@@ -60,9 +69,13 @@ struct DetailsView: View {
                         .multilineTextAlignment(.leading)
                     Spacer()
                 }.padding([.leading, .bottom, .trailing])
-
+                
                 Spacer()
             }
+            
+        }.onAppear{
+            trailer.idMovie = movie.id
+            trailer.fetchTrailer()
         }
     }
 }

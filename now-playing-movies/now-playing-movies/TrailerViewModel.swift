@@ -13,7 +13,7 @@ class TrailerViewModel: ObservableObject {
     
     private var task: AnyCancellable?
     
-    @Published var trailer: Trailer = Trailer(key: "")
+    @Published var trailer: Trailer = Trailer(key: "", type: "")
     @Published var idMovie: Int = 0
     
     
@@ -31,7 +31,11 @@ class TrailerViewModel: ObservableObject {
                 let videos = try JSONDecoder().decode(Videos.self, from: data)
                 
                 DispatchQueue.main.async {
-                    self.trailer.key = videos.results[0].key
+                    var cont = 0
+                    while (videos.results[cont].type != "Trailer") {
+                        cont = cont+1
+                    }
+                    self.trailer.key = videos.results[cont].key
                 }
                 
             } catch let error {

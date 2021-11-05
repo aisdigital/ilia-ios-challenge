@@ -13,4 +13,5 @@ struct Videos: Decodable{
 
 struct Trailer: Decodable{
     var key: String
+    var type: String
 }
