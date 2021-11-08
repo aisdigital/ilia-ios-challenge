@@ -1,0 +1,11 @@
+/*
+  Localizable.strings
+  NowPlayingMovies
+
+  Created by Dara Caroline on 08/11/21.
+  
+*/
+
+"Movie Release Date" = "Data de lançamento do filme";
+"Now playing movies" = "Filmes em cartaz";
+"details" = "Detalhes";
