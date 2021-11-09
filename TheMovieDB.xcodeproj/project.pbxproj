@@ -14,6 +14,9 @@
 		9482C6EF273A91A600CE3DDE /* TheMovieDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9482C6EE273A91A600CE3DDE /* TheMovieDBTests.swift */; };
 		9482C6F9273A91A600CE3DDE /* TheMovieDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9482C6F8273A91A600CE3DDE /* TheMovieDBUITests.swift */; };
 		9482C6FB273A91A600CE3DDE /* TheMovieDBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9482C6FA273A91A600CE3DDE /* TheMovieDBUITestsLaunchTests.swift */; };
+		9486C105273A9F9000692C77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9486C104273A9F9000692C77 /* LaunchScreen.storyboard */; };
+		9486C108273AA07400692C77 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 9486C107273AA07400692C77 /* AlertToast */; };
+		9486C10A273AA09C00692C77 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9486C109273AA09C00692C77 /* AppConstants.swift */; };
 		9493BF8C273A9536009E9253 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493BF8A273A9536009E9253 /* ColorExtension.swift */; };
 		9493BF8D273A9536009E9253 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493BF8B273A9536009E9253 /* UIFontExtension.swift */; };
 		9493BF97273A957A009E9253 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493BF8F273A9579009E9253 /* Gilroy-Bold.ttf */; };
@@ -59,6 +62,8 @@
 		9482C6F4273A91A600CE3DDE /* TheMovieDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMovieDBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9482C6F8273A91A600CE3DDE /* TheMovieDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBUITests.swift; sourceTree = "<group>"; };
 		9482C6FA273A91A600CE3DDE /* TheMovieDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9486C104273A9F9000692C77 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9486C109273AA09C00692C77 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		9493BF8A273A9536009E9253 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		9493BF8B273A9536009E9253 /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		9493BF8F273A9579009E9253 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 		9493BFA2273A95B4009E9253 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		9493BFA3273A95B4009E9253 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		9493BFA4273A95B4009E9253 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		9493BFAD273A984F009E9253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9486C108273AA07400692C77 /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,9 +131,14 @@
 		9482C6DC273A91A400CE3DDE /* TheMovieDB */ = {
 			isa = PBXGroup;
 			children = (
-				9482C6DD273A91A400CE3DDE /* TheMovieDBApp.swift */,
-				9482C6DF273A91A400CE3DDE /* ContentView.swift */,
+				9493BFAD273A984F009E9253 /* Info.plist */,
 				9482C6E1273A91A600CE3DDE /* Assets.xcassets */,
+				9486C104273A9F9000692C77 /* LaunchScreen.storyboard */,
+				9482C6DD273A91A400CE3DDE /* TheMovieDBApp.swift */,
+				9486C109273AA09C00692C77 /* AppConstants.swift */,
+				9493BFAC273A9805009E9253 /* Views */,
+				9493BFAB273A97FD009E9253 /* ViewModels */,
+				9493BFAA273A97F7009E9253 /* Models */,
 				9493BF9F273A959B009E9253 /* Network */,
 				9493BF8E273A9562009E9253 /* Fonts */,
 				9493BF89273A950D009E9253 /* Extensions */,
@@ -196,6 +208,28 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		9493BFAA273A97F7009E9253 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9493BFAB273A97FD009E9253 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9493BFAC273A9805009E9253 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9482C6DF273A91A400CE3DDE /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,6 +246,9 @@
 			dependencies = (
 			);
 			name = TheMovieDB;
+			packageProductDependencies = (
+				9486C107273AA07400692C77 /* AlertToast */,
+			);
 			productName = TheMovieDB;
 			productReference = 9482C6DA273A91A400CE3DDE /* TheMovieDB.app */;
 			productType = "com.apple.product-type.application";
@@ -284,6 +321,9 @@
 				Base,
 			);
 			mainGroup = 9482C6D1273A91A400CE3DDE;
+			packageReferences = (
+				9486C106273AA07400692C77 /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
 			productRefGroup = 9482C6DB273A91A400CE3DDE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -309,6 +349,7 @@
 				9493BF97273A957A009E9253 /* Gilroy-Bold.ttf in Resources */,
 				9482C6E5273A91A600CE3DDE /* Preview Assets.xcassets in Resources */,
 				9482C6E2273A91A600CE3DDE /* Assets.xcassets in Resources */,
+				9486C105273A9F9000692C77 /* LaunchScreen.storyboard in Resources */,
 				9493BF98273A957A009E9253 /* Heebo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +384,7 @@
 				9482C6DE273A91A400CE3DDE /* TheMovieDBApp.swift in Sources */,
 				9493BFA9273A95B4009E9253 /* Request.swift in Sources */,
 				9493BFA6273A95B4009E9253 /* NetworkRequestError.swift in Sources */,
+				9486C10A273AA09C00692C77 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,15 +542,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheMovieDB/Preview Content\"";
 				DEVELOPMENT_TEAM = 85667CV2UC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TheMovieDB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -529,15 +574,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheMovieDB/Preview Content\"";
 				DEVELOPMENT_TEAM = 85667CV2UC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TheMovieDB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -689,6 +737,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9486C106273AA07400692C77 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9486C107273AA07400692C77 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9486C106273AA07400692C77 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9482C6D2273A91A400CE3DDE /* Project object */;
 }
