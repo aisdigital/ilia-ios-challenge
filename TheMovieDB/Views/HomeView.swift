@@ -29,17 +29,52 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 if self.viewModel.showNotFoundView() {
-                    Text("Sem resultado")
+                    ZStack {
+                        Rectangle()
+                            .background(Color.white)
+                        Text("Sem resultados")
+                            .font(.robotoLight24)
+                            .foregroundColor(Color.primary)
+
+                    }
                 }
                 else {
-                    ScrollView {
-                        LazyVGrid(columns: self.columns, spacing: 16) {
-                            ForEach(self.viewModel.movies) { movie in
-                                NavigationLink(destination: MovieDetailView(movie: movie)) {
-                                    MovieCellView(movie: movie)
+                    if self.viewModel.movies.isEmpty {
+                        ZStack {
+                            Rectangle()
+                                .background(Color.white)
+                            Text("Procure por algum filme...")
+                                .font(.robotoLight24)
+                                .foregroundColor(Color.primary)
+
+                        }
+                    }
+                    else {
+                        ScrollView {
+                            LazyVGrid(columns: self.columns, spacing: 16) {
+                                ForEach(self.viewModel.movies) { movie in
+                                    NavigationLink(destination: MovieDetailView(viewModel: self.viewModel, movie: movie)) {
+                                        MovieCellView(movie: movie)
+                                    }
                                 }
                             }
+
+                            if self.viewModel.isPosibleLoadMore {
+                                Button {
+                                    self.viewModel.loadMore()
+                                } label: {
+                                    Text("CARREGAR MAIS")
+                                        .padding()
+                                        .frame(maxWidth: .infinity)
+                                        .background(Color.primary)
+                                        .foregroundColor(.white)
+                                        .clipShape(Capsule())
+                                }
+                                .padding(.horizontal, 24)
+                                .padding(.vertical, 10)
+                            }
                         }
+                        .background(.white)
                     }
                 }
             }
@@ -65,9 +100,7 @@ struct HomeView: View {
         .toast(isPresenting: self.$viewModel.isLoading) {
             AlertToast(type: .loading)
         }
-        .toast(isPresenting: self.$viewModel.showError, duration: 2, tapToDismiss: true) {
-            AlertToast(displayMode: .hud, type: .error(.red), title: "Erro", subTitle: self.viewModel.errorDescription)
-        }
+        .background(.white)
     }
 }
 

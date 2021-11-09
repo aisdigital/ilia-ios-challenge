@@ -49,6 +49,7 @@ struct LoginView: View {
                 .focused(self.$focusedField, equals: .username)
                 .textContentType(.emailAddress)
                 .submitLabel(.next)
+                .colorScheme(.light)
 
             Text(self.viewModel.password.isEmpty ? "" : "Senha")
                 .font(.robotoMedium12)
@@ -63,6 +64,7 @@ struct LoginView: View {
                         .focused(self.$focusedField, equals: .password)
                         .textContentType(.password)
                         .submitLabel(.join)
+                        .colorScheme(.light)
                 }
                 else {
                     TextField("Senha", text: self.$viewModel.password)
@@ -71,6 +73,7 @@ struct LoginView: View {
                         .focused(self.$focusedField, equals: .password)
                         .textContentType(.password)
                         .submitLabel(.join)
+                        .colorScheme(.light)
                 }
 
                 Button {
@@ -121,7 +124,7 @@ struct LoginView: View {
                         Text("Bem-Vindo(a).")
                             .font(.gilroyBold40)
 
-                        Text("Milhões de Filmes, Séries e Pessoas para Descobrir, Explore já.")
+                        Text("Milhões de Filmes, Explore já.")
                             .font(.robotoLight24)
                     }
                     .foregroundColor(.white)

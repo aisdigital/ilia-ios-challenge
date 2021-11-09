@@ -8,7 +8,6 @@
 import XCTest
 
 class TheMovieDBUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

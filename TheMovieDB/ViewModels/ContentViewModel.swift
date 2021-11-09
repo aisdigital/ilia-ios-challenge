@@ -27,10 +27,21 @@ class ContentViewModel: ObservableObject {
     }
     /// Os filmes resultantes
     @Published var movies: [Movie] = []
+    /// O ID do youtube para ser mostrado
+    @Published var youtubeID: String = ""
+    /// Se é possível carregar mais páginas
+    @Published var isPosibleLoadMore: Bool = false
 
     private var cancellables = [AnyCancellable]()
+    private var cancellablesTrailer = [AnyCancellable]()
+    
     /// Cliente do API de network
     let apiClient = APIClient(baseURL: AppConstants.baseURL)
+
+    /// Atual página
+    var currentPage: Int = 1
+    /// Total de páginas
+    var totalPages: Int = 1
 
     // MARK: - Methods
 
@@ -41,6 +52,7 @@ class ContentViewModel: ObservableObject {
             return
         }
 
+        self.isPosibleLoadMore = false
         self.isLoading = true
 
         self.apiClient.dispatch(SearchMoviesRequest(searchText: self.searchText))
@@ -57,8 +69,72 @@ class ContentViewModel: ObservableObject {
             }, receiveValue: { value in
                 debugPrint("ContentViewModel.searchMovies: movies.count=\(value.results.count), total_results=\(value.total_results), page=\(value.page)/\(value.total_pages)")
                 self.movies = value.results
+                self.currentPage = value.page
+                self.totalPages = value.total_pages
+
+                self.isPosibleLoadMore = self.currentPage < self.totalPages
             })
             .store(in: &self.cancellables)
+    }
+
+    /// Carrega mais filmes
+    func loadMore() {
+        self.currentPage += 1
+
+        self.isPosibleLoadMore = self.currentPage < self.totalPages
+
+        self.apiClient.dispatch(SearchMoviesRequest(searchText: self.searchText , page: self.currentPage))
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                self.isLoading = false
+                switch completion {
+                case .finished:
+                    debugPrint("ContentViewModel.loadMore: OK")
+                case .failure(let error):
+                    self.showError = true
+                    self.errorDescription = "\(error)"
+                }
+            }, receiveValue: { value in
+                debugPrint("ContentViewModel.loadMore: movies.count=\(value.results.count), total_results=\(value.total_results), page=\(value.page)/\(value.total_pages)")
+                self.movies = self.movies + value.results
+                self.currentPage = value.page
+                self.totalPages = value.total_pages
+
+                self.isPosibleLoadMore = self.currentPage < self.totalPages
+            })
+            .store(in: &self.cancellables)
+    }
+
+    /// Requisita o trailer do filme
+    /// - Parameter movie: O filme
+    func requetTrailer(movie: Movie) {
+        self.youtubeID = ""
+
+        self.apiClient.dispatch(TrailerRequest(movieID: movie.id))
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    debugPrint("ContentViewModel.getTrailer: OK")
+                case .failure(let error):
+                    self.youtubeID = ""
+                    debugPrint("ContentViewModel.getTrailer: Error=\(error)")
+                }
+            }, receiveValue: { value in
+                debugPrint("ContentViewModel.getTrailer: trailer.count=\(value.results.count)")
+
+                let trailers = value.results.filter { trailer in
+                    trailer.site.capitalized == "YouTube".capitalized
+                }
+
+                if let key = trailers.first?.key {
+                    self.youtubeID = key
+                }
+                else {
+                    self.youtubeID = ""
+                }
+            })
+            .store(in: &self.cancellablesTrailer)
     }
 
     /// Usado para saber se vai mostrar a tela de filmes não achados
