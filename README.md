@@ -1,8 +1,9 @@
-**IMPORTANTE:** Implementei o login do TheMovieDB para num futuro fazer melhores consultas. Implementei isso com o Keychain do Swift para que podam avaliar isso. Usem uma das credenciais que tenham nesse site, se não podem usar minhas credencias temporais:
-- username: m0rb1u5
-- senha: a1b2c3d4
+**IMPORTANTE:** Implementei o login do TheMovieDB para num futuro fazer melhores consultas já que com isso se podem usar listas personalizadas do usuário. Implementei isso com o Keychain do Swift para que podam avaliar isso. Usem uma das credenciais que tenham nesse site, se não podem usar minhas credencias temporais:
 
-Também ao clicar na imagem dos detalhes do filme é possível ver a imagem em um tamanho maior. Qualquer dúvida me podem contactar.
+username: m0rb1u5
+senha: a1b2c3d4
+
+Também ao clicar na imagem dos detalhes do filme é possível ver a imagem em um tamanho maior. Qualquer dúvida me podem contatar. Além fiz uns testes de UI que estão batendo o 89% de coverage.
 
 # ília - Code Challenge iOS
 
