@@ -14,6 +14,21 @@
 		9482C6EF273A91A600CE3DDE /* TheMovieDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9482C6EE273A91A600CE3DDE /* TheMovieDBTests.swift */; };
 		9482C6F9273A91A600CE3DDE /* TheMovieDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9482C6F8273A91A600CE3DDE /* TheMovieDBUITests.swift */; };
 		9482C6FB273A91A600CE3DDE /* TheMovieDBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9482C6FA273A91A600CE3DDE /* TheMovieDBUITestsLaunchTests.swift */; };
+		9493BF8C273A9536009E9253 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493BF8A273A9536009E9253 /* ColorExtension.swift */; };
+		9493BF8D273A9536009E9253 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493BF8B273A9536009E9253 /* UIFontExtension.swift */; };
+		9493BF97273A957A009E9253 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493BF8F273A9579009E9253 /* Gilroy-Bold.ttf */; };
+		9493BF98273A957A009E9253 /* Heebo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493BF90273A9579009E9253 /* Heebo-Regular.ttf */; };
+		9493BF99273A957A009E9253 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493BF91273A9579009E9253 /* Roboto-Medium.ttf */; };
+		9493BF9A273A957A009E9253 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493BF92273A957A009E9253 /* Roboto-Regular.ttf */; };
+		9493BF9B273A957A009E9253 /* Heebo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493BF93273A957A009E9253 /* Heebo-Medium.ttf */; };
+		9493BF9C273A957A009E9253 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493BF94273A957A009E9253 /* Gilroy-Regular.ttf */; };
+		9493BF9D273A957A009E9253 /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493BF95273A957A009E9253 /* Gilroy-SemiBold.ttf */; };
+		9493BF9E273A957A009E9253 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493BF96273A957A009E9253 /* Roboto-Light.ttf */; };
+		9493BFA5273A95B4009E9253 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493BFA0273A95B4009E9253 /* APIClient.swift */; };
+		9493BFA6273A95B4009E9253 /* NetworkRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493BFA1273A95B4009E9253 /* NetworkRequestError.swift */; };
+		9493BFA7273A95B4009E9253 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493BFA2273A95B4009E9253 /* NetworkDispatcher.swift */; };
+		9493BFA8273A95B4009E9253 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493BFA3273A95B4009E9253 /* HTTPMethod.swift */; };
+		9493BFA9273A95B4009E9253 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493BFA4273A95B4009E9253 /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +59,21 @@
 		9482C6F4273A91A600CE3DDE /* TheMovieDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMovieDBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9482C6F8273A91A600CE3DDE /* TheMovieDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBUITests.swift; sourceTree = "<group>"; };
 		9482C6FA273A91A600CE3DDE /* TheMovieDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9493BF8A273A9536009E9253 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		9493BF8B273A9536009E9253 /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		9493BF8F273A9579009E9253 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		9493BF90273A9579009E9253 /* Heebo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Regular.ttf"; sourceTree = "<group>"; };
+		9493BF91273A9579009E9253 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		9493BF92273A957A009E9253 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		9493BF93273A957A009E9253 /* Heebo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Medium.ttf"; sourceTree = "<group>"; };
+		9493BF94273A957A009E9253 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
+		9493BF95273A957A009E9253 /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
+		9493BF96273A957A009E9253 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		9493BFA0273A95B4009E9253 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9493BFA1273A95B4009E9253 /* NetworkRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestError.swift; sourceTree = "<group>"; };
+		9493BFA2273A95B4009E9253 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		9493BFA3273A95B4009E9253 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		9493BFA4273A95B4009E9253 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +127,9 @@
 				9482C6DD273A91A400CE3DDE /* TheMovieDBApp.swift */,
 				9482C6DF273A91A400CE3DDE /* ContentView.swift */,
 				9482C6E1273A91A600CE3DDE /* Assets.xcassets */,
+				9493BF9F273A959B009E9253 /* Network */,
+				9493BF8E273A9562009E9253 /* Fonts */,
+				9493BF89273A950D009E9253 /* Extensions */,
 				9482C6E3273A91A600CE3DDE /* Preview Content */,
 			);
 			path = TheMovieDB;
@@ -125,6 +158,42 @@
 				9482C6FA273A91A600CE3DDE /* TheMovieDBUITestsLaunchTests.swift */,
 			);
 			path = TheMovieDBUITests;
+			sourceTree = "<group>";
+		};
+		9493BF89273A950D009E9253 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9493BF8B273A9536009E9253 /* UIFontExtension.swift */,
+				9493BF8A273A9536009E9253 /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9493BF8E273A9562009E9253 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9493BF8F273A9579009E9253 /* Gilroy-Bold.ttf */,
+				9493BF94273A957A009E9253 /* Gilroy-Regular.ttf */,
+				9493BF95273A957A009E9253 /* Gilroy-SemiBold.ttf */,
+				9493BF93273A957A009E9253 /* Heebo-Medium.ttf */,
+				9493BF90273A9579009E9253 /* Heebo-Regular.ttf */,
+				9493BF96273A957A009E9253 /* Roboto-Light.ttf */,
+				9493BF91273A9579009E9253 /* Roboto-Medium.ttf */,
+				9493BF92273A957A009E9253 /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9493BF9F273A959B009E9253 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9493BFA3273A95B4009E9253 /* HTTPMethod.swift */,
+				9493BFA4273A95B4009E9253 /* Request.swift */,
+				9493BFA1273A95B4009E9253 /* NetworkRequestError.swift */,
+				9493BFA2273A95B4009E9253 /* NetworkDispatcher.swift */,
+				9493BFA0273A95B4009E9253 /* APIClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +300,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9493BF9B273A957A009E9253 /* Heebo-Medium.ttf in Resources */,
+				9493BF9D273A957A009E9253 /* Gilroy-SemiBold.ttf in Resources */,
+				9493BF9E273A957A009E9253 /* Roboto-Light.ttf in Resources */,
+				9493BF9A273A957A009E9253 /* Roboto-Regular.ttf in Resources */,
+				9493BF99273A957A009E9253 /* Roboto-Medium.ttf in Resources */,
+				9493BF9C273A957A009E9253 /* Gilroy-Regular.ttf in Resources */,
+				9493BF97273A957A009E9253 /* Gilroy-Bold.ttf in Resources */,
 				9482C6E5273A91A600CE3DDE /* Preview Assets.xcassets in Resources */,
 				9482C6E2273A91A600CE3DDE /* Assets.xcassets in Resources */,
+				9493BF98273A957A009E9253 /* Heebo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +334,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9493BF8C273A9536009E9253 /* ColorExtension.swift in Sources */,
 				9482C6E0273A91A400CE3DDE /* ContentView.swift in Sources */,
+				9493BF8D273A9536009E9253 /* UIFontExtension.swift in Sources */,
+				9493BFA7273A95B4009E9253 /* NetworkDispatcher.swift in Sources */,
+				9493BFA8273A95B4009E9253 /* HTTPMethod.swift in Sources */,
+				9493BFA5273A95B4009E9253 /* APIClient.swift in Sources */,
 				9482C6DE273A91A400CE3DDE /* TheMovieDBApp.swift in Sources */,
+				9493BFA9273A95B4009E9253 /* Request.swift in Sources */,
+				9493BFA6273A95B4009E9253 /* NetworkRequestError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
