@@ -22,12 +22,12 @@ struct TheMovieDBApp: App {
             if !self.securitySettings.isUserLoaded {
                 LoginView()
                     .environmentObject(self.securitySettings)
-                    .preferredColorScheme(.light)
+                    .preferredColorScheme(.dark)
             }
             else {
                 HomeView()
                     .environmentObject(self.securitySettings)
-                    .preferredColorScheme(.light)
+                    .preferredColorScheme(.dark)
             }
         }
     }

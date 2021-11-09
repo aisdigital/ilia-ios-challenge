@@ -23,7 +23,6 @@ struct CreateRequestToken: Request {
     // MARK: - Init
 
     /// Inicializador da estrutura
-    /// - Parameter searchText: Texto de busca de empresas
     init() {
         self.queryParams = ["api_key": AppConstants.apiKey]
     }

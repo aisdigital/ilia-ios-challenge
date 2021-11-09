@@ -14,6 +14,8 @@ class AppConstants {
     static let principalURL: String = "https://api.themoviedb.org/"
     /// URL base
     static let baseURL: String = "\(AppConstants.principalURL)3"
+    /// URL from images
+    static let imageURL: String = "https://image.tmdb.org/t/p/w500/"
     /// API key
     static let apiKey: String = "46a6b20dea84afed45f7c594fa0728e4"
 
