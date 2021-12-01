@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF06B91E27552FE0007BA01D /* MoviesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF06B91D27552FE0007BA01D /* MoviesAPI.swift */; };
+		CF06B92327553CB0007BA01D /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF06B92227553CB0007BA01D /* Dates.swift */; };
+		CF1EF037275155B9005783B5 /* Desafio_3_CII_3_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EF036275155B9005783B5 /* Desafio_3_CII_3_UITests.swift */; };
+		CF1EF04227515E13005783B5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EF04127515E13005783B5 /* Movie.swift */; };
+		CF1EF04727515E29005783B5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EF04627515E29005783B5 /* Result.swift */; };
+		CF1EF05227515E79005783B5 /* OriginalLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EF05127515E79005783B5 /* OriginalLanguage.swift */; };
+		CF3E2C07274FF5E9004CC4AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3E2C06274FF5E9004CC4AF /* AppDelegate.swift */; };
+		CF3E2C09274FF5E9004CC4AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3E2C08274FF5E9004CC4AF /* SceneDelegate.swift */; };
+		CF3E2C0E274FF5E9004CC4AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3E2C0C274FF5E9004CC4AF /* Main.storyboard */; };
+		CF3E2C13274FF5EA004CC4AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3E2C11274FF5EA004CC4AF /* LaunchScreen.storyboard */; };
+		CF3E2C1E274FF5EA004CC4AF /* Desafio_3_CII_3_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3E2C1D274FF5EA004CC4AF /* Desafio_3_CII_3_Tests.swift */; };
+		CF3E2C42274FFB21004CC4AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3E2C41274FFB21004CC4AF /* Assets.xcassets */; };
+		CF3E2C4A274FFD9A004CC4AF /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3E2C49274FFD9A004CC4AF /* MoviesViewController.swift */; };
+		CF3E2C57275000D6004CC4AF /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3E2C56275000D6004CC4AF /* MovieCollectionViewCell.swift */; };
+		CF3E2C6E27501478004CC4AF /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3E2C6D27501478004CC4AF /* MovieDetailsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF1EF039275155B9005783B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF3E2BFB274FF5E9004CC4AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF3E2C02274FF5E9004CC4AF;
+			remoteInfo = "Desafio 3(CII-3)";
+		};
+		CF3E2C1A274FF5EA004CC4AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF3E2BFB274FF5E9004CC4AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF3E2C02274FF5E9004CC4AF;
+			remoteInfo = "Desafio 3(CII-3)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF06B91D27552FE0007BA01D /* MoviesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAPI.swift; sourceTree = "<group>"; };
+		CF06B92227553CB0007BA01D /* Dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
+		CF1EF034275155B9005783B5 /* Desafio 3(CII-3)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desafio 3(CII-3)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1EF036275155B9005783B5 /* Desafio_3_CII_3_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desafio_3_CII_3_UITests.swift; sourceTree = "<group>"; };
+		CF1EF038275155B9005783B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF1EF04127515E13005783B5 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		CF1EF04627515E29005783B5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		CF1EF05127515E79005783B5 /* OriginalLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalLanguage.swift; sourceTree = "<group>"; };
+		CF3E2C03274FF5E9004CC4AF /* Desafio 3(CII-3).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio 3(CII-3).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3E2C06274FF5E9004CC4AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF3E2C08274FF5E9004CC4AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CF3E2C0D274FF5E9004CC4AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF3E2C12274FF5EA004CC4AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF3E2C14274FF5EA004CC4AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF3E2C19274FF5EA004CC4AF /* Desafio 3(CII-3)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desafio 3(CII-3)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3E2C1D274FF5EA004CC4AF /* Desafio_3_CII_3_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desafio_3_CII_3_Tests.swift; sourceTree = "<group>"; };
+		CF3E2C1F274FF5EA004CC4AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF3E2C41274FFB21004CC4AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF3E2C49274FFD9A004CC4AF /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		CF3E2C56275000D6004CC4AF /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		CF3E2C6D27501478004CC4AF /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF1EF031275155B9005783B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF3E2C00274FF5E9004CC4AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF3E2C16274FF5EA004CC4AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF1EF035275155B9005783B5 /* Desafio 3(CII-3)UITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF1EF036275155B9005783B5 /* Desafio_3_CII_3_UITests.swift */,
+				CF1EF038275155B9005783B5 /* Info.plist */,
+			);
+			path = "Desafio 3(CII-3)UITests";
+			sourceTree = "<group>";
+		};
+		CF3E2BFA274FF5E9004CC4AF = {
+			isa = PBXGroup;
+			children = (
+				CF3E2C41274FFB21004CC4AF /* Assets.xcassets */,
+				CF3E2C05274FF5E9004CC4AF /* Desafio 3(CII-3) */,
+				CF3E2C1C274FF5EA004CC4AF /* Desafio 3(CII-3)Tests */,
+				CF1EF035275155B9005783B5 /* Desafio 3(CII-3)UITests */,
+				CF3E2C04274FF5E9004CC4AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF3E2C04274FF5E9004CC4AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF3E2C03274FF5E9004CC4AF /* Desafio 3(CII-3).app */,
+				CF3E2C19274FF5EA004CC4AF /* Desafio 3(CII-3)Tests.xctest */,
+				CF1EF034275155B9005783B5 /* Desafio 3(CII-3)UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF3E2C05274FF5E9004CC4AF /* Desafio 3(CII-3) */ = {
+			isa = PBXGroup;
+			children = (
+				CF3E2C06274FF5E9004CC4AF /* AppDelegate.swift */,
+				CF3E2C08274FF5E9004CC4AF /* SceneDelegate.swift */,
+				CF3E2C6327500B28004CC4AF /* Model */,
+				CF3E2C3A274FF612004CC4AF /* View */,
+				CF3E2C39274FF600004CC4AF /* Controller */,
+				CF3E2C11274FF5EA004CC4AF /* LaunchScreen.storyboard */,
+				CF3E2C14274FF5EA004CC4AF /* Info.plist */,
+			);
+			path = "Desafio 3(CII-3)";
+			sourceTree = "<group>";
+		};
+		CF3E2C1C274FF5EA004CC4AF /* Desafio 3(CII-3)Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CF3E2C1D274FF5EA004CC4AF /* Desafio_3_CII_3_Tests.swift */,
+				CF3E2C1F274FF5EA004CC4AF /* Info.plist */,
+			);
+			path = "Desafio 3(CII-3)Tests";
+			sourceTree = "<group>";
+		};
+		CF3E2C39274FF600004CC4AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF3E2C56275000D6004CC4AF /* MovieCollectionViewCell.swift */,
+				CF3E2C49274FFD9A004CC4AF /* MoviesViewController.swift */,
+				CF3E2C6D27501478004CC4AF /* MovieDetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF3E2C3A274FF612004CC4AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF3E2C0C274FF5E9004CC4AF /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF3E2C6327500B28004CC4AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF1EF04127515E13005783B5 /* Movie.swift */,
+				CF1EF04627515E29005783B5 /* Result.swift */,
+				CF1EF05127515E79005783B5 /* OriginalLanguage.swift */,
+				CF06B91D27552FE0007BA01D /* MoviesAPI.swift */,
+				CF06B92227553CB0007BA01D /* Dates.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF1EF033275155B9005783B5 /* Desafio 3(CII-3)UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF1EF03B275155B9005783B5 /* Build configuration list for PBXNativeTarget "Desafio 3(CII-3)UITests" */;
+			buildPhases = (
+				CF1EF030275155B9005783B5 /* Sources */,
+				CF1EF031275155B9005783B5 /* Frameworks */,
+				CF1EF032275155B9005783B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF1EF03A275155B9005783B5 /* PBXTargetDependency */,
+			);
+			name = "Desafio 3(CII-3)UITests";
+			productName = "Desafio 3(CII-3)UITests";
+			productReference = CF1EF034275155B9005783B5 /* Desafio 3(CII-3)UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		CF3E2C02274FF5E9004CC4AF /* Desafio 3(CII-3) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF3E2C2D274FF5EA004CC4AF /* Build configuration list for PBXNativeTarget "Desafio 3(CII-3)" */;
+			buildPhases = (
+				CF3E2BFF274FF5E9004CC4AF /* Sources */,
+				CF3E2C00274FF5E9004CC4AF /* Frameworks */,
+				CF3E2C01274FF5E9004CC4AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Desafio 3(CII-3)";
+			productName = "Desafio 3(CII-3)";
+			productReference = CF3E2C03274FF5E9004CC4AF /* Desafio 3(CII-3).app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF3E2C18274FF5EA004CC4AF /* Desafio 3(CII-3)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF3E2C30274FF5EA004CC4AF /* Build configuration list for PBXNativeTarget "Desafio 3(CII-3)Tests" */;
+			buildPhases = (
+				CF3E2C15274FF5EA004CC4AF /* Sources */,
+				CF3E2C16274FF5EA004CC4AF /* Frameworks */,
+				CF3E2C17274FF5EA004CC4AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF3E2C1B274FF5EA004CC4AF /* PBXTargetDependency */,
+			);
+			name = "Desafio 3(CII-3)Tests";
+			productName = "Desafio 3(CII-3)Tests";
+			productReference = CF3E2C19274FF5EA004CC4AF /* Desafio 3(CII-3)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF3E2BFB274FF5E9004CC4AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					CF1EF033275155B9005783B5 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CF3E2C02274FF5E9004CC4AF;
+					};
+					CF3E2C02274FF5E9004CC4AF = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					CF3E2C18274FF5EA004CC4AF = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CF3E2C02274FF5E9004CC4AF;
+					};
+				};
+			};
+			buildConfigurationList = CF3E2BFE274FF5E9004CC4AF /* Build configuration list for PBXProject "Desafio 3(CII-3)" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF3E2BFA274FF5E9004CC4AF;
+			productRefGroup = CF3E2C04274FF5E9004CC4AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF3E2C02274FF5E9004CC4AF /* Desafio 3(CII-3) */,
+				CF3E2C18274FF5EA004CC4AF /* Desafio 3(CII-3)Tests */,
+				CF1EF033275155B9005783B5 /* Desafio 3(CII-3)UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF1EF032275155B9005783B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF3E2C01274FF5E9004CC4AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF3E2C13274FF5EA004CC4AF /* LaunchScreen.storyboard in Resources */,
+				CF3E2C42274FFB21004CC4AF /* Assets.xcassets in Resources */,
+				CF3E2C0E274FF5E9004CC4AF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF3E2C17274FF5EA004CC4AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF1EF030275155B9005783B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1EF037275155B9005783B5 /* Desafio_3_CII_3_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF3E2BFF274FF5E9004CC4AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF3E2C4A274FFD9A004CC4AF /* MoviesViewController.swift in Sources */,
+				CF06B92327553CB0007BA01D /* Dates.swift in Sources */,
+				CF3E2C07274FF5E9004CC4AF /* AppDelegate.swift in Sources */,
+				CF3E2C09274FF5E9004CC4AF /* SceneDelegate.swift in Sources */,
+				CF3E2C6E27501478004CC4AF /* MovieDetailsViewController.swift in Sources */,
+				CF1EF05227515E79005783B5 /* OriginalLanguage.swift in Sources */,
+				CF06B91E27552FE0007BA01D /* MoviesAPI.swift in Sources */,
+				CF1EF04227515E13005783B5 /* Movie.swift in Sources */,
+				CF1EF04727515E29005783B5 /* Result.swift in Sources */,
+				CF3E2C57275000D6004CC4AF /* MovieCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF3E2C15274FF5EA004CC4AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF3E2C1E274FF5EA004CC4AF /* Desafio_3_CII_3_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF1EF03A275155B9005783B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF3E2C02274FF5E9004CC4AF /* Desafio 3(CII-3) */;
+			targetProxy = CF1EF039275155B9005783B5 /* PBXContainerItemProxy */;
+		};
+		CF3E2C1B274FF5EA004CC4AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF3E2C02274FF5E9004CC4AF /* Desafio 3(CII-3) */;
+			targetProxy = CF3E2C1A274FF5EA004CC4AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF3E2C0C274FF5E9004CC4AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF3E2C0D274FF5E9004CC4AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF3E2C11274FF5EA004CC4AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF3E2C12274FF5EA004CC4AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF1EF03C275155B9005783B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Desafio 3(CII-3)UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilia.estagio.Desafio-3-CII-3-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Desafio 3(CII-3)";
+			};
+			name = Debug;
+		};
+		CF1EF03D275155B9005783B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Desafio 3(CII-3)UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilia.estagio.Desafio-3-CII-3-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Desafio 3(CII-3)";
+			};
+			name = Release;
+		};
+		CF3E2C2B274FF5EA004CC4AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF3E2C2C274FF5EA004CC4AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF3E2C2E274FF5EA004CC4AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Desafio 3(CII-3)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilia.estagio.Desafio-3-CII-3-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF3E2C2F274FF5EA004CC4AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Desafio 3(CII-3)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilia.estagio.Desafio-3-CII-3-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF3E2C31274FF5EA004CC4AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Desafio 3(CII-3)Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilia.estagio.Desafio-3-CII-3-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desafio 3(CII-3).app/Desafio 3(CII-3)";
+			};
+			name = Debug;
+		};
+		CF3E2C32274FF5EA004CC4AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Desafio 3(CII-3)Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilia.estagio.Desafio-3-CII-3-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desafio 3(CII-3).app/Desafio 3(CII-3)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF1EF03B275155B9005783B5 /* Build configuration list for PBXNativeTarget "Desafio 3(CII-3)UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1EF03C275155B9005783B5 /* Debug */,
+				CF1EF03D275155B9005783B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF3E2BFE274FF5E9004CC4AF /* Build configuration list for PBXProject "Desafio 3(CII-3)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF3E2C2B274FF5EA004CC4AF /* Debug */,
+				CF3E2C2C274FF5EA004CC4AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF3E2C2D274FF5EA004CC4AF /* Build configuration list for PBXNativeTarget "Desafio 3(CII-3)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF3E2C2E274FF5EA004CC4AF /* Debug */,
+				CF3E2C2F274FF5EA004CC4AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF3E2C30274FF5EA004CC4AF /* Build configuration list for PBXNativeTarget "Desafio 3(CII-3)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF3E2C31274FF5EA004CC4AF /* Debug */,
+				CF3E2C32274FF5EA004CC4AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF3E2BFB274FF5E9004CC4AF /* Project object */;
+}
