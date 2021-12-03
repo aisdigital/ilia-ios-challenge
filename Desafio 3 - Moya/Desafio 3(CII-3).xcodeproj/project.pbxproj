@@ -131,6 +131,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7D00C85F275A7B50000E0F3C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7D67663D275956320066CEC9 /* Movie Structure */,
+				7D67662A27594B8E0066CEC9 /* Extensions */,
+				7D67662E27594D7A0066CEC9 /* Support Files */,
+				CF3E2C6327500B28004CC4AF /* Model */,
+				CF3E2C3A274FF612004CC4AF /* View */,
+				CF3E2C39274FF600004CC4AF /* Controller */,
+				CF0943D027580B4400395B9F /* Services */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		7D67662A27594B8E0066CEC9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,14 +275,8 @@
 		CF3E2C05274FF5E9004CC4AF /* Desafio 3(CII-3) */ = {
 			isa = PBXGroup;
 			children = (
-				7D67663D275956320066CEC9 /* Movie Structure */,
+				7D00C85F275A7B50000E0F3C /* Sources */,
 				CF0943EF275821E600395B9F /* Resources */,
-				7D67662A27594B8E0066CEC9 /* Extensions */,
-				7D67662E27594D7A0066CEC9 /* Support Files */,
-				CF3E2C6327500B28004CC4AF /* Model */,
-				CF3E2C3A274FF612004CC4AF /* View */,
-				CF3E2C39274FF600004CC4AF /* Controller */,
-				CF0943D027580B4400395B9F /* Services */,
 				CF3E2C14274FF5EA004CC4AF /* Info.plist */,
 			);
 			path = "Desafio 3(CII-3)";
