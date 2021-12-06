@@ -1,0 +1,21 @@
+
+target 'Desafio 3(CII-3)' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'Moya', '~> 15.0'
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
+
+
+  # Pods for Desafio 3(CII-3)
+
+  target 'Desafio 3(CII-3)Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Desafio 3(CII-3)UITests' do
+    # Pods for testing
+  end
+
+end

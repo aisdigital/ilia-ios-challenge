@@ -12,7 +12,7 @@ import Moya
 class APIModelFormatter: XCTestCase {
     // Test if the date is formatted correctely
     func testDateFormatter() {
-        let getDateData = MoviesAPI()
+        let getDateData = MoviesController()
         
         let result = getDateData.formatDate(date: "2002-10-01")
         XCTAssertEqual(result, "01/10/2002")

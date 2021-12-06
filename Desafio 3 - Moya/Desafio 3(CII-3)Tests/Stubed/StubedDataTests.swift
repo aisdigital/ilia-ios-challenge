@@ -17,7 +17,7 @@ class StubedDataTests: XCTestCase {
         provider.request(.upcomingMovies(page: 1)) { (result) in
             switch result {
             case .success(let response):
-                let user = try? JSONDecoder().decode(Movie.self, from: response.data)
+                let user = try? JSONDecoder().decode(MoviesOverview.self, from: response.data)
                 XCTAssertNotNil(user?.results)
                 break
             case .failure(let error):
@@ -31,7 +31,7 @@ class StubedDataTests: XCTestCase {
         provider.request(.upcomingMovies(page: 1)) { (result) in
             switch result {
             case .success(let response):
-                let user = try? JSONDecoder().decode(Movie.self, from: response.data)
+                let user = try? JSONDecoder().decode(MoviesOverview.self, from: response.data)
                 XCTAssertEqual(user?.results.count, 20)
                 break
             case .failure(let error):

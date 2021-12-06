@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>D65498A2-1602-4287-B19D-FB95C9AB99EB</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D65498A2-1602-4287-B19D-FB95C9AB99EB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660349892.68051898</real>
+			<key>timeStoppedRecording</key>
+			<real>660349926.73094702</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>D65498A2-1602-4287-B19D-FB95C9AB99EB</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

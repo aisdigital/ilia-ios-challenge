@@ -13,7 +13,7 @@ class APIModelNetworkingTests: XCTestCase {
     
     // Test the time it takes to get data is acceptable
     func testFetchData() {
-        let getData = MoviesAPI()
+        let getData = MoviesController()
         
         let expectData = expectation(description: "Test loading data")
         getData.fetchData{

@@ -20,12 +20,7 @@ extension MovieAPI: TargetType {
     }
     
     var baseURL: URL {
-        switch self {
-        case .upcomingMovies:
-            return URL(string: "https://api.themoviedb.org/3/")!
-        case .popularMovies:
-            return URL(string: "https://api.themoviedb.org/3/")!
-        }
+        return URL(string: "https://api.themoviedb.org/3/")!
     }
     
     var path: String {
@@ -39,16 +34,14 @@ extension MovieAPI: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .upcomingMovies:
-            return .get
-        case .popularMovies:
+        case .upcomingMovies, .popularMovies:
             return .get
         }
     }
         
     var sampleData: Data {
         switch self {
-        case .upcomingMovies(page: _):
+        case .upcomingMovies:
             return Bundle.loadJSONFromBundle(bundle: Bundle.main, resourceName: "movies")
         default:
             return Data()
@@ -64,7 +57,7 @@ extension MovieAPI: TargetType {
         case .upcomingMovies(let page):
             var parameters = [String:Any]()
             parameters["api_key"] = API_KEY
-            parameters["language"] = "en-US"
+            parameters["language"] = "es-ES"
             parameters["page"] = "\(page)"
             return parameters
         case .popularMovies(let page):

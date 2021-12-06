@@ -1,0 +1,17 @@
+version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+options: "be991eaed208f85f612798e7284d383ba69843b32d234175d9daa6f5ce5b4dd0"
+build_start_time: [1638645308, 140169143]
+build_end_time: [1638645310, 667703151]
+inputs:
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Moya/Desafio 3(CII-3)Tests/Desafio_3_CII_3_Tests.swift"
+  : [1638472563, 645644187]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Moya/Desafio 3(CII-3)Tests/Model/APIModelColorsTests.swift"
+  : [1638549996, 95118999]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Moya/Desafio 3(CII-3)Tests/Model/APIModelFormatter.swift"
+  : [1638549996, 78922986]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Moya/Desafio 3(CII-3)Tests/Model/APIModelFunctionsTests.swift"
+  : [1638549996, 61778545]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Moya/Desafio 3(CII-3)Tests/Networking/APIModelNetworkingTests.swift"
+  : [1638549996, 83786487]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Moya/Desafio 3(CII-3)Tests/Stubed/StubedDataTests.swift"
+  : [1638554632, 984861135]

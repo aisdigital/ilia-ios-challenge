@@ -13,39 +13,35 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var movieDetailsLabel: UILabel!
     @IBOutlet weak var movieAverageLabel: UILabel!
-    
     @IBOutlet weak var releaseDateLabel: UILabel!
-    var imageLink: String!
-    var data = MoviesAPI()
+    
+    var data: MovieResult?
+    var controller = MoviesController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
-        let path = data.storedMovies[data.newIndex]
-        movieTitleLabel.text = path.title
-        if path.overview == "" {
-            movieDetailsLabel.text = "No overview avaliable"
-        } else {
-            movieDetailsLabel.text = path.overview
-        }
+        movieTitleLabel.text = data?.title
+
+        movieDetailsLabel.text = data?.overview == "" ? "No overview avaliable" : data?.overview
         
-        releaseDateLabel.text = "Release date: \(data.formatDate(date: path.releaseDate!))"
+        releaseDateLabel.text = "Release date: \(controller.formatDate(date: data?.releaseDate ?? ""))"
         
-        guard let posterPath = path.posterPath else {
+        guard let posterPath = data?.posterPath else {
             return
         }
         
-        data.loadImage(url: posterPath){
+        controller.loadImage(url: posterPath){
             (datas) in
-                self.movieImageView.image = UIImage(data: datas!)
+                self.movieImageView.image = UIImage(data: datas ?? Data())
         }
         
-        let voteString = "Vote average: \(path.voteAverage ?? 0)"
+        let voteString = "Vote average: \(data?.voteAverage ?? 0)"
         let attributedString = NSMutableAttributedString.init(string: voteString)
-        let range = (voteString as NSString).range(of: String(path.voteAverage!))
-        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: data.setTextColor(average: path.voteAverage!), range: range)
+        let range = (voteString as NSString).range(of: String(data?.voteAverage ?? 0))
+        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: controller.getTextColor(average: data?.voteAverage ?? 0), range: range)
         movieAverageLabel.attributedText = attributedString
         movieAverageLabel.isUserInteractionEnabled = false
     }

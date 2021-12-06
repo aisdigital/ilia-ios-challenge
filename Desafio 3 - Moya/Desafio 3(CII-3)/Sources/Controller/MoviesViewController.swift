@@ -9,9 +9,7 @@ import UIKit
 import Moya
 
 class MoviesViewController: UIViewController {
-    
-    var imageLink: String?
-    var dataMovies = MoviesAPI()
+    var dataMovies = MoviesController()
 
     @IBOutlet weak var moviesCollectionView: UICollectionView!
     
@@ -103,7 +101,7 @@ extension MoviesViewController: UICollectionViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "movieSegue" {
             let destinationVC = segue.destination as! MovieDetailsViewController
-            destinationVC.data = dataMovies
+            destinationVC.data = dataMovies.storedMovies[dataMovies.newIndex]
         }
     }
 }
