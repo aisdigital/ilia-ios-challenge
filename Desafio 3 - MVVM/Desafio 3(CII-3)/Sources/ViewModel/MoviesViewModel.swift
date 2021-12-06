@@ -36,8 +36,7 @@ class MoviesViewModel {
             return
         }
         movieData.currentPage += 1
-        print(movieData.currentPage)
-        changePage.onNext(movieData.currentPage)
+        fetchData()
     }
 }
 

@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>10D85C34-96FF-403A-8450-7119D2A7C012</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>10D85C34-96FF-403A-8450-7119D2A7C012.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660523422.83708596</real>
+			<key>timeStoppedRecording</key>
+			<real>660523508.69278002</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>10D85C34-96FF-403A-8450-7119D2A7C012</string>
+		</dict>
+		<key>1354A81A-513F-4558-BDCE-9F46F7A48642</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1354A81A-513F-4558-BDCE-9F46F7A48642.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660523294.74847198</real>
+			<key>timeStoppedRecording</key>
+			<real>660523421.70533001</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>1354A81A-513F-4558-BDCE-9F46F7A48642</string>
+		</dict>
+		<key>18F11579-D757-4798-9AF2-BF334113E96D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>18F11579-D757-4798-9AF2-BF334113E96D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660521435.79516697</real>
+			<key>timeStoppedRecording</key>
+			<real>660522846.05838096</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>18F11579-D757-4798-9AF2-BF334113E96D</string>
+		</dict>
+		<key>23110E88-E377-4140-B955-17926189C1CD</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>23110E88-E377-4140-B955-17926189C1CD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660520427.78280497</real>
+			<key>timeStoppedRecording</key>
+			<real>660520478.87272501</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>23110E88-E377-4140-B955-17926189C1CD</string>
+		</dict>
+		<key>23F8746F-D29D-4E1C-A019-319F3381C140</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>23F8746F-D29D-4E1C-A019-319F3381C140.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660522846.10130799</real>
+			<key>timeStoppedRecording</key>
+			<real>660523290.34594202</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>23F8746F-D29D-4E1C-A019-319F3381C140</string>
+		</dict>
+		<key>2F557D8C-CD0F-4C9F-A627-408BD79ED83D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>2F557D8C-CD0F-4C9F-A627-408BD79ED83D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660523544.97399998</real>
+			<key>timeStoppedRecording</key>
+			<real>660523562.06111598</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>2F557D8C-CD0F-4C9F-A627-408BD79ED83D</string>
+		</dict>
+		<key>42D3BBB1-0457-4746-B816-9B036538EB39</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>42D3BBB1-0457-4746-B816-9B036538EB39.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660523592.54877102</real>
+			<key>timeStoppedRecording</key>
+			<real>660523648.56991601</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>42D3BBB1-0457-4746-B816-9B036538EB39</string>
+		</dict>
+		<key>4336457A-4FBC-4B02-8214-66D5C0937F8F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>4336457A-4FBC-4B02-8214-66D5C0937F8F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660519167.54784203</real>
+			<key>timeStoppedRecording</key>
+			<real>660519222.71298206</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>4336457A-4FBC-4B02-8214-66D5C0937F8F</string>
+		</dict>
+		<key>538D4B19-315E-48A1-AE09-51A78E5D7C03</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>538D4B19-315E-48A1-AE09-51A78E5D7C03.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660523696.32231903</real>
+			<key>timeStoppedRecording</key>
+			<real>660523759.98758197</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>538D4B19-315E-48A1-AE09-51A78E5D7C03</string>
+		</dict>
+		<key>57874F91-89B3-4336-A8E8-6444CC39AC9E</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>57874F91-89B3-4336-A8E8-6444CC39AC9E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660523578.50002599</real>
+			<key>timeStoppedRecording</key>
+			<real>660523586.04746699</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>57874F91-89B3-4336-A8E8-6444CC39AC9E</string>
+		</dict>
+		<key>5BD41CD0-627B-434B-8E6A-57553176CB24</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5BD41CD0-627B-434B-8E6A-57553176CB24.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660523657.55737197</real>
+			<key>timeStoppedRecording</key>
+			<real>660523695.10187805</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>5BD41CD0-627B-434B-8E6A-57553176CB24</string>
+		</dict>
+		<key>5E981FBF-E330-41AB-B70D-4DCE48935EB6</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5E981FBF-E330-41AB-B70D-4DCE48935EB6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660518666.84554005</real>
+			<key>timeStoppedRecording</key>
+			<real>660518778.975137</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>5E981FBF-E330-41AB-B70D-4DCE48935EB6</string>
+		</dict>
+		<key>65556BA6-3F08-4F9D-BEB3-FDEAFD81392B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>65556BA6-3F08-4F9D-BEB3-FDEAFD81392B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660520480.03503394</real>
+			<key>timeStoppedRecording</key>
+			<real>660520517.61430204</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>65556BA6-3F08-4F9D-BEB3-FDEAFD81392B</string>
+		</dict>
+		<key>734A77F2-ED42-4C2C-9CC0-344FC8C82990</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>734A77F2-ED42-4C2C-9CC0-344FC8C82990.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660520518.64477396</real>
+			<key>timeStoppedRecording</key>
+			<real>660521434.37060201</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>734A77F2-ED42-4C2C-9CC0-344FC8C82990</string>
+		</dict>
+		<key>7851D3B5-0A7F-4A3C-BB33-EE39B8DBCCEE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7851D3B5-0A7F-4A3C-BB33-EE39B8DBCCEE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660519308.20052803</real>
+			<key>timeStoppedRecording</key>
+			<real>660520422.73223698</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>7851D3B5-0A7F-4A3C-BB33-EE39B8DBCCEE</string>
+		</dict>
+		<key>9B5E4C32-5FD9-4846-B885-30906DC93572</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9B5E4C32-5FD9-4846-B885-30906DC93572.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660523509.854895</real>
+			<key>timeStoppedRecording</key>
+			<real>660523543.70665705</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>9B5E4C32-5FD9-4846-B885-30906DC93572</string>
+		</dict>
+		<key>D0224549-267F-46B2-81B2-87AF260FFD09</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D0224549-267F-46B2-81B2-87AF260FFD09.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660523649.50632095</real>
+			<key>timeStoppedRecording</key>
+			<real>660523657.517892</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>D0224549-267F-46B2-81B2-87AF260FFD09</string>
+		</dict>
+		<key>E15822C7-AEF9-4487-A5B8-5A3BF74D6301</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E15822C7-AEF9-4487-A5B8-5A3BF74D6301.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660523562.94098902</real>
+			<key>timeStoppedRecording</key>
+			<real>660523578.45843303</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>E15822C7-AEF9-4487-A5B8-5A3BF74D6301</string>
+		</dict>
+		<key>E33B61F1-191B-4771-A07F-FEBF52D8A57F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E33B61F1-191B-4771-A07F-FEBF52D8A57F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660519233.14059699</real>
+			<key>timeStoppedRecording</key>
+			<real>660519272.56577301</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>E33B61F1-191B-4771-A07F-FEBF52D8A57F</string>
+		</dict>
+		<key>FA2B3E87-0006-4F47-A920-0C2F850970A4</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>FA2B3E87-0006-4F47-A920-0C2F850970A4.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Desafio 3(CII-3) project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Desafio 3(CII-3)</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>timeStartedRecording</key>
+			<real>660519272.61761498</real>
+			<key>timeStoppedRecording</key>
+			<real>660519294.94322002</real>
+			<key>title</key>
+			<string>Run Desafio 3(CII-3)</string>
+			<key>uniqueIdentifier</key>
+			<string>FA2B3E87-0006-4F47-A920-0C2F850970A4</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

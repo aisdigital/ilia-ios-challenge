@@ -1,0 +1,39 @@
+version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+options: "6a355a45c6fa9361e2b93e0d1510b4e723b96aa8ed015648ad5b8a0790dd98d1"
+build_start_time: [1638830895, 376905918]
+build_end_time: [1638830896, 120291948]
+inputs:
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/Extensions/BundleExtension.swift"
+  : [1638460206, 279269218]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/Model/Coordinator.swift"
+  : [1638819783, 771009445]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/Model/Dates.swift"
+  : [1638460206, 279363632]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/Model/MainCoordinator.swift"
+  : [1638830769, 306689739]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/Model/MovieData.swift"
+  : [1638817458, 341597318]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/Model/MovieResult.swift"
+  : [1638550057, 242997646]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/Model/MoviesOverview.swift"
+  : [1638554632, 991063594]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/Model/Storyboarded.swift"
+  : [1638826407, 813165903]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/Services/ImagesAPIMoya.swift"
+  : [1638545765, 916328430]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/Services/MoviesAPIMoya.swift"
+  : [1638549254, 587269783]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/Support Files/AppDelegate.swift"
+  : [1638826126, 536608457]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/Support Files/SceneDelegate.swift"
+  : [1638829750, 70269584]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/View/MovieCollectionViewCell.swift"
+  : [1638806522, 455487012]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/View/MovieDetailsViewController.swift"
+  : [1638830487, 494925498]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/View/MoviesViewController.swift"
+  : [1638830873, 571534156]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/ViewModel/MovieOverviewViewModel.swift"
+  : [1638811344, 375559806]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Desafio 3(CII-3)/Sources/ViewModel/MoviesViewModel.swift"
+  : [1638817507, 683385372]

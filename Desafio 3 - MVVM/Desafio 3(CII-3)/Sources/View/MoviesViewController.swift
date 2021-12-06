@@ -38,9 +38,6 @@ class MoviesViewController: UIViewController {
             self?.movies.append(contentsOf: movies)
             self?.reloadData()
         }).disposed(by: bag)
-        moviesViewModel.changePage.subscribe { _ in
-            self.moviesViewModel.fetchData()
-        }.disposed(by: bag)
     }
 }
 

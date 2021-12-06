@@ -1,0 +1,52 @@
+version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+options: "fa176ae26597a429326ae46122df1d5c23ade041360a794088ff9d9b72bd6af1"
+build_start_time: [1638820055, 759118080]
+build_end_time: [1638820059, 74373960]
+inputs:
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/AFError.swift": !dirty [1638460206, 281660795]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/Alamofire.swift": !dirty [1638460206, 281792640]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/AlamofireExtended.swift": !dirty [1638460206, 281908035]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/AuthenticationInterceptor.swift"
+  : !dirty [1638460206, 282090663]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/CachedResponseHandler.swift"
+  : !dirty [1638460206, 282230377]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/Combine.swift": !dirty [1638460206, 282397508]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift"
+  : !dirty [1638460206, 282490253]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/EventMonitor.swift": !dirty [1638460206, 282682418]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/HTTPHeaders.swift": !dirty [1638460206, 282834291]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/HTTPMethod.swift": !dirty [1638460206, 282938957]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/MultipartFormData.swift": !dirty [1638460206, 283114433]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/MultipartUpload.swift": !dirty [1638460206, 283234119]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/NetworkReachabilityManager.swift"
+  : !dirty [1638460206, 283399343]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/Notifications.swift": !dirty [1638460206, 283520698]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/OperationQueue+Alamofire.swift"
+  : !dirty [1638460206, 283616542]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/ParameterEncoder.swift": !dirty [1638460206, 283758401]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/ParameterEncoding.swift": !dirty [1638460206, 283918857]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/Protected.swift": !dirty [1638460206, 284064292]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/RedirectHandler.swift": !dirty [1638460206, 284157752]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/Request.swift": !dirty [1638460206, 284517288]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/RequestInterceptor.swift": !dirty [1638460206, 284654378]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/RequestTaskMap.swift": !dirty [1638460206, 284761905]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/Response.swift": !dirty [1638460206, 284900665]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/ResponseSerialization.swift"
+  : !dirty [1638460206, 285096645]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/Result+Alamofire.swift": !dirty [1638460206, 285202503]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/RetryPolicy.swift": !dirty [1638460206, 285367012]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/ServerTrustEvaluation.swift"
+  : !dirty [1638460206, 285549879]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/Session.swift": !dirty [1638460206, 285784244]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/SessionDelegate.swift": !dirty [1638460206, 285924434]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/StringEncoding+Alamofire.swift"
+  : !dirty [1638460206, 286049365]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/URLConvertible+URLRequestConvertible.swift"
+  : !dirty [1638460206, 286159276]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/URLEncodedFormEncoder.swift"
+  : !dirty [1638460206, 286363363]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/URLRequest+Alamofire.swift"
+  : !dirty [1638460206, 286444664]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/URLSessionConfiguration+Alamofire.swift"
+  : !dirty [1638460206, 286541938]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Alamofire/Source/Validation.swift": !dirty [1638460206, 286659717]

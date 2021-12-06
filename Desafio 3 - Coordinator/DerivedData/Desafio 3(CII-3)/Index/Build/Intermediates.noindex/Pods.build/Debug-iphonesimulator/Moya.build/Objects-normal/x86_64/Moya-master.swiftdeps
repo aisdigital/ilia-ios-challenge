@@ -1,0 +1,37 @@
+version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+options: "b9f579b3bb827e1c15a89152012e4fc49e61059f5d4234356efe57645c085e41"
+build_start_time: [1638819969, 963098049]
+build_end_time: [1638819969, 991986989]
+inputs:
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/AnyEncodable.swift": !dirty [1638460206, 287237644]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/Atomic.swift": !dirty [1638460206, 287348270]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/Cancellable.swift": !dirty [1638460206, 287434339]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/Endpoint.swift": !dirty [1638460206, 287551879]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/Image.swift": !dirty [1638460206, 287639379]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/Moya+Alamofire.swift": !dirty [1638460206, 287744522]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/MoyaError.swift": !dirty [1638460206, 287850856]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/MoyaProvider+Defaults.swift"
+  : !dirty [1638460206, 287948608]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/MoyaProvider+Internal.swift"
+  : !dirty [1638460206, 288075923]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/MoyaProvider.swift": !dirty [1638460206, 288198947]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/MultiTarget.swift": !dirty [1638460206, 288309812]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/MultipartFormData.swift": !dirty [1638460206, 288409948]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/Plugin.swift": !dirty [1638460206, 288513183]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/Plugins/AccessTokenPlugin.swift"
+  : !dirty [1638460206, 288667201]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/Plugins/CredentialsPlugin.swift"
+  : !dirty [1638460206, 288771629]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/Plugins/NetworkActivityPlugin.swift"
+  : !dirty [1638460206, 288875818]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/Plugins/NetworkLoggerPlugin.swift"
+  : !dirty [1638460206, 289004802]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/RequestTypeWrapper.swift"
+  : !dirty [1638460206, 289103269]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/Response.swift": !dirty [1638460206, 289225101]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/TargetType.swift": !dirty [1638460206, 289339303]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/Task.swift": !dirty [1638460206, 289427757]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/URL+Moya.swift": !dirty [1638460206, 289520263]
+  ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/URLRequest+Encoding.swift"
+  : !dirty [1638460206, 289617776]
+  "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - MVVM/Pods/Moya/Sources/Moya/ValidationType.swift": !dirty [1638460206, 289724826]
