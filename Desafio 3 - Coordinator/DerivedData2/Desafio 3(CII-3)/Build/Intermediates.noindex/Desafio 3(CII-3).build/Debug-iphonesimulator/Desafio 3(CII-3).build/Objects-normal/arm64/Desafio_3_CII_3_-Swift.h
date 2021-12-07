@@ -260,6 +260,7 @@ SWIFT_CLASS("_TtC16Desafio_3_CII_3_20MoviesViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
 @class UICollectionViewLayout;
 @class NSIndexPath;
 

@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
 options: "e5ab5e9422a53ba45284d18bd4db99f7d23d5b063ef0ee7da37f5de7eaca9930"
-build_start_time: [1638829825, 715360164]
-build_end_time: [1638829825, 810091018]
+build_start_time: [1638892903, 783231973]
+build_end_time: [1638892905, 572204113]
 inputs:
   "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Pods/Alamofire/Source/AFError.swift": [1638460206, 281660795]
   "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Pods/Alamofire/Source/Alamofire.swift": [1638460206, 281792640]

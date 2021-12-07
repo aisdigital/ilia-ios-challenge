@@ -38,7 +38,7 @@
 		</data>
 		<key>Frameworks/Alamofire.framework/Alamofire</key>
 		<data>
-		cBymRdKxAyuzrudqpvqwxK7igNc=
+		Aa1Gn3RNBVm9KqYE3kOgYcHGB68=
 		</data>
 		<key>Frameworks/Alamofire.framework/Info.plist</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Frameworks/Moya.framework/Moya</key>
 		<data>
-		y0RUe7n0QcPL0Pvms+yxh9Osrq0=
+		bvuIt8RLY0iP8SbROgEMQHaL+/Q=
 		</data>
 		<key>Frameworks/Moya.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Frameworks/RxCocoa.framework/RxCocoa</key>
 		<data>
-		E5xSabNbDCT4H9DlV38cL+NO6EU=
+		Vr+QUbL4ZZChhVSOIr6nYE3m4wg=
 		</data>
 		<key>Frameworks/RxCocoa.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Frameworks/RxRelay.framework/RxRelay</key>
 		<data>
-		cF4rjQLV+gENOJh/do2EbrvEoY8=
+		Hyt0qZ5T1GYg5XNtNp+3Gtdk9KM=
 		</data>
 		<key>Frameworks/RxRelay.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Frameworks/RxSwift.framework/RxSwift</key>
 		<data>
-		AEFhHgQwoAU9b22XY0340bcAhQc=
+		NQelLuC5xkbdTST5XoW/VA9aBeM=
 		</data>
 		<key>Frameworks/RxSwift.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -171,7 +171,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jyZf8aGAl/oxp/QewJwM3hgV5fg+RMSVlqKg5URreZc=
+			BW0UkT1/OcWiZrtqRES6bY4IbBM969Unm2gRfnuWxaU=
 			</data>
 		</dict>
 		<key>Frameworks/Alamofire.framework/Info.plist</key>
@@ -199,7 +199,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nXx1mztkUSL71V+QeFTO9gSjAf3KxRvYfEcDaEofZVY=
+			/DqERqKonMwo6zywnfXPytVpFaxQ/2CTq1LSy/XFIDw=
 			</data>
 		</dict>
 		<key>Frameworks/Moya.framework/_CodeSignature/CodeResources</key>
@@ -220,7 +220,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+frT9nE1s7LJJ75AkvKW7oOnQGiaB5vM9+gM2X4lm50=
+			/NZjqYUZq8AgjJ8+zMjZPbzn8aBIkvMxisyLHYwnK80=
 			</data>
 		</dict>
 		<key>Frameworks/RxCocoa.framework/_CodeSignature/CodeResources</key>
@@ -241,7 +241,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DbT1fyZdqeyS9C3Z54X20haPTf8il8gAglQLb724o2o=
+			vTQWrrTgchSd560aguMwLpipDRinsVDd1Z0jzjGm9PQ=
 			</data>
 		</dict>
 		<key>Frameworks/RxRelay.framework/_CodeSignature/CodeResources</key>
@@ -262,7 +262,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			36l0uIOInkZTXcAuX0//z01/X0bImhBI4bDDEzoSCuY=
+			1buA+y2+8IyehQyodv56MPfiRkWbpq1ttYajcoDRygE=
 			</data>
 		</dict>
 		<key>Frameworks/RxSwift.framework/_CodeSignature/CodeResources</key>

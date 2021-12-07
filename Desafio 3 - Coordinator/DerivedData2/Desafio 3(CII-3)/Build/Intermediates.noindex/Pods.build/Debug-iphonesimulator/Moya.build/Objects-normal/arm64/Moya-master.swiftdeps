@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
 options: "57e3a72a2865e39529628e09d2127c30539f8f9e1457e92b1fa7b32c05ea3c0f"
-build_start_time: [1638829826, 421442031]
-build_end_time: [1638829826, 472264051]
+build_start_time: [1638892905, 978320121]
+build_end_time: [1638892907, 202117919]
 inputs:
   ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Pods/Moya/Sources/Moya/AnyEncodable.swift"
   : [1638460206, 287237644]

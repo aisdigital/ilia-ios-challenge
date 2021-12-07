@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
 options: "b9f579b3bb827e1c15a89152012e4fc49e61059f5d4234356efe57645c085e41"
-build_start_time: [1638825197, 981341838]
-build_end_time: [1638825198, 682317972]
+build_start_time: [1638892756, 412889003]
+build_end_time: [1638892756, 567614078]
 inputs:
   ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Pods/RxRelay/RxRelay/BehaviorRelay.swift"
   : [1638460206, 302635192]

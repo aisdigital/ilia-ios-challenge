@@ -10,10 +10,10 @@ import Moya
 import RxCocoa
 import RxSwift
 
-class MoviesViewController: UIViewController, Storyboarded {
+class MoviesViewController: UIViewController {
     
     var moviesViewModel = MoviesViewModel()
-    weak var coordinator: MainCoordinator?
+    var coordinator: MainCoordinator?
     var passData = PublishSubject<MovieResult>()
 
     @IBOutlet weak var moviesCollectionView: UICollectionView!
@@ -67,18 +67,19 @@ extension MoviesViewController: UICollectionViewDelegateFlowLayout{
 
 extension MoviesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //moviesViewModel.movieData.updateList = indexPath.item
-        coordinator?.seeMovieDetails()
+        moviesViewModel.movieData.updateList = indexPath.item
+        coordinator?.seeMovieDetails(data: movies[indexPath.item])
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let currentOffset = scrollView.contentOffset.y
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
-        
-        if maximumOffset - currentOffset <= 5.0 {
+        if maximumOffset - currentOffset <= 0.0 {
             moviesViewModel.loadPages()
         }
-        
-        coordinator?.seeMovieDetails()
     }
+}
+
+extension MoviesViewController: Storyboarded {
+    
 }

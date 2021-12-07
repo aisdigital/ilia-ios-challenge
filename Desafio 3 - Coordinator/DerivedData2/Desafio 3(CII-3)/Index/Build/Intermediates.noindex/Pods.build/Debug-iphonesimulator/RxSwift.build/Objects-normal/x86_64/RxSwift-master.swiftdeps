@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
 options: "fa176ae26597a429326ae46122df1d5c23ade041360a794088ff9d9b72bd6af1"
-build_start_time: [1638825195, 947278976]
-build_end_time: [1638825197, 702014923]
+build_start_time: [1638892755, 621047973]
+build_end_time: [1638892756, 282382965]
 inputs:
   "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Pods/RxSwift/Platform/AtomicInt.swift": [1638460206, 303167104]
   ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Pods/RxSwift/Platform/DataStructures/Bag.swift"

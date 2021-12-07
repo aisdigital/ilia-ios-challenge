@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
 options: "46006ddfe7ebf60a815d0808250c3a0656e0e27c8bed52f8a68db23fd6bcaba2"
-build_start_time: [1638825198, 733769893]
-build_end_time: [1638825199, 286120891]
+build_start_time: [1638892756, 608629941]
+build_end_time: [1638892756, 977578163]
 inputs:
   ? "/Users/guilhermeprofissional/Documents/GitHub/ilia-ios-challenge/Desafio 3 - Coordinator/Pods/RxCocoa/Platform/DataStructures/Bag.swift"
   : [1638460206, 291298627]

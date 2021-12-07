@@ -25,10 +25,6 @@ class MovieDetailsViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        newValue.subscribe { movie in
-            self.data = movie
-        }
-        
         // Do any additional setup after loading the view.
         
         movieTitleLabel.text = data?.title

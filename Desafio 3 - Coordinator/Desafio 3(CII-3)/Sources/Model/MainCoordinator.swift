@@ -22,9 +22,10 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func seeMovieDetails() {
-        let vc = MovieDetailsViewController.instantiate()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+    func seeMovieDetails(data: MovieResult?) {
+        let view = MovieDetailsViewController.instantiate()
+        view.coordinator = self
+        view.data = data
+        navigationController.pushViewController(view, animated: true)
     }
 }
