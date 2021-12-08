@@ -1,6 +1,0 @@
-framework module Pods_Desafio_3_CII_3_Tests {
-  umbrella header "Pods-Desafio 3(CII-3)Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
