@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="11" rowHeight="186" id="KGk-i7-Jjw" customClass="MovieTableViewCell" customModule="IliaCodeChallenge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="792" height="235"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="792" height="235"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kPo-x8-brf">
+                        <rect key="frame" x="20" y="18" width="179" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="179" id="C2m-2h-Wtr"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kax-m8-iSY">
+                        <rect key="frame" x="249" y="18" width="523" height="53"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="53" id="pJc-2O-g4S"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Kax-m8-iSY" firstAttribute="top" secondItem="kPo-x8-brf" secondAttribute="top" id="DyP-UY-nMF"/>
+                    <constraint firstItem="Kax-m8-iSY" firstAttribute="leading" secondItem="kPo-x8-brf" secondAttribute="trailing" constant="50" id="KyX-FU-vFM"/>
+                    <constraint firstItem="kPo-x8-brf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="aSh-rc-4LI"/>
+                    <constraint firstAttribute="trailing" secondItem="Kax-m8-iSY" secondAttribute="trailing" constant="20" symbolic="YES" id="g7P-OK-P5Y"/>
+                    <constraint firstItem="kPo-x8-brf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="tbx-6T-lXU"/>
+                    <constraint firstAttribute="bottom" secondItem="kPo-x8-brf" secondAttribute="bottom" constant="17" id="wVB-zf-A00"/>
+                    <constraint firstAttribute="trailing" secondItem="Kax-m8-iSY" secondAttribute="trailing" constant="20" symbolic="YES" id="y7i-lD-3lq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ivMovie" destination="kPo-x8-brf" id="ytk-1m-0Bw"/>
+                <outlet property="lblMovieTitle" destination="Kax-m8-iSY" id="NfB-Ha-XRt"/>
+            </connections>
+            <point key="canvasLocation" x="166.66666666666669" y="-33.816964285714285"/>
+        </tableViewCell>
+    </objects>
+</document>

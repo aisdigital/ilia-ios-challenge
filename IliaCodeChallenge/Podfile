@@ -1,0 +1,17 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '9.0'
+
+  target 'IliaCodeChallenge' do
+    use_frameworks!
+    pod 'Alamofire'
+
+  target 'IliaCodeChallengeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'IliaCodeChallengeUITests' do
+    # Pods for testing
+  end
+
+end
