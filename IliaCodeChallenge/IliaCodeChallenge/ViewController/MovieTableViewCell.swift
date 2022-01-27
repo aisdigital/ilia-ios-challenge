@@ -11,6 +11,7 @@ class MovieTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblMovieTitle: UILabel!
     @IBOutlet weak var ivMovie: UIImageView!
+    @IBOutlet weak var lblDate: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,7 +33,8 @@ class MovieTableViewCell: UITableViewCell {
                    ivMovie.image = image
                }
            }
-                
+               
+           lblDate.text = movieModel.release_date
        }
        
 }

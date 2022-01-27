@@ -17,25 +17,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Filmes"
         setupTableView()
         service.getPopularMovies()
         bindEvents()
-        //filmes = ["homem aranha","eternos"]
+        configNavigationController()
            
     }
     
     
     func setupTableView(){
-        movieTable.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "movieCell")
-        movieTable.delegate = self
-        movieTable.dataSource = self
+        movieTable?.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "movieCell")
+        movieTable?.delegate = self
+        movieTable?.dataSource = self
+    }
+    
+    func configNavigationController(){
+        self.title = "Filmes"
+        navigationController?.navigationBar.backgroundColor = UIColor.black
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        
     }
     
     func bindEvents(){
         service.updateLayout = { [weak self] in
             DispatchQueue.main.async {
-                self?.movieTable.reloadData()
+                self?.movieTable?.reloadData()
             }
             //print("TRATOU O MODEL")
             
@@ -43,7 +49,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return filmes.count
         return service.getMoviesListSize()
     }
     
@@ -51,15 +56,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let movie = service.getMovieAt(indexPath.row)
         let cell = movieTable.dequeueReusableCell(withIdentifier: "movieCell") as! MovieTableViewCell
         cell.setUpModel(movie)
+        cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 220
     }
     
-    
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = service.getMovieAt(indexPath.row)
+        let movieDetailViewController = MovieDetailViewController(selectedMovie: movie)
+        navigationController?.pushViewController(movieDetailViewController, animated: true)
+    }
 
  
 

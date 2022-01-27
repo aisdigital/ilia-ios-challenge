@@ -21,6 +21,8 @@
 		E3951C7F27A03BE0004735C1 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3951C7E27A03BE0004735C1 /* Service.swift */; };
 		E3951C8427A08A9E004735C1 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3951C8227A08A9E004735C1 /* MovieTableViewCell.swift */; };
 		E3951C8527A08A9E004735C1 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3951C8327A08A9E004735C1 /* MovieTableViewCell.xib */; };
+		E3951C8827A2C45E004735C1 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3951C8627A2C45E004735C1 /* MovieDetailViewController.swift */; };
+		E3951C8927A2C45E004735C1 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3951C8727A2C45E004735C1 /* MovieDetailViewController.xib */; };
 		E6C0F51DCCBAB8AC1EB3E294 /* Pods_IliaCodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E05392EB05E1C81EA9F6E7 /* Pods_IliaCodeChallenge.framework */; };
 		F0BC8F64F06717FA0BE9382C /* Pods_IliaCodeChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF6EAFEC047022B494097C1 /* Pods_IliaCodeChallengeTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		E3951C7E27A03BE0004735C1 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		E3951C8227A08A9E004735C1 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		E3951C8327A08A9E004735C1 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		E3951C8627A2C45E004735C1 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		E3951C8727A2C45E004735C1 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
 		E4320B6BDAE12A2BB6A2332E /* Pods-IliaCodeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IliaCodeChallenge.release.xcconfig"; path = "Target Support Files/Pods-IliaCodeChallenge/Pods-IliaCodeChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		EDF65CAB99B5949287D01E7A /* Pods-IliaCodeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IliaCodeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-IliaCodeChallenge/Pods-IliaCodeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +203,8 @@
 			children = (
 				E3951C4C27A02788004735C1 /* ViewController.swift */,
 				E3951C8227A08A9E004735C1 /* MovieTableViewCell.swift */,
+				E3951C8627A2C45E004735C1 /* MovieDetailViewController.swift */,
+				E3951C8727A2C45E004735C1 /* MovieDetailViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3951C8927A2C45E004735C1 /* MovieDetailViewController.xib in Resources */,
 				E3951C5527A02789004735C1 /* LaunchScreen.storyboard in Resources */,
 				E3951C5227A02789004735C1 /* Assets.xcassets in Resources */,
 				E3951C8527A08A9E004735C1 /* MovieTableViewCell.xib in Resources */,
@@ -447,6 +454,7 @@
 				E3951C4927A02788004735C1 /* AppDelegate.swift in Sources */,
 				E3951C8427A08A9E004735C1 /* MovieTableViewCell.swift in Sources */,
 				E3951C7F27A03BE0004735C1 /* Service.swift in Sources */,
+				E3951C8827A2C45E004735C1 /* MovieDetailViewController.swift in Sources */,
 				E3951C7C27A0363B004735C1 /* Movie.swift in Sources */,
 				E3951C4B27A02788004735C1 /* SceneDelegate.swift in Sources */,
 			);
