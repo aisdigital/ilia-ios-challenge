@@ -16,10 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="40d-1s-5VL">
-                                <rect key="frame" x="20" y="88" width="374" height="774"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="40d-1s-5VL">
+                                <rect key="frame" x="0.0" y="108" width="414" height="764"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fua-Ek-e15">
                                     <size key="itemSize" width="177" height="164"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -30,11 +29,17 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="40d-1s-5VL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OZo-QV-gkg"/>
+                            <constraint firstItem="40d-1s-5VL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="RfD-Gk-idN"/>
+                            <constraint firstItem="40d-1s-5VL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="XAN-4P-RPX"/>
+                            <constraint firstItem="40d-1s-5VL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bCY-2a-2QL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rQT-99-54l"/>
                     <connections>
-                        <outlet property="collectionViewMovies" destination="40d-1s-5VL" id="fvS-79-oMo"/>
+                        <outlet property="collectionViewMovies" destination="40d-1s-5VL" id="NWL-Gl-pYd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -61,8 +66,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

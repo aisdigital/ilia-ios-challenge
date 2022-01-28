@@ -11,6 +11,7 @@ import Alamofire
 class Service{
 
     private var movies: [Movie] = []
+    private let baseUrl = "https://api.themoviedb.org/3/movie/popular?api_key=1196e92a2075c7fc0f9b90091499a470"
     
     var shouldShowErrorMessage: ((String) -> Void)?
     var updateLayout: (() -> Void)?
@@ -25,9 +26,9 @@ class Service{
         return movies[index]
     }
 
-    
-    func getPopularMovies(){
-        Alamofire.request("https://api.themoviedb.org/3/movie/popular?api_key=1196e92a2075c7fc0f9b90091499a470", method: .get)
+    //(MovieResponse?,Error?)
+    func getPopularMovies(completion: @escaping ([Movie]) -> Void){
+        Alamofire.request(baseUrl, method: .get)
             .responseJSON{ (response) in
                 print(">>>>> RESPOSTA DA API: ", response)
                 guard let data = response.data else{return}
@@ -36,7 +37,9 @@ class Service{
                     let moviesResponse = try JSONDecoder().decode(MovieResponse.self, from: data)
                     self.movies = moviesResponse.results ?? []
                     self.updateLayout?()
-                    print(self.movies)
+                    completion(self.movies)
+
+                   // print(self.movies)
                     
                 }catch (let error){
                     self.shouldShowErrorMessage?(error.localizedDescription)
