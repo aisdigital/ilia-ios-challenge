@@ -6,17 +6,27 @@
 //
 
 import UIKit
+import Lottie
+
 
 class MovieCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var ivMovie: UIImageView!
     @IBOutlet weak var lblMovieTitle: UILabel!
+    private let loadingAnimation = AnimationView()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
+    private func setupAnimation(){
+        //loadingAnimation.animation = Animation.named("")
+        loadingAnimation.contentMode = .scaleAspectFit
+        loadingAnimation.loopMode = .loop
+        loadingAnimation.play()
+
+    }
     func setUpModel(_ movie: Movie?) {
         guard let movieModel = movie else{return}
         lblMovieTitle?.text = movieModel.original_title
@@ -29,4 +39,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
             }
         }
     }
+
 }
+

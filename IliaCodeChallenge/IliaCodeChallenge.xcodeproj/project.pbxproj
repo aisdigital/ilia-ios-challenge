@@ -23,6 +23,7 @@
 		E3951C9327A340A7004735C1 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3951C9127A340A7004735C1 /* MovieCollectionViewCell.xib */; };
 		E3951C9727A35D0B004735C1 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3951C9527A35D0B004735C1 /* MovieDetailViewController.swift */; };
 		E3951C9827A35D0B004735C1 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3951C9627A35D0B004735C1 /* MovieDetailViewController.xib */; };
+		E3D4FC1A27A80C9B00E250D6 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = E3D4FC1927A80C9A00E250D6 /* loading.json */; };
 		E6C0F51DCCBAB8AC1EB3E294 /* Pods_IliaCodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E05392EB05E1C81EA9F6E7 /* Pods_IliaCodeChallenge.framework */; };
 		F0BC8F64F06717FA0BE9382C /* Pods_IliaCodeChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF6EAFEC047022B494097C1 /* Pods_IliaCodeChallengeTests.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		E3951C9127A340A7004735C1 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		E3951C9527A35D0B004735C1 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		E3951C9627A35D0B004735C1 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
+		E3D4FC1927A80C9A00E250D6 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = loading.json; path = ../../../../../Downloads/loading.json; sourceTree = "<group>"; };
 		E4320B6BDAE12A2BB6A2332E /* Pods-IliaCodeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IliaCodeChallenge.release.xcconfig"; path = "Target Support Files/Pods-IliaCodeChallenge/Pods-IliaCodeChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		EDF65CAB99B5949287D01E7A /* Pods-IliaCodeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IliaCodeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-IliaCodeChallenge/Pods-IliaCodeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,11 +153,13 @@
 		E3951C4727A02788004735C1 /* IliaCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				E3D4FC1D27A81FC100E250D6 /* Service */,
 				E3951C8027A08A40004735C1 /* View */,
 				E3951C7A27A035FF004735C1 /* Model */,
 				E3951C4827A02788004735C1 /* AppDelegate.swift */,
 				E3951C4A27A02788004735C1 /* SceneDelegate.swift */,
 				E3951C5127A02789004735C1 /* Assets.xcassets */,
+				E3D4FC1927A80C9A00E250D6 /* loading.json */,
 				E3951C5627A02789004735C1 /* Info.plist */,
 			);
 			path = IliaCodeChallenge;
@@ -182,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				E3951C7B27A0363B004735C1 /* Movie.swift */,
-				E3951C7E27A03BE0004735C1 /* Service.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +226,14 @@
 				E3951C9627A35D0B004735C1 /* MovieDetailViewController.xib */,
 			);
 			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		E3D4FC1D27A81FC100E250D6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E3951C7E27A03BE0004735C1 /* Service.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +347,7 @@
 			files = (
 				E3951C9827A35D0B004735C1 /* MovieDetailViewController.xib in Resources */,
 				E3951C5527A02789004735C1 /* LaunchScreen.storyboard in Resources */,
+				E3D4FC1A27A80C9B00E250D6 /* loading.json in Resources */,
 				E3951C5227A02789004735C1 /* Assets.xcassets in Resources */,
 				E3951C5027A02788004735C1 /* Main.storyboard in Resources */,
 				E3951C9327A340A7004735C1 /* MovieCollectionViewCell.xib in Resources */,

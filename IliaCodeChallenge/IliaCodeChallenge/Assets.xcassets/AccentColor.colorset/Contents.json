@@ -1,6 +1,7 @@
 {
   "colors" : [
     {
+      "filename" : "loading.json",
       "idiom" : "universal"
     }
   ],

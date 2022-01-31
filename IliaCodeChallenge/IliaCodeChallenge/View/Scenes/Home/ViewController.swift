@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import Lottie
+
 
 class ViewController: UIViewController{
 
 
     private var service: Service = Service()
     private var movies : [Movie] = []
+    private let loadingAnimation = AnimationView(name: "loading")
     
     @IBOutlet weak var collectionViewMovies: UICollectionView!
         
@@ -20,18 +23,18 @@ class ViewController: UIViewController{
         
         title = "Movies"
         setupCollections()
-        service.getPopularMovies { (movies) in
-            DispatchQueue.main.async {
-                self.collectionViewMovies?.reloadData()
-            }
-            
-        }
-        bindEvents()
+        //bindEvents()
+        showScreen()
+        //setupAnimation()
+
         
     }
+    private func showScreen(){
+        setupAnimation()
+        bindEvents()
+    }
     
-    
-    func setupCollections(){
+    private func setupCollections(){
         collectionViewMovies?.register(UINib(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieCollectionViewCell")
         collectionViewMovies?.delegate = self
         collectionViewMovies?.dataSource = self
@@ -41,17 +44,29 @@ class ViewController: UIViewController{
         collectionViewMovies?.setCollectionViewLayout(layout, animated: true)
     }
     
-    func bindEvents(){
-        service.updateLayout = {
-            //print("CHEGUEI AQUI")
-            [weak self] in
+    private func bindEvents(){
+        service.getPopularMovies { (movies) in
             DispatchQueue.main.async {
-                self?.collectionViewMovies?.reloadData()
+                self.collectionViewMovies?.reloadData()
+                self.stopAnimation()
             }
         }
     }
 
+    private func setupAnimation(){
+        view.addSubview(loadingAnimation)
+        loadingAnimation.frame = view.bounds
+        loadingAnimation.contentMode = .scaleAspectFit
+        loadingAnimation.animationSpeed = 0.5
+        loadingAnimation.loopMode = .loop
+        loadingAnimation.play()
+    }
+    
+    private func stopAnimation(){
+        loadingAnimation.stop()
+    }
 }
+
 
 extension ViewController: UICollectionViewDataSource{
 
