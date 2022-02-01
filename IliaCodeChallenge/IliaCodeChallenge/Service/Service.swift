@@ -38,6 +38,7 @@ class Service{
                     self.movies = moviesResponse.results ?? []
                     self.updateLayout?()
                     completion(self.movies)
+                    
 
                    // print(self.movies)
                     

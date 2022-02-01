@@ -14,25 +14,27 @@ class ViewController: UIViewController{
 
     private var service: Service = Service()
     private var movies : [Movie] = []
-    private let loadingAnimation = AnimationView(name: "loading")
+   // let loadingAnimation = AnimationView(name: "loading")
+    let tabBarVC = UITabBarController()
     
     @IBOutlet weak var collectionViewMovies: UICollectionView!
-        
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Movies"
-        setupCollections()
-        //bindEvents()
         showScreen()
-        //setupAnimation()
+    }
 
-        
+     private func showScreen(){
+         //addLoading()
+         addSpinner()
+         setupCollections()
+         bindEvents()
     }
-    private func showScreen(){
-        setupAnimation()
-        bindEvents()
-    }
+    
+    
     
     private func setupCollections(){
         collectionViewMovies?.register(UINib(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieCollectionViewCell")
@@ -48,23 +50,38 @@ class ViewController: UIViewController{
         service.getPopularMovies { (movies) in
             DispatchQueue.main.async {
                 self.collectionViewMovies?.reloadData()
-                self.stopAnimation()
+                //self.removeLoading()
+                self.removeSpinner()
             }
         }
     }
-
-    private func setupAnimation(){
-        view.addSubview(loadingAnimation)
-        loadingAnimation.frame = view.bounds
-        loadingAnimation.contentMode = .scaleAspectFit
-        loadingAnimation.animationSpeed = 0.5
+    
+   /* private func addLoading(){
+       view.addSubview(loadingAnimation)
         loadingAnimation.loopMode = .loop
+        loadingAnimation.frame = view.bounds
+        loadingAnimation.isHidden = false
+        loadingAnimation.alpha = 0.5
         loadingAnimation.play()
     }
     
-    private func stopAnimation(){
-        loadingAnimation.stop()
+    private func removeLoading(){
+        self.loadingAnimation.stop()
+        self.loadingAnimation.isHidden = true
+        self.loadingAnimation.removeFromSuperview()
+
+    }*/
+
+    private func addSpinner(){
+        self.spinner?.startAnimating()
     }
+
+    private func removeSpinner(){
+        self.spinner?.stopAnimating()
+        self.spinner?.isHidden = true
+        self.spinner?.removeFromSuperview()
+    }
+    
 }
 
 
