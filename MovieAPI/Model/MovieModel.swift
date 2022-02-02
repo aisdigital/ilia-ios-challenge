@@ -9,19 +9,19 @@
 
 import Foundation
 
-struct MovieModel: Codable {
+struct MovieModel: Decodable {
     let results: [MoviesItens]
 }
 
-struct MoviesItens: Codable {
+struct MoviesItens: Decodable {
     let title: String
     let poster_path: String?
     let overview: String
-    let id: Int
-//    let popularity: Int
-    let vote_average: String
+//    let id: Int
+//    let popularity: String
+//    let vote_average: String
     let release_date: String
-    let vote_count: Int
+//    let vote_count: String
 }
 
 

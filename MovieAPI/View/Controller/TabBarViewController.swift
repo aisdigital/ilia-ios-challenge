@@ -13,10 +13,9 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         let popularesVC = self.criarTabBar(viewController: HomeViewController(), titulo: "Populares", image: "film")
+        let topMovies = self.criarTabBar(viewController: TopMovieViewController(), titulo: "Top Aprovação", image: "play")
         
-        let seriesVC = self.criarTabBar(viewController: TopMovieViewController(), titulo: "Top Aprovação", image: "play")
-        
-        viewControllers = [popularesVC, seriesVC]
+        viewControllers = [popularesVC, topMovies]
     }
     
     func criarTabBar (viewController: UIViewController, titulo: String, image: String) -> UIViewController {

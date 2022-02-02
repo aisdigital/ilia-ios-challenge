@@ -8,6 +8,7 @@ target 'MovieAPI' do
   # Pods for MovieAPI
 
   pod 'Alamofire'
+  pod 'lottie-ios'
 
   target 'MovieAPITests' do
     inherit! :search_paths

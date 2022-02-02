@@ -19,13 +19,14 @@
 		B64E0E00279F5FD200FD03F5 /* MovieAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E0DFF279F5FD200FD03F5 /* MovieAPIUITestsLaunchTests.swift */; };
 		B64E0E0E279F602300FD03F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E0E0C279F602300FD03F5 /* HomeViewController.swift */; };
 		B64E0E0F279F602300FD03F5 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64E0E0D279F602300FD03F5 /* HomeViewController.xib */; };
+		B64EBEB227A8474200503086 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = B64EBEB127A8474200503086 /* loading.json */; };
+		B64EBEB527A848FA00503086 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B64EBEB427A848FA00503086 /* Lottie */; };
 		B66E5A9627A3250200FA2822 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E5A9427A3250200FA2822 /* PopularCollectionViewCell.swift */; };
 		B66E5A9727A3250200FA2822 /* PopularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66E5A9527A3250200FA2822 /* PopularCollectionViewCell.xib */; };
 		B66E5A9B27A32EAD00FA2822 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E5A9A27A32EAD00FA2822 /* TabBarViewController.swift */; };
 		B66E5AA427A33DF500FA2822 /* BuscaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E5AA327A33DF500FA2822 /* BuscaService.swift */; };
 		B66E5AA727A3476B00FA2822 /* TopMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E5AA527A3476B00FA2822 /* TopMovieViewController.swift */; };
 		B66E5AA827A3476B00FA2822 /* TopMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66E5AA627A3476B00FA2822 /* TopMovieViewController.xib */; };
-		B66EF9F027A7313500F2089C /* APIMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EF9EF27A7313500F2089C /* APIMovie.swift */; };
 		B6BCA7AA27A44F23008D6FA1 /* DetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BCA7A827A44F23008D6FA1 /* DetalhesViewController.swift */; };
 		B6BCA7AB27A44F23008D6FA1 /* DetalhesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6BCA7A927A44F23008D6FA1 /* DetalhesViewController.xib */; };
 		FEA5A097A2E15DB0DBD8B022 /* Pods_MovieAPI_MovieAPIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2138121A1750DD93C7A7EF /* Pods_MovieAPI_MovieAPIUITests.framework */; };
@@ -69,13 +70,13 @@
 		B64E0DFF279F5FD200FD03F5 /* MovieAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B64E0E0C279F602300FD03F5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B64E0E0D279F602300FD03F5 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		B64EBEB127A8474200503086 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		B66E5A9427A3250200FA2822 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		B66E5A9527A3250200FA2822 /* PopularCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionViewCell.xib; sourceTree = "<group>"; };
 		B66E5A9A27A32EAD00FA2822 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B66E5AA327A33DF500FA2822 /* BuscaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscaService.swift; sourceTree = "<group>"; };
 		B66E5AA527A3476B00FA2822 /* TopMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMovieViewController.swift; sourceTree = "<group>"; };
 		B66E5AA627A3476B00FA2822 /* TopMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopMovieViewController.xib; sourceTree = "<group>"; };
-		B66EF9EF27A7313500F2089C /* APIMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMovie.swift; sourceTree = "<group>"; };
 		B6BCA7A827A44F23008D6FA1 /* DetalhesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViewController.swift; sourceTree = "<group>"; };
 		B6BCA7A927A44F23008D6FA1 /* DetalhesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalhesViewController.xib; sourceTree = "<group>"; };
 		CA23448AF14C1D7AD4A6682C /* Pods-MovieAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAPI.release.xcconfig"; path = "Target Support Files/Pods-MovieAPI/Pods-MovieAPI.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A74B537A8FDD5EB70AB9FE4 /* Pods_MovieAPI.framework in Frameworks */,
+				B64EBEB527A848FA00503086 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +160,6 @@
 		B64E0DDB279F5FD100FD03F5 /* MovieAPI */ = {
 			isa = PBXGroup;
 			children = (
-				B66EF9EE27A7312500F2089C /* API */,
 				B66E5AA227A33DE500FA2822 /* Busca */,
 				B610EB3E27A0676F0071B1D7 /* Model */,
 				B64E0E12279F606900FD03F5 /* View */,
@@ -196,6 +197,7 @@
 		B64E0E11279F605000FD03F5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B64EBEB127A8474200503086 /* loading.json */,
 				B64E0DE5279F5FD200FD03F5 /* Assets.xcassets */,
 				B64E0DE7279F5FD200FD03F5 /* LaunchScreen.storyboard */,
 				B64E0DEA279F5FD200FD03F5 /* Info.plist */,
@@ -266,14 +268,6 @@
 			path = Busca;
 			sourceTree = "<group>";
 		};
-		B66EF9EE27A7312500F2089C /* API */ = {
-			isa = PBXGroup;
-			children = (
-				B66EF9EF27A7313500F2089C /* APIMovie.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		B6BCA7A727A44F11008D6FA1 /* Detalhes */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +305,9 @@
 			dependencies = (
 			);
 			name = MovieAPI;
+			packageProductDependencies = (
+				B64EBEB427A848FA00503086 /* Lottie */,
+			);
 			productName = MovieAPI;
 			productReference = B64E0DD9279F5FD100FD03F5 /* MovieAPI.app */;
 			productType = "com.apple.product-type.application";
@@ -386,6 +383,9 @@
 				Base,
 			);
 			mainGroup = B64E0DD0279F5FD100FD03F5;
+			packageReferences = (
+				B64EBEB327A848FA00503086 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = B64E0DDA279F5FD100FD03F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -406,6 +406,7 @@
 				B64E0DE9279F5FD200FD03F5 /* LaunchScreen.storyboard in Resources */,
 				B66E5AA827A3476B00FA2822 /* TopMovieViewController.xib in Resources */,
 				B64E0DE6279F5FD200FD03F5 /* Assets.xcassets in Resources */,
+				B64EBEB227A8474200503086 /* loading.json in Resources */,
 				B64E0E0F279F602300FD03F5 /* HomeViewController.xib in Resources */,
 				B66E5A9727A3250200FA2822 /* PopularCollectionViewCell.xib in Resources */,
 			);
@@ -540,7 +541,6 @@
 				B610EB4227A06B9C0071B1D7 /* MovieModel.swift in Sources */,
 				B66E5AA427A33DF500FA2822 /* BuscaService.swift in Sources */,
 				B66E5AA727A3476B00FA2822 /* TopMovieViewController.swift in Sources */,
-				B66EF9F027A7313500F2089C /* APIMovie.swift in Sources */,
 				B64E0E0E279F602300FD03F5 /* HomeViewController.swift in Sources */,
 				B66E5A9B27A32EAD00FA2822 /* TabBarViewController.swift in Sources */,
 				B6BCA7AA27A44F23008D6FA1 /* DetalhesViewController.swift in Sources */,
@@ -722,7 +722,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -750,7 +750,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -880,6 +880,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B64EBEB327A848FA00503086 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B64EBEB427A848FA00503086 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B64EBEB327A848FA00503086 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B64E0DD1279F5FD100FD03F5 /* Project object */;
 }

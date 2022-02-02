@@ -8,8 +8,13 @@
 import UIKit
 import Alamofire
 
+struct ConstantSearch {
+    static let Api_Key = "52db72946dc3afe5a87fe0ab69aec074"
+    static let baseURL = "https://api.themoviedb.org"
+}
+
 class BuscaService {
-    
+    // ("\(ConstantSearch.baseURL)/3/search/movie?api_key=\(ConstantSearch.Api_Key)&query=\(texto)")
     private var movies: [MoviesItens] = []
     static let shared = BuscaService()
     
@@ -17,21 +22,22 @@ class BuscaService {
     var shoulError: (() -> Void)?
     
     func buscaMovie (texto: String) {
-        
-        AF.request("https://api.themoviedb.org/3/search/movie", method: .get).responseJSON { (response) in
-            debugPrint("==> Response: ", response)
-            guard let data = response.data else {return}
-            
-            do {
-                let moviesModel = try JSONDecoder().decode(MovieModel.self, from: data)
-                self.movies = moviesModel.results ?? []
-                self.updateLayout?()
-                
-            } catch (let error) {
-                self.shoulError?()
-            }
+        guard let texto = texto.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
+        guard let url = URL(string: "\(ConstantSearch.baseURL)/3/search/movie?api_key=\(ConstantSearch.Api_Key)&query=\(texto)") else {
+            return
             
         }
-        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            do {
+                let results = try JSONDecoder().decode(MovieModel.self, from: data)
+//                completion(.success(results.results))
+            } catch {
+//                completion(.failure(results.results))
+            }
+        }
+        task.resume()
     }
 }
