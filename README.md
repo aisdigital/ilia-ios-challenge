@@ -129,7 +129,7 @@ Use the API from [TheMovieDB](https://developers.themoviedb.org/3/getting-starte
 1. Implement UI tests.
 
 
-### TYPES OF COMMENTS </p>
+### COMMENT TYPES </p>
 
 - #### **Code Insertion**
     Any new code that is added to the project
