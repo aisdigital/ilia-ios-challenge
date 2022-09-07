@@ -25,7 +25,12 @@ struct FavoriteMoviesComponentListItem: View {
                 
             }
         }
-        .frame(maxWidth: .infinity, idealHeight: height)
+        /*
+         @CHANGE
+         fixing alignment and adding text color to components
+         */
+        .foregroundColor(.white)
+        .frame(maxWidth: .infinity, idealHeight: height, alignment: .leading)
     }
 }
 

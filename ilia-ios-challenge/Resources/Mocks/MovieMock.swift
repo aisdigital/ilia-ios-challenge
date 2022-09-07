@@ -9,20 +9,17 @@ import Foundation
 
 class MovieMock: MovieResponse {
     init() {
+        /*
+         @CHANGE
+         the init has been changed to conform to the new initializer
+         */
         super.init(
-            adult: true,
-            backdropPath: "",
-            genreIDS: [],
-            originalLanguage: "originalLanguage",
-            originalTitle: "originalTitle",
+            id: 1,
             overview: "overview",
-            popularity: 0,
             posterPath: "posterPath",
             releaseDate: "2022-10-31",
             title: "titleTest",
-            video: true,
-            voteAverage: 0,
-            voteCount: 0
+            voteAverage: 0
         )
     }
     

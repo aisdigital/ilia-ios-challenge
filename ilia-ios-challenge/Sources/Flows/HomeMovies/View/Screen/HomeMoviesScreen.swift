@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+/*
+ @DELETION
+ The following view has been deleted because we created a common empty view to reuse in other pages
+ struct HomeMoviesScreenEmptyPage: View
+ */
+
 struct HomeMoviesScreen: View {
     @EnvironmentObject private var viewModel: HomeMoviesViewModel
     @EnvironmentObject private var favoriteViewModel: FavoriteMoviesViewModel
@@ -14,19 +20,37 @@ struct HomeMoviesScreen: View {
     var body: some View {
         switch viewModel.state {
         case .idle:
-            HomeMoviesScreenEmptyPage()
+            /*
+             @CHANGE
+             this code has been changed to adapt to the new reusable empty page
+             */
+            EmptyPage(title: viewModel.emptyTitle)
                 .onAppear {
-                    await self.viewModel.loadMovies(page: 1)
+                    /*
+                     @INSERTION
+                     A task was inserted to manage the asynchronous function call, as the onAppear method does not support using asynchronous functions
+                     */
+                    Task {
+                        await self.viewModel.loadMovies()
+                    }
                 }
         case .loading:
             HomeMoviesScreenLoadingPage()
-        case .loaded:
+        /*
+         @CHANGE
+         added the new state to switch
+         */
+        case .loaded, .loadingNextPage:
             if viewModel.hasMovies() {
                 HomeMoviesScreenMainPage()
                     .environmentObject(viewModel)
                     .environmentObject(favoriteViewModel)
             } else {
-                HomeMoviesScreenEmptyPage()
+                /*
+                 @CHANGE
+                 this code has been changed to adapt to the new reusable empty page
+                 */
+                EmptyPage(title: viewModel.emptyTitle)
             }
         case .failed(let error):
             Text("\(error.localizedDescription)")

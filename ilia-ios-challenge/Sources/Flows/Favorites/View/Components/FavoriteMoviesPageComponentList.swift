@@ -11,30 +11,41 @@ struct FavoriteMoviesPageComponentList: View {
     @EnvironmentObject private var viewModel: FavoriteMoviesViewModel
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                ForEach(viewModel.favoriteMovies.indices, id: \.self) { movieIndex in
-                    let mv = viewModel.favoriteMovies[movieIndex]
-                    let destinationView = HomeMoviesScreenDetailPage(movie: mv, isFavorite: true)
-                        .background(IICUIKit.backGroundColor)
-                        .environmentObject(viewModel)
-                        .navigationBarTitleDisplayMode(.inline)
-                        .navigationTitle("Favorite Movies")
-                        .navigationBarColor(backgroundColor: IICUIKit.navigationBarColor, titleColor: IICUIKit.secondaryColor)
-                    
-                    NavigationLink(destination: destinationView) {
-                        FavoriteMoviesComponentListItem(imagePath: mv.posterPath ?? "", title: mv.title ?? "", releaseDate: mv.releaseDate ?? "")
-                            .background(.green)
-                    }
-                    .padding(.top, 6)
-                    .buttonStyle(PlainButtonStyle())
+        /*
+         @CHANGE
+         removed navigation view because we dont need it anymore, because the navigation view is on IICTabBarScreen
+         */
+        ScrollView {
+            ForEach(viewModel.favoriteMovies.indices, id: \.self) { movieIndex in
+                let mv = viewModel.favoriteMovies[movieIndex]
+                let destinationView = HomeMoviesScreenDetailPage(movie: mv, isFavorite: true)
+                    .background(IICUIKit.backGroundColor)
+                    .environmentObject(viewModel)
+                    /*
+                     @DELETION
+                     removed the navigation bar modifiers because it has already been added in the IICTabBarScreen
+                     */
+                
+                NavigationLink(destination: destinationView) {
+                    FavoriteMoviesComponentListItem(imagePath: mv.posterPath ?? "", title: mv.title ?? "", releaseDate: mv.releaseDate ?? "")
+                        /*
+                         @CHANGE
+                         fixing the background color of each cell
+                         */
+                        .background(IICUIKit.listItemColor)
                 }
+                .padding(.top, 6)
+                .buttonStyle(PlainButtonStyle())
             }
-            .background(IICUIKit.backGroundColor)
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Favorite Movies")
-            .navigationBarColor(backgroundColor: IICUIKit.navigationBarColor, titleColor: IICUIKit.secondaryColor)
         }
+        /*
+         @INSERTION
+         add this method to update the favorites movies every time view appear
+         */
+        .onAppear(perform: {
+            viewModel.loadFavoriteMovies()
+        })
+        .background(IICUIKit.backGroundColor)
     }
 }
 

@@ -39,6 +39,11 @@ struct HomeMoviesScreenDetailPage: View {
                         .font(IICUIKit.bodyFontBold())
                     Text(String(movie.voteAverage ?? 0))
                         .font(IICUIKit.bodyFont())
+                        /*
+                         @INSERTION
+                         this modifier was added to change text color
+                         */
+                        .foregroundColor(.green)
                 }
             }
             .padding(.leading)
@@ -50,21 +55,29 @@ struct HomeMoviesScreenDetailPage: View {
                     .padding(.horizontal)
             }
         }
-        .onAppear(perform: {
-            isFavorite = false
-        })
-        .navigationBarTitleDisplayMode(.inline)
+        /*
+         @DELETION
+         remove the following code because we dont need it
+         .onAppear(perform: {
+             isFavorite = false
+         })
+         */
+        /*
+         @CHANGE
+         Adding foregroundColor modifier to change the text color
+         */
+        .foregroundColor(.white)
         .navigationTitle("Movie Detail")
         .navigationBarColor(backgroundColor: IICUIKit.navigationBarColor, titleColor: IICUIKit.secondaryColor)
+        .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailing:
             Button(action: {
-            if isFavorite {
-                    favoriteViewModel.deleteFavoriteMovie(movie: movie)
-                } else {
-                    favoriteViewModel.deleteFavoriteMovie(movie: movie)
-                }
-                favoriteViewModel.loadFavoriteMovies()
-                isFavorite.toggle()
+            /*
+             @CHANGE
+             changing the logic to handle button click of favorite movie
+             */
+            favoriteViewModel.handleFavoriteClick(with: movie)
+            isFavorite.toggle()
             }) {
                 Image(systemName: isFavorite ?  "heart.fill" : "heart").imageScale(.large).foregroundColor(.red)
             }

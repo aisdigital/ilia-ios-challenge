@@ -10,13 +10,16 @@ import Foundation
 class MoviesRepositoryMock: MoviesRepositoryProtocol {
     var isSuccess = true
     
-    func getUpcomingMovies(page: Int) async throws -> [MovieResponse] {
+    /*
+     @CHANGE
+     the following method has been changed to conform to the new signature of MoviesRepositoryProtocol
+     */
+    func getUpcomingMovies(page: Int) async throws -> MoviesDataResponse {
         return try await withCheckedThrowingContinuation({
-            (continuation: CheckedContinuation<[MovieResponse], Error>) in
+            (continuation: CheckedContinuation<MoviesDataResponse, Error>) in
             if isSuccess {
                 let user = try! JSONDecoder().decode(MoviesDataResponse.self, from: JSON.loadJSONFromBundle(bundle: Bundle.main, resourceName: "MoviesJSONMock"))
-                let moviesResult = user.results
-                continuation.resume(returning: moviesResult)
+                continuation.resume(returning: user)
             } else {
                 continuation.resume(throwing: NSError(domain:"", code: 101, userInfo:nil))
             }

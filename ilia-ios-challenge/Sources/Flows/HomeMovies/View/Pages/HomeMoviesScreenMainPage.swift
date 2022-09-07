@@ -14,6 +14,11 @@ struct HomeMoviesScreenMainPage: View {
     var body: some View {
         HomeMoviesPageComponentList()
             .environmentObject(viewModel)
+            /*
+             @INSERTION
+             the following code was inserted to inject the favoriteViewModel on the page component list
+             */
+            .environmentObject(favoriteViewModel)
     }
 }
 

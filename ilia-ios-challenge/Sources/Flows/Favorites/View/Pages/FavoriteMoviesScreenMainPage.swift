@@ -11,7 +11,16 @@ struct FavoriteMoviesScreenMainPage: View {
     @EnvironmentObject private var viewModel: FavoriteMoviesViewModel
     
     var body: some View {
-        FavoriteMoviesPageComponentList().environmentObject(viewModel)
+        /*
+         @CHANGE
+         The following code has been changed to handle the empty state of this view
+         */
+        if viewModel.hasMovies() {
+            FavoriteMoviesPageComponentList()
+                .environmentObject(viewModel)
+        } else {
+            EmptyPage(title: viewModel.emptyTitle)
+        }
     }
 }
 

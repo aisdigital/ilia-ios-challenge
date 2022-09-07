@@ -17,7 +17,11 @@ enum MovieAPI {
 extension MovieAPI: TargetType {
     
     var API_KEY: String {
-            return ""
+        /*
+         @CHANGE
+         Change made to insert APIkey and make requests
+         */
+        return "1aa28268d2ef9fe956de0d893cc2d843"
     }
     
     var baseURL: URL {

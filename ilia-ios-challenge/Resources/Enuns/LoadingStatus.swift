@@ -10,6 +10,11 @@ import Foundation
 enum LoadingState: Equatable {
     case idle
     case loading
+    /*
+     @CHANGE
+     handle pagination on movies
+     */
+    case loadingNextPage
     case failed(Error)
     case loaded
     
@@ -25,6 +30,8 @@ enum LoadingState: Equatable {
             let error1 = v0 as NSError
             let error2 = v1 as NSError
             return error1.code == error2.code
+        case (.loadingNextPage, .loadingNextPage):
+            return true
         default:
             return false
         }

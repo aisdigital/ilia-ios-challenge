@@ -27,28 +27,53 @@ class HomeMoviesViewModelTests: XCTestCase {
     func testLoadMoviesSuccess() async {
         let expectedMoviesCount = 20
         
+        /*
+         @INSERTION
+         calling the load funtion to update the movies count
+         */
+        await homeMoviesViewModel.loadMovies()
+        
         let moviesCount = homeMoviesViewModel.movies.count
         XCTAssertEqual(expectedMoviesCount, moviesCount)
     }
     
     func testLoadMoviesFailure() async {
         let expectedError = NSError(domain:"", code: 101, userInfo:nil)
+        
+        /*
+         @INSERTION
+         changing the variable to throw error and loading movies again to update the state
+         */
+        moviesRepository.isSuccess = false
+        await homeMoviesViewModel.loadMovies()
     
         XCTAssertEqual(homeMoviesViewModel.state, .failed(expectedError))
     }
     
     func testHasMovies() async {
-        await homeMoviesViewModel.loadMovies(page: 1)
+        /*
+         @CHANGE
+         change the function to the new signature
+         */
+        await homeMoviesViewModel.loadMovies()
         
         XCTAssertTrue(homeMoviesViewModel.hasMovies())
     }
     
+    /*
+     @CHANGE
+     the following has been changed to check the idle state
+     */
     func testIdleState() {
-        
+        XCTAssertEqual(homeMoviesViewModel.state, .idle)
     }
     
     func testLoadedState() async {
-        await homeMoviesViewModel.loadMovies(page: 1)
+        /*
+         @CHANGE
+         change the function to the new signature
+         */
+        await homeMoviesViewModel.loadMovies()
         DispatchQueue.main.async {
             XCTAssertEqual(self.homeMoviesViewModel.state, .loaded)
         }

@@ -12,17 +12,50 @@ class HomeMoviesViewModel: ObservableObject {
     var moviesRepository: MoviesRepositoryProtocol
     
     private(set) var movies: [MovieResponse] = []
+    /*
+     @INSERTION
+     this property was inserted to handle pagination
+     */
+    private var page = 1
+    private var pageLimit = 1000
     
-    @State private(set) var state = LoadingState.idle
+    /*
+     @INSERTION
+     This property has been added to viewModel in order to configure the empty title of the view
+     */
+    var emptyTitle: String {
+        "Não há filmes"
+    }
+    
+    /*
+     @CHANGE
+     This variable needs to be Published instead of State, because the class is an ObservableObject and not a view
+     */
+    @Published private(set) var state = LoadingState.idle
     
     init(moviesRepository: MoviesRepositoryProtocol) {
         self.moviesRepository = moviesRepository
     }
     
-    func loadMovies(page: Int) async {
-        self.state = .loading
+    /*
+     @INSERTION
+     The @MainActor keyword was inserted so that the function runs on the Main Thread and there are no problems in updating the UI
+     */
+    @MainActor func loadMovies() async {
+        /*
+         @CHANGE
+         changing the state logic to handle pagination
+         */
+        self.state = page > 1 ? .loadingNextPage : .loaded
         do {
-            self.movies = try await moviesRepository.getUpcomingMovies(page: page)
+            /*
+             @CHANGE
+             fix logic to append the movies loaded
+             */
+            let response = try await moviesRepository.getUpcomingMovies(page: page)
+            
+            pageLimit = response.totalPages
+            self.movies.append(contentsOf: response.results)
             self.state = .loaded
         } catch let error {
             self.movies = []
@@ -30,7 +63,27 @@ class HomeMoviesViewModel: ObservableObject {
         }
     }
     
+    /*
+     @INSERTION
+     this function has been created to handle pagination
+     */
+    func loadMoreMovies(itemIndex: Int) async {
+        guard page < pageLimit else { return }
+        
+        guard state == .loaded else { return }
+        
+        guard itemIndex == movies.endIndex-1 else { return }
+        
+        page += 1
+        await loadMovies()
+    }
+    
     func hasMovies() -> Bool {
-        return movies.isEmpty
+        /*
+         @CHANGE
+         Made the change because the isEmpty variable returns true if it is empty, so if it has objects it returns false, so we have to deny it.
+         I also removed the return because it is not necessary when there is only one line in the function
+         */
+        !movies.isEmpty
     }
 }

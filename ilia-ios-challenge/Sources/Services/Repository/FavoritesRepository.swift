@@ -18,6 +18,10 @@ protocol FavoritesRepositoryProtocol {
 class FavoritesRepository: FavoritesRepositoryProtocol {
     let key: String = "favorite_movies"
     
+    /*
+     @SUGGESTION
+     Maybe here it was better to save only the movie id in order to reduce the size and always fetch updated movies
+     */
     func getFavoriteMovies() -> [MovieResponse] {
         if let retrievedCodableObject = UserDefaults.standard.codableObject(dataType: Array<MovieResponse>.self, key: key) {
           return retrievedCodableObject
@@ -26,15 +30,35 @@ class FavoritesRepository: FavoritesRepositoryProtocol {
         }
     }
     
+    /*
+     @CHANGE
+     The following function has been changed to fix the logic of saving favorite movies
+     */
     func saveFavoriteMovie(movie: MovieResponse) {
-    
+        var movies = getFavoriteMovies()
+        
+        movies.append(movie)
+        
+        UserDefaults.standard.setCodableObject(movies, forKey: key)
     }
     
+    /*
+     @CHANGE
+     The following function has been changed to fix the logic of deleting favorite movies
+     */
     func deleteFavoriteMovie(movie: MovieResponse) {
-       
+        var movies = getFavoriteMovies()
+        
+        movies = movies.filter({$0.id != movie.id})
+        
+        UserDefaults.standard.setCodableObject(movies, forKey: key)
     }
     
+    /*
+     @CHANGE
+     The following function has been changed to fix the logic to see if the movie is in the favorites list
+     */
     func isFavoriteMovie(movie: MovieResponse) -> Bool {
-       return true
+        getFavoriteMovies().contains(where: {$0.id == movie.id})
     }
 }

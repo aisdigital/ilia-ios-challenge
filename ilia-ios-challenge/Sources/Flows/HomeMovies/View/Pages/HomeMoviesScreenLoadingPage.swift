@@ -9,10 +9,17 @@ import SwiftUI
 
 struct HomeMoviesScreenLoadingPage: View {
     var body: some View {
+        /*
+         @CHANGE
+         the following code has been changed to fix the layout
+         */
         VStack {
             Text("Carregando...")
+                .font(IICUIKit.bodyFont())
             ProgressView()
+                .tint(.white)
         }
+        .foregroundColor(.white)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

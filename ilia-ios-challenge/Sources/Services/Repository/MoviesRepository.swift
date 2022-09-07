@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MoviesRepositoryProtocol {
-    func getUpcomingMovies(page: Int) async throws -> [MovieResponse]
+    func getUpcomingMovies(page: Int) async throws -> MoviesDataResponse
 }
 
 class MoviesRepository: MoviesRepositoryProtocol {
@@ -18,14 +18,17 @@ class MoviesRepository: MoviesRepositoryProtocol {
         self.movieProvider = movieProvider
     }
     
-    func getUpcomingMovies(page: Int) async throws -> [MovieResponse] {
+    /*
+     @CHANGE
+     the following function changed the return because it needs the pageLimit
+     */
+    func getUpcomingMovies(page: Int) async throws -> MoviesDataResponse {
         return try await withCheckedThrowingContinuation({
-            (continuation: CheckedContinuation<[MovieResponse], Error>) in movieProvider.provider.request(.upcomingMovies(page: page)) { result in
+            (continuation: CheckedContinuation<MoviesDataResponse, Error>) in movieProvider.provider.request(.upcomingMovies(page: page)) { result in
                 switch result {
                 case .success(let response):
                     let user = try! JSONDecoder().decode(MoviesDataResponse.self, from: response.data)
-                    let moviesResult = user.results
-                    continuation.resume(returning: moviesResult)
+                    continuation.resume(returning: user)
                     break
                 case .failure(let error):
                     continuation.resume(throwing: error)

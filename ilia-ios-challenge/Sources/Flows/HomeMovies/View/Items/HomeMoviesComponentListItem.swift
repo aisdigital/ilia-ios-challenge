@@ -20,7 +20,11 @@ struct HomeMoviesComponentListItem: View {
             Text(title)
                 .foregroundColor(IICUIKit.textColor)
                 .font(IICUIKit.posterTitleFontBold())
-                .lineLimit(3)
+                /*
+                 @CHANGE
+                 Made to respect the design line limit
+                 */
+                .lineLimit(1)
             
         }
     }

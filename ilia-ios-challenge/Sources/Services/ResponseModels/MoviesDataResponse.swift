@@ -7,23 +7,24 @@
 
 import Foundation
 
+/*
+ @CHANGE
+ removing unused properties such as:
+ DatesResponse
+ page
+ totalResults
+ */
 class MoviesDataResponse: Codable {
-    let dates: DatesResponse
-    let page: Int
     let results: [MovieResponse]
-    let totalPages, totalResults: Int
+    let totalPages: Int
 
     enum CodingKeys: String, CodingKey {
-        case dates, page, results
+        case results
         case totalPages = "total_pages"
-        case totalResults = "total_results"
     }
 
-    init(dates: DatesResponse, page: Int, results: [MovieResponse], totalPages: Int, totalResults: Int) {
-        self.dates = dates
-        self.page = page
+    init(results: [MovieResponse], totalPages: Int) {
         self.results = results
         self.totalPages = totalPages
-        self.totalResults = totalResults
     }
 }
